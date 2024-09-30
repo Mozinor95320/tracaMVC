@@ -19,11 +19,7 @@ header {
   border-bottom: solid 2px #ffb91d;
 }
 
-header h1 {
-  margin: 0;
-  padding-left: 0px;
-  display: inline-block;
-}
+
 
 .form-section {
 margin-bottom: 20px;
