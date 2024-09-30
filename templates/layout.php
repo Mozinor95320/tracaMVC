@@ -13,6 +13,15 @@
     </head>
 
     <body>
+        <header class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-3">
+                    <h1>Parker</h1>
+                </div>
+            </div>
+            <div class="row align-items-center">
+            </div>
+        </header>
         <?= $content ?>
     </body>
 </html>
