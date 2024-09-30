@@ -4,7 +4,7 @@ namespace Application\Controllers\TracabilitySheet;
 
 require_once('src/lib/database.php');
 require_once('src/model/comment.php');
-require_once('src/model/TracabilitySheet.php');
+require_once('src/model/tracabilitySheet.php');
 
 use Application\Lib\Database\DatabaseConnection;
 use Application\Model\Comment\CommentRepository;
