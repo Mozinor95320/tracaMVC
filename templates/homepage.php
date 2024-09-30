@@ -1,10 +1,6 @@
 <?php $title = "Le blog de l'AVBN"; ?>
 
 <?php ob_start(); ?>
-
-<?php
-foreach ($tracabilitySheets as $tracabilitySheet) {
-?>
 <div class="container mt-5">
     <h1 class="text-center mb-4">Recherche par SN</h1>
     <!-- Barre de recherche -->
@@ -15,6 +11,10 @@ foreach ($tracabilitySheets as $tracabilitySheet) {
         </div>
     </form>
     <div id="result-container">
+<?php
+foreach ($tracabilitySheets as $tracabilitySheet) {
+?>
+
         <div class="card mb-3">
             <div class="card-body d-flex justify-content-between align-items-center">';
                 <div>
@@ -25,13 +25,12 @@ foreach ($tracabilitySheets as $tracabilitySheet) {
                     <i class="bi bi-folder2-open" style="font-size: 24px;"></i> <!--Icône de dossier ouvert-->
                 </a>
             </div>
-        </div>
-    </div>
-</div>
-        
+        </div>     
 <?php
 }
 ?>
+    </div>
+</div>
 <?php $content = ob_get_clean(); ?>
 
 <?php require('layout.php') ?>
