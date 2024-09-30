@@ -4,7 +4,7 @@ namespace Application\Controllers\Post;
 
 require_once('src/lib/database.php');
 require_once('src/model/comment.php');
-require_once('src/model/post.php');
+require_once('src/model/TracabilitySheet.php');
 
 use Application\Lib\Database\DatabaseConnection;
 use Application\Model\Comment\CommentRepository;
