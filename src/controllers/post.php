@@ -8,7 +8,7 @@ require_once('src/model/post.php');
 
 use Application\Lib\Database\DatabaseConnection;
 use Application\Model\Comment\CommentRepository;
-use Application\Model\Post\PostRepository;
+use Application\Model\TracabilitySheet\TracabilitySheetRepository;
 
 class Post
 {
