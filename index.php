@@ -16,7 +16,7 @@ try {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 $identifier = $_GET['id'];
 
-                (new Post())->execute($identifier);
+                (new TracabilitySheet())->execute($identifier);
             } else {
                 throw new Exception('Aucun identifiant de billet envoyé');
             }
