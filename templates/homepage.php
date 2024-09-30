@@ -10,7 +10,7 @@ foreach ($tracabilitySheets as $tracabilitySheet) {
     <div class="news">
         <h3>
             <?= htmlspecialchars($tracabilitySheet->identifier); ?>
-            <em>le :<?= $tracabilitySheet->frenchCreationDate; ?></em>
+            <em>le <?= $tracabilitySheet->frenchCreationDate; ?></em>
         </h3>
             <em><a href="index.php?action=post&id=<?= urlencode($tracabilitySheet->identifier) ?>">Commentaires</a></em>
     </div>
