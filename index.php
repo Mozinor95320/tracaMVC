@@ -8,7 +8,7 @@ require_once('src/controllers/tracabilitySheet.php');
 use Application\Controllers\Comment\Add\AddComment;
 use Application\Controllers\Comment\Update\UpdateComment;
 use Application\Controllers\Homepage\Homepage;
-use Application\Controllers\tracabilitySheet\tracabilitySheet;
+use Application\Controllers\TracabilitySheet\TracabilitySheet;
 
 try {
     if (isset($_GET['action']) && $_GET['action'] !== '') {
