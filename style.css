@@ -1,8 +1,3 @@
-body {
-padding-top: 20px;
-background-color: #f8f9fa;
-}
-
 .card-title {
 font-size: 1.5rem;
 }
@@ -36,15 +31,6 @@ margin: 0;
 padding-left: 20px;
 display: inline-block;
 background-color: #ffb91d;
-}
-
-header .header-buttons {
-float: right;
-padding-right: 20px;
-}
-
-header .header-buttons button {
-margin-left: 10px;
 }
 
 .form-section {
