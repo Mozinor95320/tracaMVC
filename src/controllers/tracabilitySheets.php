@@ -1,6 +1,6 @@
 <?php
 
-namespace Application\Controllers\Post;
+namespace Application\Controllers\TracabilitySheets;
 
 require_once('src/lib/database.php');
 require_once('src/model/comment.php');
