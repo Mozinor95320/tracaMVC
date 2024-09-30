@@ -11,11 +11,19 @@
         <link rel="stylesheet" href="style.css">
 </head>
 
-    <body>
-        <?= $content ?>
-
-    <!-- Inclusion de Bootstrap JS et de son bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
+<body>
+<header class="container-fluid">
+    <div class="row align-items-center">
+        <div class="col-md-3">
+            <h1>Parker</h1>
+        </div>
+    </div>
+    <div class="row align-items-center">
+    </div>
+</header>
+    
+    <?= $content ?>
 </body>
+<!-- Inclusion de Bootstrap JS et de son bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </html>
