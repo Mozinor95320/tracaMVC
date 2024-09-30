@@ -16,7 +16,7 @@ foreach ($tracabilitySheets as $tracabilitySheet) {
 ?>
 
         <div class="card mb-3">
-            <div class="card-body d-flex justify-content-between align-items-center">';
+            <div class="card-body d-flex justify-content-between align-items-center">
                 <div>
                     <h5 class="card-title fw-bold"><?= htmlspecialchars($tracabilitySheet->identifier); ?></h5>
                     <em class="card-text text-muted">le :<?= $tracabilitySheet->frenchCreationDate; ?></em>
