@@ -5,18 +5,14 @@
 <p>Derniers billets du blog :</p>
 
 <?php
-foreach ($posts as $post) {
+foreach ($tracabilitySheets as $tracabilitySheet) {
 ?>
     <div class="news">
         <h3>
-            <?= htmlspecialchars($post->title); ?>
-            <em>le <?= $post->frenchCreationDate; ?></em>
+            <?= htmlspecialchars($tracabilitySheet->identifier); ?>
+            <em>le :<?= $tracabilitySheet->frenchCreationDate; ?></em>
         </h3>
-        <p>
-            <?= nl2br(htmlspecialchars($post->content)); ?>
-            <br />
-            <em><a href="index.php?action=post&id=<?= urlencode($post->identifier) ?>">Commentaires</a></em>
-        </p>
+            <em><a href="index.php?action=post&id=<?= urlencode($tracabilitySheet->identifier) ?>">Commentaires</a></em>
     </div>
 <?php
 }
