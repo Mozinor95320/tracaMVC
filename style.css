@@ -18,7 +18,11 @@ header {
   padding: 10px;
   border-bottom: solid 2px #ffb91d;
 }
-
+header h1 {
+  margin: 0;
+  padding-left: 20px;
+  display: inline-block;
+}
 
 
 .form-section {
