@@ -13,7 +13,7 @@ class TracabilitySheet
     public string $frenchCreationDate;
     public string $spoolBatch;
     public int $spoolNumber;
-    public string $dateDimAfterCoating`;
+    public string $dateDimAfterCoating;
     public string $operatorNameDimAfterCoating;
     public float $lengthL;
     public float $diameterD;
