@@ -32,3 +32,4 @@ try {
 
     require('templates/error.php');
 }
+?>
