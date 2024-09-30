@@ -1,18 +1,3 @@
-.card-title {
-font-size: 1.5rem;
-}
-
-.card-text {
-font-size: 0.9rem;
-color: #6c757d;
-}
-
-.btn-outline-primary {
-display: inline-flex;
-align-items: center;
-padding: 6px 12px;
-}
-
 header {
   background-color: #211e1e;
   color: white;
