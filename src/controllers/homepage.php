@@ -3,7 +3,6 @@
 namespace Application\Controllers\Homepage;
 
 require_once('src/lib/database.php');
-require_once('src/model/tracabilitySheet.php');
 
 use Application\Lib\Database\DatabaseConnection;
 use Application\Model\TracabilitySheet\TracabilitySheetRepository;
