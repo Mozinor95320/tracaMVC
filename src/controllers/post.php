@@ -10,7 +10,7 @@ use Application\Lib\Database\DatabaseConnection;
 use Application\Model\Comment\CommentRepository;
 use Application\Model\TracabilitySheet\TracabilitySheetRepository;
 
-class Post
+class TracabilitySheet
 {
     public function execute(string $identifier)
     {
