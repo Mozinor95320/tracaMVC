@@ -1,4 +1,4 @@
-<?php $title = "Le blog de l'AVBN"; ?>
+<?php $title = "Liste des fiches de tracabilité"; ?>
 
 <?php ob_start(); ?>
 <div class="container mt-5">
