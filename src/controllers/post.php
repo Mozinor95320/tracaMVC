@@ -16,9 +16,9 @@ class Post
     {
         $connection = new DatabaseConnection();
 
-        $postRepository = new PostRepository();
-        $postRepository->connection = $connection;
-        $post = $postRepository->getPost($identifier);
+        $tracabilitySheetRepository = new TracabilitySheetRepository();
+        $tracabilitySheetRepository->connection = $connection;
+        $tracabilitySheet = $tracabilitySheetRepository->getTracabilitySheet($identifier);
 
         $commentRepository = new CommentRepository();
         $commentRepository->connection = $connection;
