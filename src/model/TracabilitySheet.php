@@ -76,7 +76,7 @@ class TracabilitySheetRepository
 {
     public DatabaseConnection $connection;
 
-    public function getPost(string $identifier): TracabilitySheet
+    public function getTracabilitySheet(string $identifier): TracabilitySheet
     {
         $statement = $this->connection->getConnection()->prepare(
             "SELECT id, title, content, DATE_FORMAT(creation_date, '%d/%m/%Y à %Hh%imin%ss') AS french_creation_date FROM posts WHERE id = ?"
@@ -151,7 +151,7 @@ class TracabilitySheetRepository
         return $tracabilitySheet;
     }
 
-    public function getPosts(): array
+    public function getTracabilitySheets(): array
     {
         $statement = $this->connection->getConnection()->query(
             "SELECT serialNumber, workOrder, DATE_FORMAT(sheetCreationDate, '%d/%m/%Y à %Hh%imin%ss') AS french_creation_date FROM tracabilitySheets ORDER BY sheetCreationDate DESC LIMIT 0, 5"
