@@ -1166,7 +1166,5 @@
   </div>
 </div>
 
-<script src="scriptTemplate/tolerance.js"></script>
-
 <?php $content = ob_get_clean(); ?>
 <?php require('layout.php') ?>
