@@ -6,7 +6,7 @@ require_once('src/controllers/updateTracabilitySheet.php');
 use Application\Controllers\Comment\Add\AddComment;
 use Application\Controllers\Comment\Update\UpdateComment;
 use Application\Controllers\Homepage\Homepage;
-use Application\Controllers\UpdateTracabilitySheet;
+use Application\Controllers\UpdateTracabilitySheet\UpdateTracabilitySheet;
 
 try {
     if (isset($_GET['action']) && $_GET['action'] !== '') {
