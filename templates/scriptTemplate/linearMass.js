@@ -79,3 +79,21 @@ function calculateMoyenneEcartType(prefix) {
       toleranceElement.classList.add("bg-tolerance-wrong");
     }
   }
+
+// Calls Before Shrink Test
+function calculateMeanStandardDeviationBeforeShrinkTest() {
+    calculateMeanStandardDeviation("Before Shrink Test");
+}
+
+function calculateLinearMassBeforeShrinkTest() {
+    calculateLinearMass("Before Shrink Test");
+}
+
+// Calls for After Shrink Test
+function calculateMeanStandardDeviationAfter() {
+    calculateMeanStandardDeviation("After");
+}
+
+function calculateLinearMassAfter() {
+    calculateLinearMass("After");
+}
