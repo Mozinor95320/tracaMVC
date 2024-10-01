@@ -97,3 +97,17 @@ function calculateMeanStandardDeviationAfter() {
 function calculateLinearMassAfter() {
     calculateLinearMass("After");
 }
+
+document.getElementById("mt").addEventListener("input", function () {
+    const inputValue = parseFloat(this.value);
+    const diff = inputValue - parseFloat(document.getElementById(`massM`).value);
+
+    document.getElementById(`mf`).value = diff.toFixed(2);
+
+    // Dynamic tolerance change - mf
+    updateTolerance({
+        inputValue: diff,
+        toleranceId: "toleranceMF",
+        tolMax: 1050
+    });
+});
