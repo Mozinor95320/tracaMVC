@@ -1,4 +1,4 @@
-document.getElementById("name").value = "<?= $utilisateur->nom ?>";
+document.getElementById("serialNumber").value = "<?= $tracabilitySheet->identifier ?>";
 
 function verifyTolerance({
 
