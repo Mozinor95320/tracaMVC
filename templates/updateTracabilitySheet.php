@@ -1,4 +1,4 @@
-<?php $title = "Fiche n°".$tracabilitySheet->identifier; ?>
+<?php $title = "Fiche n°" . $tracabilitySheet->identifier; ?>
 
 <?php ob_start(); ?>
 
