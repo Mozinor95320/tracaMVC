@@ -81,7 +81,7 @@ class TracabilitySheetRepository
     public function getTracabilitySheet(string $identifier): TracabilitySheet
     {
         $statement = $this->connection->getConnection()->prepare(
-            "SELECT serialNumber, workOrder, DATE_FORMAT(sheetCreationDate, '%d/%m/%Y à %Hh%imin%ss') AS french_creation_date FROM tracabilitySheets ORDER BY sheetCreationDate DESC LIMIT 0, 5"
+            "SELECT *, DATE_FORMAT(sheetCreationDate, '%d/%m/%Y à %Hh%imin%ss') AS french_creation_date FROM tracabilitySheets WHERE serialNumber = ?"
         );
         $statement->execute([$identifier]);
 
