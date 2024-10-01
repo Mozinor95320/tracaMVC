@@ -255,34 +255,34 @@
                   <div class="mb-3">
                     <div class="row align-items-center">
                       
-                       <!--  <!-- Aspect Dimension After Coating --> -->
+                       <!--  Label - Profile Mass Before Shrink Fit-->
                       <div class="col-md-3">
                         <div class="d-flex justify-content-end">
                           <label for="masseM" class="form-label">Masse du profilé (48±0,5 cm)</label>
                         </div>
                       </div>
                       
-                      <!-- Aspect Dimension After Coating -->
+                      <!--  Input - Profile Mass Before Shrink Fit-->
                       <div class="col-md-3">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="masseProfileAvant" placeholder="Entrez la masse du profilé" oninput="calculateMasseLineiqueAvant()">
+                          <input type="number" class="form-control" id="profileMassBeforeShrinkFit" placeholder="Entrez la masse du profilé" oninput="calculateMasseLineiqueAvant()">
                           
                           <!-- Unit of measurement -->
                           <span class="input-group-text">g</span>
                         </div>
                       </div>
                       
-                      <!-- Aspect Dimension After Coating -->
+                      <!--  Label - Linear Mass Before Shrink Fit-->
                       <div class="col-md-3">
                         <div class="d-flex justify-content-end">
                           <label for="masseLineiqueProfil" class="form-label">Masse linéique du profilé</label>
                         </div>
                       </div>
                       
-                      <!-- Aspect Dimension After Coating -->
+                      <!--  Input readonly - Linear Mass Before Shrink Fit-->
                       <div class="col-md-3">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="masseLineiqueProfileAvant" placeholder="Calculée automatiquement" readonly>
+                          <input type="number" class="form-control" id="linearMassBeforeShrinkFit" placeholder="Calculée automatiquement" readonly>
                           
                           <!-- Tolerance with dynamic color -->
                           <span class="input-group-text" id="toleranceMasseLineiqueProfileAvant">2,107-2,407</span>
@@ -294,28 +294,40 @@
                     </div>
                   </div>
 
-                  
+                   <!--  Tensile Test Sample 1 Before Shrink Fit -->
                   <div class="mb-3">
                     <label for="meche1" class="form-label">Mèche 1</label>
                     <div class="row">
-                      <div class="col-md-4">
-                        <div class="input-group">
-                          <input type="number" class="form-control" id="epMeche1Avant" placeholder="Entrez l'épaisseur">
-                          <!-- Tolerance with dynamic color -->
-                          <span class="input-group-text" id="toleranceEpMeche1Avant">0,23-0,30</span>
-                          <span class="input-group-text">mm</span> <!-- Unité ici -->
 
-                        </div>
-                      </div>
+                      <!--  Thickness Sample 1 Before Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="FMeche1Avant" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()">
-                          <span class="input-group-text" id="toleranceFMeche1Avant">Min 1820</span>
-                          <span class="input-group-text">N</span> <!-- Unité ici -->
+                          <input type="number" class="form-control" id="thickness1BeforeShrinkFit" placeholder="Entrez l'épaisseur">
+                          
+                          <!-- Tolerance with dynamic color -->
+                          <span class="input-group-text" id="toleranceThickness1BeforeShrinkFit">0,23-0,30</span>
+                          
+                          <!-- Unit of measurement -->
+                          <span class="input-group-text">mm</span>
                         </div>
                       </div>
+
+                      <!--  Force Sample 1 Before Shrink Fit -->
                       <div class="col-md-4">
-                        <select class="form-select" id="aspectRuptureAvantMeche1">
+                        <div class="input-group">
+                          <input type="number" class="form-control" id="force1BeforeShrinkFit" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()">
+                         
+                          <!-- Tolerance with dynamic color -->
+                          <span class="input-group-text" id="toleranceForce1BeforeShrinkFit">Min 1820</span>
+                          
+                           <!-- Unit of measurement -->
+                          <span class="input-group-text">N</span>
+                        </div>
+                      </div>
+
+                      <!--  Aspect Sample 1 Before Shrink Fit -->
+                      <div class="col-md-4">
+                        <select class="form-select" id="aspectFiber1BeforeShrinkFit">
                           <option selected disabled>Selectionnez le cas de rupture </option>
                           <option value="1">Cas 1 - Trop sérré</option>
                           <option value="2">Cas 2 - Pas assez sérré</option>
@@ -324,25 +336,41 @@
                       </div>
                     </div>
                   </div>
+
+                   <!--  Tensile Test Sample 2 Before Shrink Fit -->
                   <div class="mb-3">
                     <label for="meche2" class="form-label">Mèche 2</label>
                     <div class="row">
+
+                      <!--  Thickness Sample 2 Before Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="epMeche2Avant" placeholder="Entrez l'épaisseur">
-                          <span class="input-group-text" id="toleranceEpMeche2Avant">0,23-0,30</span>
-                          <span class="input-group-text">mm</span> <!-- Unité ici -->
+                          <input type="number" class="form-control" id="thickness2BeforeShrinkFit" placeholder="Entrez l'épaisseur">
+                          
+                          <!-- Tolerance with dynamic color -->
+                          <span class="input-group-text" id="toleranceThickness2BeforeShrinkFit">0,23-0,30</span>
+                          
+                          <!-- Unit of measurement -->
+                          <span class="input-group-text">mm</span>
                         </div>
                       </div>
+
+                      <!--  Force Sample 2 Before Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="FMeche2Avant" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()">
-                          <span class="input-group-text" id="toleranceFMeche2Avant">Min 1820</span>
-                          <span class="input-group-text">N</span> <!-- Unité ici -->
+                          <input type="number" class="form-control" id="force2BeforeShrinkFit" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()">
+                         
+                          <!-- Tolerance with dynamic color -->
+                          <span class="input-group-text" id="toleranceForce2BeforeShrinkFit">Min 1820</span>
+                          
+                           <!-- Unit of measurement -->
+                          <span class="input-group-text">N</span>
                         </div>
                       </div>
+
+                      <!--  Aspect Sample 2 Before Shrink Fit -->
                       <div class="col-md-4">
-                        <select class="form-select" id="aspectRuptureAvantMeche2">
+                        <select class="form-select" id="aspectFiber2BeforeShrinkFit">
                           <option selected disabled>Selectionnez le cas de rupture </option>
                           <option value="1">Cas 1 - Trop sérré</option>
                           <option value="2">Cas 2 - Pas assez sérré</option>
@@ -351,25 +379,41 @@
                       </div>
                     </div>
                   </div>
+
+                   <!--  Tensile Test Sample 3 Before Shrink Fit -->
                   <div class="mb-3">
                     <label for="meche3" class="form-label">Mèche 3</label>
                     <div class="row">
+
+                      <!--  Thickness Sample 3 Before Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="epMeche3Avant" placeholder="Entrez l'épaisseur">
-                          <span class="input-group-text" id="toleranceEpMeche3Avant">0,23-0,30</span>
-                          <span class="input-group-text">mm</span> <!-- Unité ici -->
+                          <input type="number" class="form-control" id="thickness3BeforeShrinkFit" placeholder="Entrez l'épaisseur">
+                          
+                          <!-- Tolerance with dynamic color -->
+                          <span class="input-group-text" id="toleranceThickness3BeforeShrinkFit">0,23-0,30</span>
+                          
+                          <!-- Unit of measurement -->
+                          <span class="input-group-text">mm</span>
                         </div>
                       </div>
+
+                      <!--  Force Sample 3 Before Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="FMeche3Avant" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()">
-                          <span class="input-group-text" id="toleranceFMeche3Avant">Min 1820</span>
-                          <span class="input-group-text">N</span> <!-- Unité ici -->
+                          <input type="number" class="form-control" id="force3BeforeShrinkFit" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()">
+                         
+                          <!-- Tolerance with dynamic color -->
+                          <span class="input-group-text" id="toleranceForce3BeforeShrinkFit">Min 1820</span>
+                          
+                           <!-- Unit of measurement -->
+                          <span class="input-group-text">N</span>
                         </div>
                       </div>
+
+                      <!--  Aspect Sample 3 Before Shrink Fit -->
                       <div class="col-md-4">
-                        <select class="form-select" id="aspectRuptureAvantMeche3">
+                        <select class="form-select" id="aspectFiber3BeforeShrinkFit">
                           <option selected disabled>Selectionnez le cas de rupture </option>
                           <option value="1">Cas 1 - Trop sérré</option>
                           <option value="2">Cas 2 - Pas assez sérré</option>
@@ -378,25 +422,41 @@
                       </div>
                     </div>
                   </div>
+
+                 <!--  Tensile Test Sample 4 Before Shrink Fit -->
                   <div class="mb-3">
                     <label for="meche4" class="form-label">Mèche 4</label>
                     <div class="row">
+
+                      <!--  Thickness Sample 4 Before Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="epMeche4Avant" placeholder="Entrez l'épaisseur">
-                          <span class="input-group-text" id="toleranceEpMeche4Avant">0,23-0,30</span>
-                          <span class="input-group-text">mm</span> <!-- Unité ici -->
+                          <input type="number" class="form-control" id="thickness4BeforeShrinkFit" placeholder="Entrez l'épaisseur">
+                          
+                          <!-- Tolerance with dynamic color -->
+                          <span class="input-group-text" id="toleranceThickness4BeforeShrinkFit">0,23-0,30</span>
+                          
+                          <!-- Unit of measurement -->
+                          <span class="input-group-text">mm</span>
                         </div>
                       </div>
+
+                      <!--  Force Sample 4 Before Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="FMeche4Avant" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()">
-                          <span class="input-group-text" id="toleranceFMeche4Avant">Min 1820</span>
-                          <span class="input-group-text">N</span> <!-- Unité ici -->
+                          <input type="number" class="form-control" id="force4BeforeShrinkFit" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()">
+                         
+                          <!-- Tolerance with dynamic color -->
+                          <span class="input-group-text" id="toleranceForce4BeforeShrinkFit">Min 1820</span>
+                          
+                           <!-- Unit of measurement -->
+                          <span class="input-group-text">N</span>
                         </div>
                       </div>
+
+                      <!--  Aspect Sample 4 Before Shrink Fit -->
                       <div class="col-md-4">
-                        <select class="form-select" id="aspectRuptureAvantMeche4">
+                        <select class="form-select" id="aspectFiber4BeforeShrinkFit">
                           <option selected disabled>Selectionnez le cas de rupture </option>
                           <option value="1">Cas 1 - Trop sérré</option>
                           <option value="2">Cas 2 - Pas assez sérré</option>
@@ -405,25 +465,41 @@
                       </div>
                     </div>
                   </div>
+
+                  <!--  Tensile Test Sample 5 Before Shrink Fit -->
                   <div class="mb-3">
                     <label for="meche5" class="form-label">Mèche 5</label>
                     <div class="row">
+
+                      <!--  Thickness Sample 5 Before Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="epMeche5Avant" placeholder="Entrez l'épaisseur">
-                          <span class="input-group-text" id="toleranceEpMeche5Avant">0,23-0,30</span>
-                          <span class="input-group-text">mm</span> <!-- Unité ici -->
+                          <input type="number" class="form-control" id="thickness5BeforeShrinkFit" placeholder="Entrez l'épaisseur">
+                          
+                          <!-- Tolerance with dynamic color -->
+                          <span class="input-group-text" id="toleranceThickness5BeforeShrinkFit">0,23-0,30</span>
+                          
+                          <!-- Unit of measurement -->
+                          <span class="input-group-text">mm</span>
                         </div>
                       </div>
+
+                      <!--  Force Sample 5 Before Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="FMeche5Avant" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()">
-                          <span class="input-group-text" id="toleranceFMeche5Avant">Min 1820</span>
-                          <span class="input-group-text">N</span> <!-- Unité ici -->
+                          <input type="number" class="form-control" id="force5BeforeShrinkFit" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()">
+                         
+                          <!-- Tolerance with dynamic color -->
+                          <span class="input-group-text" id="toleranceForce5BeforeShrinkFit">Min 1820</span>
+                          
+                           <!-- Unit of measurement -->
+                          <span class="input-group-text">N</span>
                         </div>
                       </div>
+
+                      <!--  Aspect Sample 5 Before Shrink Fit -->
                       <div class="col-md-4">
-                        <select class="form-select" id="aspectRuptureAvantMeche5">
+                        <select class="form-select" id="aspectFiber5BeforeShrinkFit">
                           <option selected disabled>Selectionnez le cas de rupture </option>
                           <option value="1">Cas 1 - Trop sérré</option>
                           <option value="2">Cas 2 - Pas assez sérré</option>
@@ -432,30 +508,47 @@
                       </div>
                     </div>
                   </div>
+
+                  <!--  Mean - Tensile Test Before Shrink Fit -->
                   <div class="mb-3">
                     <div class="row">
+                      
+                      <!--  label - Mean Force Tensile test Before Shrink Fit -->
                       <div class="col-md-6 d-flex justify-content-end">
-                        <label for="moyenne" class="form-label">Moyenne</label>
+                        <label for="mean" class="form-label">Moyenne</label>
                       </div>
+                      
+                      <!--  Value - Mean Force Tensile test Before Shrink Fit -->
                       <div class="col-md-6">
-
                         <div class="input-group">
-                          <input type="number" class="form-control" id="moyAvant" placeholder="Calculée automatiquement" readonly>
-                          <span class="input-group-text" id="toleranceMoyAvant">Min 1820</span>
-                          <span class="input-group-text">N</span> <!-- Unité ici -->
+                          <input type="number" class="form-control" id="averageBeforeShrinkFit" placeholder="Calculée automatiquement" readonly>
+                          
+                          <!-- Tolerance with dynamic color -->
+                          <span class="input-group-text" id="toleranceAverageBeforeShrinkFit">Min 1820</span>
+                          
+                          <!-- Unit of measurement -->
+                          <span class="input-group-text">N</span>
                         </div>
                       </div>
                     </div>
                   </div>
+
+                 <!--  Standart deviation - Tensile Test Before Shrink Fit -->
                   <div class="mb-3">
                     <div class="row">
+                      
+                      <!--  label - Standart deviation Force Tensile test Before Shrink Fit -->
                       <div class="col-md-6 d-flex justify-content-end">
-                        <label for="ecartType" class="form-label">Écart type</label>
+                        <label for="standartDeviation" class="form-label">Écart type</label>
                       </div>
+                      
+                       <!--  Value - Standart deviation Force Tensile test Before Shrink Fit -->
                       <div class="col-md-6">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="ecartTypeAvant" placeholder="Calculée automatiquement" readonly>
-                          <span class="input-group-text">N</span> <!-- Unité ici -->
+                          <input type="number" class="form-control" id="sigmaBeforeShrinkFit" placeholder="Calculée automatiquement" readonly>
+
+                          <!-- Unit of measurement -->
+                          <span class="input-group-text">N</span>
                         </div>
                       </div>
                     </div>
@@ -465,70 +558,94 @@
             </div>
           </div>
         </div>
-        <!-- Section 5: Essais traction après frettage -->
+
+        <!-- Section 5: Tensile Test before Shrink Fit -->
         <div class="accordion-item form-section">
-          <h2 class="accordion-header" id="headingFive">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-              Essais traction après frettage
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              Essais traction avant frettage
             </button>
           </h2>
-          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
             <div class="accordion-body">
               <form>
                 <div class="mb-3">
                   <div class="mb-3">
-
-                    <label for="masseM" class="form-label">Masse du profilé</label>
-
                     <div class="row align-items-center">
-                      <div class="col-md-4">
+        
+                      <!--  Label - Profile Mass After Shrink Fit-->
+                      <div class="col-md-3">
+                        <div class="d-flex justify-content-end">
+                          <label for="masseM" class="form-label">Masse du profilé (48±0,5 cm)</label>
+                        </div>
+                      </div>
+        
+                      <!--  Input - Profile Mass After Shrink Fit-->
+                      <div class="col-md-3">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="masseProfileApres" placeholder="Entrez la masse du profilé" oninput="calculateMasseLineiqueApres()">
+                          <input type="number" class="form-control" id="profileMassAfterShrinkFit" placeholder="Entrez la masse du profilé" oninput="calculateMasseLineiqueAvant()">
+        
                           <!-- Unit of measurement -->
                           <span class="input-group-text">g</span>
                         </div>
                       </div>
-
-                      <div class="col-md-4">
+        
+                      <!--  Label - Linear Mass After Shrink Fit-->
+                      <div class="col-md-3">
                         <div class="d-flex justify-content-end">
                           <label for="masseLineiqueProfil" class="form-label">Masse linéique du profilé</label>
                         </div>
                       </div>
-
-                      <div class="col-md-4">
+        
+                      <!--  Input readonly - Linear Mass After Shrink Fit-->
+                      <div class="col-md-3">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="masseLineiqueProfileApres" placeholder="Calculée automatiquement" readonly>
+                          <input type="number" class="form-control" id="linearMassAfterShrinkFit" placeholder="Calculée automatiquement" readonly>
+        
                           <!-- Tolerance with dynamic color -->
-                          <span class="input-group-text" id="toleranceMasseLineiqueProfileApres">2,107-2,407</span>
+                          <span class="input-group-text" id="toleranceMasseLineiqueProfileAvant">2,107-2,407</span>
+        
                           <!-- Unit of measurement -->
                           <span class="input-group-text">g/m</span>
                         </div>
                       </div>
-
                     </div>
                   </div>
+        
+                  <!--  Tensile Test Sample 1 After Shrink Fit -->
                   <div class="mb-3">
                     <label for="meche1" class="form-label">Mèche 1</label>
                     <div class="row">
+        
+                      <!--  Thickness Sample 1 After Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="epMeche1Apres" placeholder="Entrez l'épaisseur">
+                          <input type="number" class="form-control" id="thickness1AfterShrinkFit" placeholder="Entrez l'épaisseur">
+        
                           <!-- Tolerance with dynamic color -->
-                          <span class="input-group-text" id="toleranceEpMeche1Apres">0,23-0,30</span>
-                          <span class="input-group-text">mm</span> <!-- Unité ici -->
-
+                          <span class="input-group-text" id="toleranceThickness1AfterShrinkFit">0,23-0,30</span>
+        
+                          <!-- Unit of measurement -->
+                          <span class="input-group-text">mm</span>
                         </div>
                       </div>
+        
+                      <!--  Force Sample 1 After Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="FMeche1Apres" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeApres()">
-                          <span class="input-group-text" id="toleranceFMeche1Apres">Min 1820</span>
-                          <span class="input-group-text">N</span> <!-- Unité ici -->
+                          <input type="number" class="form-control" id="force1AfterShrinkFit" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()">
+        
+                          <!-- Tolerance with dynamic color -->
+                          <span class="input-group-text" id="toleranceForce1AfterShrinkFit">Min 1820</span>
+        
+                          <!-- Unit of measurement -->
+                          <span class="input-group-text">N</span>
                         </div>
                       </div>
+        
+                      <!--  Aspect Sample 1 After Shrink Fit -->
                       <div class="col-md-4">
-                        <select class="form-select" id="aspectRuptureApresMeche1">
+                        <select class="form-select" id="aspectFiber1AfterShrinkFit">
                           <option selected disabled>Selectionnez le cas de rupture </option>
                           <option value="1">Cas 1 - Trop sérré</option>
                           <option value="2">Cas 2 - Pas assez sérré</option>
@@ -537,25 +654,41 @@
                       </div>
                     </div>
                   </div>
+        
+                  <!--  Tensile Test Sample 2 After Shrink Fit -->
                   <div class="mb-3">
                     <label for="meche2" class="form-label">Mèche 2</label>
                     <div class="row">
+        
+                      <!--  Thickness Sample 2 After Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="epMeche2Apres" placeholder="Entrez l'épaisseur">
-                          <span class="input-group-text" id="toleranceEpMeche2Apres">0,23-0,30</span>
-                          <span class="input-group-text">mm</span> <!-- Unité ici -->
+                          <input type="number" class="form-control" id="thickness2AfterShrinkFit" placeholder="Entrez l'épaisseur">
+        
+                          <!-- Tolerance with dynamic color -->
+                          <span class="input-group-text" id="toleranceThickness2AfterShrinkFit">0,23-0,30</span>
+        
+                          <!-- Unit of measurement -->
+                          <span class="input-group-text">mm</span>
                         </div>
                       </div>
+        
+                      <!--  Force Sample 2 After Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="FMeche2Apres" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeApres()">
-                          <span class="input-group-text" id="toleranceFMeche2Apres">Min 1820</span>
-                          <span class="input-group-text">N</span> <!-- Unité ici -->
+                          <input type="number" class="form-control" id="force2AfterShrinkFit" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()">
+        
+                          <!-- Tolerance with dynamic color -->
+                          <span class="input-group-text" id="toleranceForce2AfterShrinkFit">Min 1820</span>
+        
+                          <!-- Unit of measurement -->
+                          <span class="input-group-text">N</span>
                         </div>
                       </div>
+        
+                      <!--  Aspect Sample 2 After Shrink Fit -->
                       <div class="col-md-4">
-                        <select class="form-select" id="aspectRuptureApresMeche2">
+                        <select class="form-select" id="aspectFiber2AfterShrinkFit">
                           <option selected disabled>Selectionnez le cas de rupture </option>
                           <option value="1">Cas 1 - Trop sérré</option>
                           <option value="2">Cas 2 - Pas assez sérré</option>
@@ -564,25 +697,41 @@
                       </div>
                     </div>
                   </div>
+        
+                  <!--  Tensile Test Sample 3 After Shrink Fit -->
                   <div class="mb-3">
                     <label for="meche3" class="form-label">Mèche 3</label>
                     <div class="row">
+        
+                      <!--  Thickness Sample 3 After Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="epMeche3Apres" placeholder="Entrez l'épaisseur">
-                          <span class="input-group-text" id="toleranceEpMeche3Apres">0,23-0,30</span>
-                          <span class="input-group-text">mm</span> <!-- Unité ici -->
+                          <input type="number" class="form-control" id="thickness3AfterShrinkFit" placeholder="Entrez l'épaisseur">
+        
+                          <!-- Tolerance with dynamic color -->
+                          <span class="input-group-text" id="toleranceThickness3AfterShrinkFit">0,23-0,30</span>
+        
+                          <!-- Unit of measurement -->
+                          <span class="input-group-text">mm</span>
                         </div>
                       </div>
+        
+                      <!--  Force Sample 3 After Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="FMeche3Apres" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeApres()">
-                          <span class="input-group-text" id="toleranceFMeche3Apres">Min 1820</span>
-                          <span class="input-group-text">N</span> <!-- Unité ici -->
+                          <input type="number" class="form-control" id="force3AfterShrinkFit" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()">
+        
+                          <!-- Tolerance with dynamic color -->
+                          <span class="input-group-text" id="toleranceForce3AfterShrinkFit">Min 1820</span>
+        
+                          <!-- Unit of measurement -->
+                          <span class="input-group-text">N</span>
                         </div>
                       </div>
+        
+                      <!--  Aspect Sample 3 After Shrink Fit -->
                       <div class="col-md-4">
-                        <select class="form-select" id="aspectRuptureApresMeche3">
+                        <select class="form-select" id="aspectFiber3AfterShrinkFit">
                           <option selected disabled>Selectionnez le cas de rupture </option>
                           <option value="1">Cas 1 - Trop sérré</option>
                           <option value="2">Cas 2 - Pas assez sérré</option>
@@ -591,25 +740,41 @@
                       </div>
                     </div>
                   </div>
+        
+                  <!--  Tensile Test Sample 4 After Shrink Fit -->
                   <div class="mb-3">
                     <label for="meche4" class="form-label">Mèche 4</label>
                     <div class="row">
+        
+                      <!--  Thickness Sample 4 After Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="epMeche4Apres" placeholder="Entrez l'épaisseur">
-                          <span class="input-group-text" id="toleranceEpMeche4Apres">0,23-0,30</span>
-                          <span class="input-group-text">mm</span> <!-- Unité ici -->
+                          <input type="number" class="form-control" id="thickness4AfterShrinkFit" placeholder="Entrez l'épaisseur">
+        
+                          <!-- Tolerance with dynamic color -->
+                          <span class="input-group-text" id="toleranceThickness4AfterShrinkFit">0,23-0,30</span>
+        
+                          <!-- Unit of measurement -->
+                          <span class="input-group-text">mm</span>
                         </div>
                       </div>
+        
+                      <!--  Force Sample 4 After Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="FMeche4Apres" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeApres()">
-                          <span class="input-group-text" id="toleranceFMeche4Apres">Min 1820</span>
-                          <span class="input-group-text">N</span> <!-- Unité ici -->
+                          <input type="number" class="form-control" id="force4AfterShrinkFit" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()">
+        
+                          <!-- Tolerance with dynamic color -->
+                          <span class="input-group-text" id="toleranceForce4AfterShrinkFit">Min 1820</span>
+        
+                          <!-- Unit of measurement -->
+                          <span class="input-group-text">N</span>
                         </div>
                       </div>
+        
+                      <!--  Aspect Sample 4 After Shrink Fit -->
                       <div class="col-md-4">
-                        <select class="form-select" id="aspectRuptureApresMeche4">
+                        <select class="form-select" id="aspectFiber4AfterShrinkFit">
                           <option selected disabled>Selectionnez le cas de rupture </option>
                           <option value="1">Cas 1 - Trop sérré</option>
                           <option value="2">Cas 2 - Pas assez sérré</option>
@@ -618,25 +783,41 @@
                       </div>
                     </div>
                   </div>
+        
+                  <!--  Tensile Test Sample 5 After Shrink Fit -->
                   <div class="mb-3">
                     <label for="meche5" class="form-label">Mèche 5</label>
                     <div class="row">
+        
+                      <!--  Thickness Sample 5 After Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="epMeche5Apres" placeholder="Entrez l'épaisseur">
-                          <span class="input-group-text" id="toleranceEpMeche5Apres">0,23-0,30</span>
-                          <span class="input-group-text">mm</span> <!-- Unité ici -->
+                          <input type="number" class="form-control" id="thickness5AfterShrinkFit" placeholder="Entrez l'épaisseur">
+        
+                          <!-- Tolerance with dynamic color -->
+                          <span class="input-group-text" id="toleranceThickness5AfterShrinkFit">0,23-0,30</span>
+        
+                          <!-- Unit of measurement -->
+                          <span class="input-group-text">mm</span>
                         </div>
                       </div>
+        
+                      <!--  Force Sample 5 After Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="FMeche5Apres" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeApres()">
-                          <span class="input-group-text" id="toleranceFMeche5Apres">Min 1820</span>
-                          <span class="input-group-text">N</span> <!-- Unité ici -->
+                          <input type="number" class="form-control" id="force5AfterShrinkFit" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()">
+        
+                          <!-- Tolerance with dynamic color -->
+                          <span class="input-group-text" id="toleranceForce5AfterShrinkFit">Min 1820</span>
+        
+                          <!-- Unit of measurement -->
+                          <span class="input-group-text">N</span>
                         </div>
                       </div>
+        
+                      <!--  Aspect Sample 5 After Shrink Fit -->
                       <div class="col-md-4">
-                        <select class="form-select" id="aspectRuptureApresMeche5">
+                        <select class="form-select" id="aspectFiber5AfterShrinkFit">
                           <option selected disabled>Selectionnez le cas de rupture </option>
                           <option value="1">Cas 1 - Trop sérré</option>
                           <option value="2">Cas 2 - Pas assez sérré</option>
@@ -645,30 +826,47 @@
                       </div>
                     </div>
                   </div>
+        
+                  <!--  Mean - Tensile Test After Shrink Fit -->
                   <div class="mb-3">
                     <div class="row">
+        
+                      <!--  label - Mean Force Tensile test After Shrink Fit -->
                       <div class="col-md-6 d-flex justify-content-end">
-                        <label for="moyenne" class="form-label">Moyenne</label>
+                        <label for="mean" class="form-label">Moyenne</label>
                       </div>
+        
+                      <!--  Value - Mean Force Tensile test After Shrink Fit -->
                       <div class="col-md-6">
-
                         <div class="input-group">
-                          <input type="number" class="form-control" id="moyApres" placeholder="Calculée automatiquement" readonly>
-                          <span class="input-group-text" id="toleranceMoyApres">Min 1820</span>
-                          <span class="input-group-text">N</span> <!-- Unité ici -->
+                          <input type="number" class="form-control" id="averageAfterShrinkFit" placeholder="Calculée automatiquement" readonly>
+        
+                          <!-- Tolerance with dynamic color -->
+                          <span class="input-group-text" id="toleranceAverageAfterShrinkFit">Min 1820</span>
+        
+                          <!-- Unit of measurement -->
+                          <span class="input-group-text">N</span>
                         </div>
                       </div>
                     </div>
                   </div>
+        
+                  <!--  Standart deviation - Tensile Test After Shrink Fit -->
                   <div class="mb-3">
                     <div class="row">
+        
+                      <!--  label - Standart deviation Force Tensile test After Shrink Fit -->
                       <div class="col-md-6 d-flex justify-content-end">
-                        <label for="ecartType" class="form-label">Écart type</label>
+                        <label for="standartDeviation" class="form-label">Écart type</label>
                       </div>
+        
+                      <!--  Value - Standart deviation Force Tensile test After Shrink Fit -->
                       <div class="col-md-6">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="ecartTypeApres" placeholder="Calculée automatiquement" readonly>
-                          <span class="input-group-text">N</span> <!-- Unité ici -->
+                          <input type="number" class="form-control" id="sigmaAfterShrinkFit" placeholder="Calculée automatiquement" readonly>
+        
+                          <!-- Unit of measurement -->
+                          <span class="input-group-text">N</span>
                         </div>
                       </div>
                     </div>
@@ -676,11 +874,12 @@
                 </div>
               </form>
             </div>
-
           </div>
         </div>
+        
 
-        <!-- Section 6: Dimensions après frettage -->
+        <!-- Section 6: Dimensions After Shrink Fit -->
+        
         <div class="accordion-item form-section">
           <h2 class="accordion-header" id="headingSix">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
@@ -692,95 +891,124 @@
               <form>
                 <div class="mb-3">
                   <div class="row">
+
+                     <!--  Diameter DF1 -->
                     <div class="col-md-4">
                       <label for="df1" class="form-label">DF1</label>
                       <div class="input-group">
                         <input type="text" class="form-control" id="df1">
+
                         <!-- Tolerance with dynamic color -->
-                        <span class="input-group-text" id="toleranceDF1">174 +0/+2</span>
+                        <span class="input-group-text" id="toleranceDf1">174 +0/+2</span>
+                        
                         <!-- Unit of measurement -->
                         <span class="input-group-text">mm</span>
                       </div>
                     </div>
+
+                     <!--  Diameter DF2 -->
                     <div class="col-md-4">
                       <label for="df2" class="form-label">DF2</label>
                       <div class="input-group">
                         <input type="text" class="form-control" id="df2">
+                        
                         <!-- Tolerance with dynamic color -->
-                        <span class="input-group-text" id="toleranceDF2">174 +0/+2</span>
+                        <span class="input-group-text" id="toleranceDf2">174 +0/+2</span>
+                        
                         <!-- Unit of measurement -->
                         <span class="input-group-text">mm</span>
                       </div>
                     </div>
+
+                     <!--  Diameter DF3 -->
                     <div class="col-md-4">
                       <label for="df3" class="form-label">DF3</label>
                       <div class="input-group">
                         <input type="text" class="form-control" id="df3">
+                        
                         <!-- Tolerance with dynamic color -->
-                        <span class="input-group-text" id="toleranceDF3">174 +0/+2</span>
+                        <span class="input-group-text" id="toleranceDf3">174 +0/+2</span>
+                        
                         <!-- Unit of measurement -->
                         <span class="input-group-text">mm</span>
                       </div>
                     </div>
                   </div>
                 </div>
+                
                 <div class="mb-3">
                   <div class="row">
+
+                     <!--  Total Mass MT -->
                     <div class="col-md-6">
                       <label for="mt" class="form-label">MT</label>
                       <div class="input-group">
                         <input type="text" class="form-control" id="mt">
+                        
                         <!-- Tolerance with dynamic color -->
-                        <span class="input-group-text" id="toleranceMT">Max 8700</span>
+                        <span class="input-group-text" id="toleranceMt">Max 8700</span>
+                        
                         <!-- Unit of measurement -->
                         <span class="input-group-text">g</span>
                       </div>
                     </div>
+
+                     <!--  Shrink Fit Mass MF-->
                     <div class="col-md-6">
                       <label for="mf" class="form-label">MF</label>
                       <div class="input-group">
                         <input type="text" class="form-control" id="mf" readonly>
+                        
                         <!-- Tolerance with dynamic color -->
-                        <span class="input-group-text" id="toleranceMF">Max 1050</span>
+                        <span class="input-group-text" id="toleranceMf">Max 1050</span>
+                        
                         <!-- Unit of measurement -->
                         <span class="input-group-text">g</span>
                       </div>
                     </div>
                   </div>
                 </div>
+
+                
                 <div class="mb-3">
                   <div class="row">
+
+                     <!--  Shrink Fit OK Oil Side BF-->
                     <div class="col-md-6">
                       <label class="form-label d-block">BF</label>
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="BF" id="BFOk" value="ok">
+                        <input class="form-check-input" type="radio" name="bf" id="BfOk" value="ok">
                         <label class="form-check-label" for="aspectOk">OK</label>
                       </div>
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="BF" id="BFNok" value="nok">
+                        <input class="form-check-input" type="radio" name="bf" id="BfNok" value="nok">
                         <label class="form-check-label" for="aspectNok">NOK</label>
                       </div>
                     </div>
-                    <div class="col-md-6">
 
+                      <!--  Shrink Fit OK Gaz Side VF-->
+                    <div class="col-md-6">
                       <label class="form-label d-block">VF</label>
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="VF" id="VFOk" value="ok">
+                        <input class="form-check-input" type="radio" name="vf" id="VfOk" value="ok">
                         <label class="form-check-label" for="aspectOk">OK</label>
                       </div>
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="VF" id="VFNok" value="nok">
+                        <input class="form-check-input" type="radio" name="vf" id="VfNok" value="nok">
                         <label class="form-check-label" for="aspectNok">NOK</label>
                       </div>
                     </div>
                   </div>
                 </div>
+                
+                <!-- Button - Modal - Help Spool Data -->
                 <div class="d-flex justify-content-end">
                   <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#tuto3">
                     <i class="bi bi-question-circle"></i>
                   </button>
                 </div>
-                <!-- La pop-up (modal) -->
+                
+                <!-- Content - Modal - Help Spool Data -->
                 <div class="modal fade" id="tuto3" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
                   <div class="modal-dialog">
                     <div class="modal-content">
@@ -800,7 +1028,7 @@
           </div>
         </div>
 
-        <!-- Section 7: Validation -->
+        <!-- Section 7: Validation Operator -->
         <div class="accordion-item form-section">
           <h2 class="accordion-header" id="headingSeven">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
@@ -810,48 +1038,58 @@
           <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
             <div class="accordion-body">
               <form>
+                
+                <!-- Date Operator Conformity Declaration -->
                 <div class="mb-3">
-                  <label for="dateValidation" class="form-label">Date validation par l'opérateur</label>
-                  <input type="date" class="form-control" id="dateValidationOp">
+                  <label for="dateOperatorValidation" class="form-label">Date validation par l'opérateur</label>
+                  <input type="date" class="form-control" id="dateOperatorConformityDeclaration">
                 </div>
-
+      
                 <div class="mb-3">
                   <div class="row">
+                    
+                    <!-- Operator Name Conformity Declaration -->
                     <div class="col-md-4">
-                      <label for="operateurValidation" class="form-label">Opérateur</label>
-                      <input type="text" class="form-control" id="ValidationOp">
+                      <label for="operatorValidation" class="form-label">Opérateur</label>
+                      <input type="text" class="form-control" id="operatorNameConformityDeclaration">
                     </div>
+
+                    <!-- Operator Conformity Declaration -->
                     <div class="col-md-4">
                       <label for="conformiteValidation" class="form-label">Conformité</label>
                       <div class="col-md-6">
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="Conformite" id="ConformeOuiOp" value="ok">
+                          <input class="form-check-input" type="radio" name="Conformite" id="operatorConformityDeclarationOk" value="ok">
                           <label class="form-check-label" for="aspectOk">Oui</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="Conformite" id="ConformeNonOp" value="nok">
+                          <input class="form-check-input" type="radio" name="Conformite" id="operatorConformityDeclarationNok" value="nok">
                           <label class="form-check-label" for="aspectNok">Non</label>
                         </div>
                       </div>
                     </div>
+
+                    <!-- First Accumulator Lot -->
                     <div class="col-md-4">
-                      <label for="premierAccumulateur" class="form-label">Premier du Lot</label>
+                      <label for="firstAccumulator" class="form-label">Premier du Lot</label>
                       <div class="col-md-6">
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="PremierDuLot" id="PremierDuLotOui" value="ok">
+                          <input class="form-check-input" type="radio" name="PremierDuLot" id="firstAccumulatorLotOk" value="ok">
                           <label class="form-check-label" for="aspectOk">Oui</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="PremierDuLot" id="PremierDuLotNon" value="nok">
+                          <input class="form-check-input" type="radio" name="PremierDuLot" id="firstAccumulatorLotNok" value="nok">
                           <label class="form-check-label" for="aspectNok">Non</label>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+                
+                <!-- Operator Remarks -->
                 <div class="mb-3">
                   <label for="remarqueValidation" class="form-label">Remarque</label>
-                  <textarea class="form-control" id="commentaireOp" rows="4" placeholder="Entrez votre commentaire..." maxlength="255"></textarea>
+                  <textarea class="form-control" id="operatorRemarks" rows="4" placeholder="Entrez votre commentaire..." maxlength="255"></textarea>
                   <div id="charCount" class="form-text">0/255 caractères</div>
 
                 </div>
@@ -860,7 +1098,7 @@
           </div>
         </div>
 
-        <!-- Section 8: Contrôle -->
+        <!-- Section 8: Quality Control -->
         <div class="accordion-item form-section">
           <h2 class="accordion-header" id="headingEight">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
@@ -870,34 +1108,46 @@
           <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
             <div class="accordion-body">
               <form>
+
+                <!-- Date Quality Control Conformity Declaration -->
                 <div class="mb-3">
                   <label for="dateValidation" class="form-label">Date de validation par le contrôle</label>
-                  <input type="date" class="form-control" id="dateValidationQuali">
+                  <input type="date" class="form-control" id="qualityControlDate">
                 </div>
                 <div class="mb-3">
                   <div class="row">
+                    
+                    <!-- Quality Inspector Name -->
                     <div class="col-md-6">
                       <label for="operateurValidation" class="form-label">Contrôleur</label>
-                      <input type="text" class="form-control" id="ValidationQuali">
+                      <input type="text" class="form-control" id="qualityInspectorName">
                     </div>
-                    <div class="col-md-6">
+
+                    <!-- Quality Control Conformity Declaration -->
+                    
+                      <!-- Quality Control Conformity Declaration - Label-->
+                      <div class="col-md-6">
                       <label for="conformiteValidation" class="form-label">Conformité</label>
+
+                      <!-- Quality Control Conformity Declaration - CheckBox-->
                       <div class="col-md-6">
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="Conformite" id="ConformeOuiQuali" value="ok">
+                          <input class="form-check-input" type="radio" name="Conformite" id="qualityConformityDeclarationOk" value="ok">
                           <label class="form-check-label" for="aspectOk">Oui</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="Conformite" id="ConformeNonQuali" value="nok">
+                          <input class="form-check-input" type="radio" name="Conformite" id="qualityConformityDeclarationNok" value="nok">
                           <label class="form-check-label" for="aspectNok">Non</label>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+
+                <!-- Quality Inspector Remarks -->
                 <div class="mb-3">
                   <label for="remarqueValidation" class="form-label">Remarque</label>
-                  <textarea class="form-control" id="commentaireQuali" rows="4" placeholder="Entrez votre commentaire..." maxlength="255"></textarea>
+                  <textarea class="form-control" id="qualityInspectorRemarks" rows="4" placeholder="Entrez votre commentaire..." maxlength="255"></textarea>
                   <div id="charCount2" class="form-text">0/255 caractères</div>
 
                 </div>
@@ -905,7 +1155,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
@@ -915,12 +1164,7 @@
       <p>Contenu de l'onglet 3.</p>
     </div>
   </div>
-
 </div>
-
-<?php $content = ob_get_clean(); ?>
-
-<?php require('layout.php') ?>
 
 // Fonction générique pour calculer la moyenne et l'écart-type
 function calculateMoyenneEcartType(prefix) {
@@ -1293,3 +1537,6 @@ function calculateMoyenneEcartType(prefix) {
     });
   });
   
+<?php $content = ob_get_clean(); ?>
+
+<?php require('layout.php') ?>
