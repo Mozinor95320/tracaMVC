@@ -1,6 +1,6 @@
 <?php
 
-namespace Application\Controllers;
+namespace Application\Controllers\UpdateTracabilitySheet;
 
 require_once('src/lib/database.php');
 require_once('src/model/tracabilitySheet.php');
