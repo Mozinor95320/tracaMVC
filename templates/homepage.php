@@ -26,7 +26,7 @@ foreach ($tracabilitySheets as $tracabilitySheet) {
             </a>
         </div>
     </div>     
-<?php test
+<?php
 }
 ?>
     </div>
