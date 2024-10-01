@@ -1,3 +1,5 @@
+document.getElementById("name").value = "<?= $utilisateur->nom ?>";
+
 function verifyTolerance({
 
     inputId,
@@ -8,58 +10,54 @@ function verifyTolerance({
 
     tolMax = Infinity
 
-}) {
-
-    document.getElementById(inputId).addEventListener("input", function () {
-
-        const inputValue = parseFloat(this.value);
-
-        const toleranceElement = document.getElementById(toleranceId);
-
-        // Check if no value is entered
-        if (isNaN(inputValue)) {
-
-            toleranceElement.classList.remove(
-                "bg-tolerance-ok",
-                "bg-tolerance-wrong"
-            );
-
-            toleranceElement.classList.add("bg-tolerance-default");
-
-        }
-
-        // Check if the entered value is within tolerance
-        else if (inputValue >= tolMin && inputValue <= tolMax) {
-
-            toleranceElement.classList.remove(
-                "bg-tolerance-wrong",
-                "bg-tolerance-default"
-            );
-
-            toleranceElement.classList.add("bg-tolerance-ok");
-
-        } else {
-
-            toleranceElement.classList.remove(
-                "bg-tolerance-ok",
-                "bg-tolerance-default"
-            );
-
-            toleranceElement.classList.add("bg-tolerance-wrong");
-
-        }
-
-    });
-
+}){
+    const inputValue = parseFloat(document.getElementById(inputId).value);
+    
+    const toleranceElement = document.getElementById(toleranceId);
+    
+    // Check if no value is entered
+    if (isNaN(inputValue)) {
+    
+        toleranceElement.classList.remove(
+            "bg-tolerance-ok",
+            "bg-tolerance-wrong"
+        );²
+    
+        toleranceElement.classList.add("bg-tolerance-default");
+    
+    }
+    
+    // Check if the entered value is within tolerance
+    else if (inputValue >= tolMin && inputValue <= tolMax) {
+    
+        toleranceElement.classList.remove(
+            "bg-tolerance-wrong",
+            "bg-tolerance-default"
+        );
+    
+        toleranceElement.classList.add("bg-tolerance-ok");
+    
+    } else {
+    
+        toleranceElement.classList.remove(
+            "bg-tolerance-ok",
+            "bg-tolerance-default"
+        );
+    
+        toleranceElement.classList.add("bg-tolerance-wrong");
+    
+    }
+    
 }
 
-// Dynamic tolerance change - Length L
-verifyTolerance({
-    inputId: "length",
-    toleranceId: "toleranceLength",
-    tolMin: 413.5 - 6,
-    tolMax: 413.5
+document.getElementById(inputId).addEventListener("input", () => {
+    verifyTolerance({ 
+        inputId: "length", 
+        toleranceId: "toleranceLength", 
+        tolMin: 413.5 - 6, 
+        tolMax: 413.5 });
 });
+
 
 // Dynamic tolerance change - Diameter D
 verifyTolerance({
