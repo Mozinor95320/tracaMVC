@@ -9,6 +9,7 @@ use Application\Lib\Database\DatabaseConnection;
 class TracabilitySheet
 {
     public string $identifier;
+    public string $partNumber;
     public string $workOrder;
     public string $frenchCreationDate;
     public string $spoolBatch;
@@ -72,6 +73,7 @@ class TracabilitySheet
     public string $qualityConformityDeclaration;
     public string $qualityControlDate;
     public string $qualityInspectorName;
+    public string $qualityInspectorRemarks;
 }
 
 class TracabilitySheetRepository
