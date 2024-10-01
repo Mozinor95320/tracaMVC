@@ -67,7 +67,7 @@ class TracabilitySheet
     public float $df3;
     public int $operatorConformityDeclaration;
     public string $operatorRemarks;
-    public string $dateOperatorConformityDeclaratio;
+    public string $dateOperatorConformityDeclaration;
     public string $operatorNameConformityDeclaration;
     public int $firstAccumulatorLot;
     public string $qualityConformityDeclaration;
@@ -148,7 +148,7 @@ class TracabilitySheetRepository
         $tracabilitySheet->df3 = (float)$row['df3'];
         $tracabilitySheet->operatorConformityDeclaration = (int)$row['operatorConformityDeclaration'];
         $tracabilitySheet->operatorRemarks = $row['operatorRemarks'];
-        $tracabilitySheet->dateOperatorConformityDeclaratio = $row['dateOperatorConformityDeclaratio'];
+        $tracabilitySheet->dateOperatorConformityDeclaration = $row['dateOperatorConformityDeclaration'];
         $tracabilitySheet->operatorNameConformityDeclaration = $row['operatorNameConformityDeclaration'];
         $tracabilitySheet->firstAccumulatorLot = (int)$row['firstAccumulatorLot'];
         $tracabilitySheet->qualityConformityDeclaration = $row['qualityConformityDeclaration'];

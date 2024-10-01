@@ -1,4 +1,4 @@
-<?php $title = "Liste des fiches de tracabilité"; ?>
+<?php $title = "Liste des fiches de tracabilite"; ?>
 
 <?php ob_start(); ?>
 <div class="container mt-5">
