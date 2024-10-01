@@ -9,19 +9,19 @@ use Application\Controllers\TracabilitySheet\TracabilitySheet;
 
 try {
     if (isset($_GET['action']) && $_GET['action'] !== '') {
-        if ($_GET['action'] === 'post') {
+        if ($_GET['action'] === 'openTracabilitySheet') {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 $identifier = $_GET['id'];
 
                 (new Post())->execute($identifier);
             } else {
-                throw new Exception('Aucun identifiant de billet envoyé');
+                throw new Exception('Aucun identifiant de fiche de tracabilité transnmis');
             }
         } elseif ($_GET['action'] === 'addComment') {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 $identifier = $_GET['id'];
 
-                (new AddComment())->execute($identifier, $_POST);
+                //(new AddComment())->execute($identifier, $_POST);
             } else {
                 throw new Exception('Aucun identifiant de billet envoyé');
             }
@@ -34,7 +34,7 @@ try {
                     $input = $_POST;
                 }
 
-                (new UpdateComment())->execute($identifier, $input);
+                //(new UpdateComment())->execute($identifier, $input);
             } else {
                 throw new Exception('Aucun identifiant de commentaire envoyé');
             }
