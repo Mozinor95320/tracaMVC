@@ -13,8 +13,6 @@ class UpdateTracabilitySheet
 {
     public function execute(string $identifier)
     {
-        $connection = new DatabaseConnection();
-        
         $tracabilitySheetRepository = new TracabilitySheetRepository();
         $tracabilitySheetRepository->connection = new DatabaseConnection();
         $tracabilitySheets = $tracabilitySheetRepository->getTracabilitySheet();
