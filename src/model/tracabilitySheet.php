@@ -39,7 +39,7 @@ class TracabilitySheet
     public float $averageBeforeShrinkFit;
     public float $sigmaBeforeShrinkFit;
     public float $profileMassAfterShrinkFit;
-    public float linearMassAfterShrinkFit;
+    public float $linearMassAfterShrinkFit;
     public float $thickness1AfterShrinkFit;
     public float $thickness2AfterShrinkFit;
     public float $thickness3AfterShrinkFit;
