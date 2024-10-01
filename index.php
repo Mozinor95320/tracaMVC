@@ -13,7 +13,7 @@ try {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 $identifier = $_GET['id'];
 
-                (new Post())->execute($identifier);
+                (new UpdateTracabilitySheet())->execute($identifier);
             } else {
                 throw new Exception('Aucun identifiant de fiche de tracabilité transnmis');
             }
