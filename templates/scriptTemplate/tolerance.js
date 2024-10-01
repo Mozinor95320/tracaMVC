@@ -1,7 +1,7 @@
 document.getElementById("serialNumber").value = "<?= $tracabilitySheet->serialNumber ?>";
 document.getElementById("partNumber").value = "<?= $tracabilitySheet->partNumber ?>";
 document.getElementById("workOrder").value = "<?= $tracabilitySheet->workOrder ?>";
-document.getElementById("sheetCreationDate").value = "<?= $tracabilitySheet->sheetCreationDate ?>";
+/*document.getElementById("sheetCreationDate").value = "<?= $tracabilitySheet->sheetCreationDate ?>";
 document.getElementById("spoolBatch").value = "<?= $tracabilitySheet->spoolBatch ?>";
 document.getElementById("spoolNumber").value = "<?= $tracabilitySheet->spoolNumber ?>";
 document.getElementById("dateDimAfterCoating").value = "<?= $tracabilitySheet->dateDimAfterCoating ?>";
@@ -63,7 +63,7 @@ document.getElementById("firstAccumulatorLot").value = "<?= $tracabilitySheet->f
 document.getElementById("qualityConformityDeclaration").value = "<?= $tracabilitySheet->qualityConformityDeclaration ?>";
 document.getElementById("qualityControlDate").value = "<?= $tracabilitySheet->qualityControlDate ?>";
 document.getElementById("qualityInspectorName").value = "<?= $tracabilitySheet->qualityInspectorName ?>";
-document.getElementById("qualityInspectorRemarks").value = "<?= $tracabilitySheet->qualityInspectorRemarks ?>";
+document.getElementById("qualityInspectorRemarks").value = "<?= $tracabilitySheet->qualityInspectorRemarks ?>"; 
 
 function verifyTolerance({
 
@@ -86,7 +86,7 @@ function verifyTolerance({
         toleranceElement.classList.remove(
             "bg-tolerance-ok",
             "bg-tolerance-wrong"
-        );²
+        );
     
         toleranceElement.classList.add("bg-tolerance-default");
     
@@ -367,4 +367,4 @@ document.addEventListener("DOMContentLoaded", function () {
         const currentLength = comment.value.length;
         charCount.textContent = `${currentLength}/255 characters`;
     });
-});
+});*/
