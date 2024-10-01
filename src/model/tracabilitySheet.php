@@ -20,7 +20,7 @@ class TracabilitySheet
     public int $massM;
     public int $aspectDimAfterCoating;
     public float $profileMassBeforeShrinkFit;
-    public float linearMassBeforeShrinkFit;
+    public float $linearMassBeforeShrinkFit;
     public float $thickness1BeforeShrinkFit;
     public float $thickness2BeforeShrinkFit;
     public float $thickness3BeforeShrinkFit;
