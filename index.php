@@ -9,7 +9,7 @@ use Application\Controllers\UpdateTracabilitySheet;
 
 try {
     if (isset($_GET['action']) && $_GET['action'] !== '') {
-        if ($_GET['action'] === 'openTracabiltySheet') {
+        if ($_GET['action'] === 'openTracabilitySheet') {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 $identifier = $_GET['id'];
 
