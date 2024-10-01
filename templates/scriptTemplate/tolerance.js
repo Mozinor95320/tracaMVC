@@ -144,183 +144,206 @@ document.getElementById(inputId).addEventListener("input", () => {
 // Dynamic tolerance change - Thickness Sample 1 Before Shrink Test
 document.getElementById(inputId).addEventListener("input", () => {
     verifyTolerance({
-    inputId: "thicknessSample1Before",
-    toleranceId: "toleranceThicknessSample1Before",
-    tolMin: 0.23,
-    tolMax: 0.3
+        inputId: "thicknessSample1Before",
+        toleranceId: "toleranceThicknessSample1Before",
+        tolMin: 0.23,
+        tolMax: 0.3
 });
 
 // Dynamic tolerance change - Force Sample 1 Before Shrink Test
-document.getElementById(inputId).addEventListener("input", () => {verifyTolerance({
-    inputId: "forceSample1Before",
-    toleranceId: "toleranceForceSample1Before",
-    tolMin: 1820
+document.getElementById(inputId).addEventListener("input", () => {
+    verifyTolerance({
+        inputId: "forceSample1Before",
+        toleranceId: "toleranceForceSample1Before",
+        tolMin: 1820
 });
 
 // Dynamic tolerance change - Thickness Sample 2 Before Shrink Test
-document.getElementById(inputId).addEventListener("input", () => {verifyTolerance({
-    inputId: "thicknessSample2Before",
-    toleranceId: "toleranceThicknessSample2Before",
-    tolMin: 0.23,
-    tolMax: 0.3
+document.getElementById(inputId).addEventListener("input", () => {
+    verifyTolerance({
+        inputId: "thicknessSample2Before",
+        toleranceId: "toleranceThicknessSample2Before",
+        tolMin: 0.23,
+        tolMax: 0.3
 });
 
 // Dynamic tolerance change - Force Sample 2 Before Shrink Test
-document.getElementById(inputId).addEventListener("input", () => {verifyTolerance({
-    inputId: "forceSample2Before",
-    toleranceId: "toleranceForceSample2Before",
-    tolMin: 1820
+document.getElementById(inputId).addEventListener("input", () => {
+    verifyTolerance({
+        inputId: "forceSample2Before",
+        toleranceId: "toleranceForceSample2Before",
+        tolMin: 1820
 });
 
 // Dynamic tolerance change - Thickness Sample 3 Before Shrink Test
-document.getElementById(inputId).addEventListener("input", () => {verifyTolerance({
-    inputId: "thicknessSample3Before",
-    toleranceId: "toleranceThicknessSample3Before",
-    tolMin: 0.23,
-    tolMax: 0.3
+document.getElementById(inputId).addEventListener("input", () => {
+    verifyTolerance({
+        inputId: "thicknessSample3Before",
+        toleranceId: "toleranceThicknessSample3Before",
+        tolMin: 0.23,
+        tolMax: 0.3
 });
 
 // Dynamic tolerance change - Force Sample 3 Before Shrink Test
-document.getElementById(inputId).addEventListener("input", () => {verifyTolerance({
-    inputId: "forceSample3Before",
-    toleranceId: "toleranceForceSample3Before",
-    tolMin: 1820
+document.getElementById(inputId).addEventListener("input", () => {
+    verifyTolerance({
+        inputId: "forceSample3Before",
+        toleranceId: "toleranceForceSample3Before",
+        tolMin: 1820
 });
 
 // Dynamic tolerance change - Thickness Sample 4 Before Shrink Test
-document.getElementById(inputId).addEventListener("input", () => {verifyTolerance({
-    inputId: "thicknessSample4Before",
-    toleranceId: "toleranceThicknessSample4Before",
-    tolMin: 0.23,
-    tolMax: 0.3
+document.getElementById(inputId).addEventListener("input", () => {
+    verifyTolerance({
+        inputId: "thicknessSample4Before",
+        toleranceId: "toleranceThicknessSample4Before",
+        tolMin: 0.23,
+        tolMax: 0.3
 });
 
 // Dynamic tolerance change - Force Sample 4 Before Shrink Test
-document.getElementById(inputId).addEventListener("input", () => {verifyTolerance({
-    inputId: "forceSample4Before",
-    toleranceId: "toleranceForceSample4Before",
-    tolMin: 1820
+document.getElementById(inputId).addEventListener("input", () => {
+    verifyTolerance({
+        inputId: "forceSample4Before",
+        toleranceId: "toleranceForceSample4Before",
+        tolMin: 1820
 });
 
 // Dynamic tolerance change - Thickness Sample 5 Before Shrink Test
-document.getElementById(inputId).addEventListener("input", () => {verifyTolerance({
-    inputId: "thicknessSample5Before",
-    toleranceId: "toleranceThicknessSample5Before",
-    tolMin: 0.23,
-    tolMax: 0.3
+document.getElementById(inputId).addEventListener("input", () => {
+    verifyTolerance({
+        inputId: "thicknessSample5Before",
+        toleranceId: "toleranceThicknessSample5Before",
+        tolMin: 0.23,
+        tolMax: 0.3
 });
 
 // Dynamic tolerance change - Force Sample 5 Before Shrink Test
-document.getElementById(inputId).addEventListener("input", () => {verifyTolerance({
-    inputId: "forceSample5Before",
-    toleranceId: "toleranceForceSample5Before",
-    tolMin: 1820
+document.getElementById(inputId).addEventListener("input", () => {
+    verifyTolerance({
+        inputId: "forceSample5Before",
+        toleranceId: "toleranceForceSample5Before",
+        tolMin: 1820
 });
 
 // Dynamic tolerance change - Thickness Sample 1 After Shrink Test
-document.getElementById(inputId).addEventListener("input", () => {verifyTolerance({
-    inputId: "thicknessSample1After",
-    toleranceId: "toleranceThicknessSample1After",
-    tolMin: 0.23,
-    tolMax: 0.3
+document.getElementById(inputId).addEventListener("input", () => {
+    verifyTolerance({
+        inputId: "thicknessSample1After",
+        toleranceId: "toleranceThicknessSample1After",
+        tolMin: 0.23,
+        tolMax: 0.3
 });
 
 // Dynamic tolerance change - Force Sample 1 After Shrink Test
-document.getElementById(inputId).addEventListener("input", () => {verifyTolerance({
-    inputId: "forceSample1After",
-    toleranceId: "toleranceForceSample1After",
-    tolMin: 1820
+document.getElementById(inputId).addEventListener("input", () => {
+    verifyTolerance({
+        inputId: "forceSample1After",
+        toleranceId: "toleranceForceSample1After",
+        tolMin: 1820
 });
 
 // Dynamic tolerance change - Thickness Sample 2 After Shrink Test
-document.getElementById(inputId).addEventListener("input", () => {verifyTolerance({
-    inputId: "thicknessSample2After",
-    toleranceId: "toleranceThicknessSample2After",
-    tolMin: 0.23,
-    tolMax: 0.3
+document.getElementById(inputId).addEventListener("input", () => {
+    verifyTolerance({
+        inputId: "thicknessSample2After",
+        toleranceId: "toleranceThicknessSample2After",
+        tolMin: 0.23,
+        tolMax: 0.3
 });
 
 // Dynamic tolerance change - Force Sample 2 After Shrink Test
-document.getElementById(inputId).addEventListener("input", () => {verifyTolerance({
-    inputId: "forceSample2After",
-    toleranceId: "toleranceForceSample2After",
-    tolMin: 1820
+document.getElementById(inputId).addEventListener("input", () => {
+    verifyTolerance({
+        inputId: "forceSample2After",
+        toleranceId: "toleranceForceSample2After",
+        tolMin: 1820
 });
 
 // Dynamic tolerance change - Thickness Sample 3 After Shrink Test
-document.getElementById(inputId).addEventListener("input", () => {verifyTolerance({
-    inputId: "thicknessSample3After",
-    toleranceId: "toleranceThicknessSample3After",
-    tolMin: 0.23,
-    tolMax: 0.3
+document.getElementById(inputId).addEventListener("input", () => {
+    verifyTolerance({
+        inputId: "thicknessSample3After",
+        toleranceId: "toleranceThicknessSample3After",
+        tolMin: 0.23,
+        tolMax: 0.3
 });
 
 // Dynamic tolerance change - Force Sample 3 After Shrink Test
-document.getElementById(inputId).addEventListener("input", () => {verifyTolerance({
-    inputId: "forceSample3After",
-    toleranceId: "toleranceForceSample3After",
-    tolMin: 1820
+document.getElementById(inputId).addEventListener("input", () => {
+    verifyTolerance({
+        inputId: "forceSample3After",
+        toleranceId: "toleranceForceSample3After",
+        tolMin: 1820
 });
 
 // Dynamic tolerance change - Thickness Sample 4 After Shrink Test
-document.getElementById(inputId).addEventListener("input", () => {verifyTolerance({
-    inputId: "thicknessSample4After",
-    toleranceId: "toleranceThicknessSample4After",
-    tolMin: 0.23,
-    tolMax: 0.3
+document.getElementById(inputId).addEventListener("input", () => {
+    verifyTolerance({
+        inputId: "thicknessSample4After",
+        toleranceId: "toleranceThicknessSample4After",
+        tolMin: 0.23,
+        tolMax: 0.3
 });
 
 // Dynamic tolerance change - Force Sample 4 After Shrink Test
-document.getElementById(inputId).addEventListener("input", () => {verifyTolerance({
-    inputId: "forceSample4After",
-    toleranceId: "toleranceForceSample4After",
-    tolMin: 1820
+document.getElementById(inputId).addEventListener("input", () => {
+    verifyTolerance({
+        inputId: "forceSample4After",
+        toleranceId: "toleranceForceSample4After",
+        tolMin: 1820
 });
 
 // Dynamic tolerance change - Thickness Sample 5 After Shrink Test
-document.getElementById(inputId).addEventListener("input", () => {verifyTolerance({
-    inputId: "thicknessSample5After",
-    toleranceId: "toleranceThicknessSample5After",
-    tolMin: 0.23,
-    tolMax: 0.3
+document.getElementById(inputId).addEventListener("input", () => {
+    verifyTolerance({
+        inputId: "thicknessSample5After",
+        toleranceId: "toleranceThicknessSample5After",
+        tolMin: 0.23,
+        tolMax: 0.3
 });
 
 // Dynamic tolerance change - Force Sample 5 After Shrink Test
-document.getElementById(inputId).addEventListener("input", () => {verifyTolerance({
-    inputId: "forceSample5After",
-    toleranceId: "toleranceForceSample5After",
-    tolMin: 1820
+document.getElementById(inputId).addEventListener("input", () => {
+    verifyTolerance({
+        inputId: "forceSample5After",
+        toleranceId: "toleranceForceSample5After",
+        tolMin: 1820
 });
 
 // Dynamic tolerance change - df1
-document.getElementById(inputId).addEventListener("input", () => {verifyTolerance({
-    inputId: "df1",
-    toleranceId: "toleranceDF1",
-    tolMin: 174,
-    tolMax: 174 + 2
+document.getElementById(inputId).addEventListener("input", () => {
+    verifyTolerance({
+        inputId: "df1",
+        toleranceId: "toleranceDF1",
+        tolMin: 174,
+        tolMax: 174 + 2
 });
 
 // Dynamic tolerance change - df2
-document.getElementById(inputId).addEventListener("input", () => {verifyTolerance({
-    inputId: "df2",
-    toleranceId: "toleranceDF2",
-    tolMin: 174,
-    tolMax: 174 + 2
+document.getElementById(inputId).addEventListener("input", () => {
+    verifyTolerance({
+        inputId: "df2",
+        toleranceId: "toleranceDF2",
+        tolMin: 174,
+        tolMax: 174 + 2
 });
 
 // Dynamic tolerance change - df3
-document.getElementById(inputId).addEventListener("input", () => {verifyTolerance({
-    inputId: "df3",
-    toleranceId: "toleranceDF3",
-    tolMin: 174,
-    tolMax: 174 + 2
+document.getElementById(inputId).addEventListener("input", () => {
+    verifyTolerance({
+        inputId: "df3",
+        toleranceId: "toleranceDF3",
+        tolMin: 174,
+        tolMax: 174 + 2
 });
 
 // Dynamic tolerance change - mt
-document.getElementById(inputId).addEventListener("input", () => {verifyTolerance({
-    inputId: "mt",
-    toleranceId: "toleranceMT",
-    tolMax: 8700
+document.getElementById(inputId).addEventListener("input", () => {
+    verifyTolerance({
+        inputId: "mt",
+        toleranceId: "toleranceMT",
+        tolMax: 8700
 });
 
 
