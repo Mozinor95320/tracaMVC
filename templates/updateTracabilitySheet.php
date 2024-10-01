@@ -286,7 +286,7 @@
                           <input type="number" class="form-control" id="linearMassBeforeShrinkFit" placeholder="Calculée automatiquement" readonly>
                           
                           <!-- Tolerance with dynamic color -->
-                          <span class="input-group-text" id="toleranceMasseLineiqueProfileAvant">2,107-2,407</span>
+                          <span class="input-group-text" id="toleranceLinearMassBeforeShrinkFit">2,107-2,407</span>
                           
                           <!-- Unit of measurement -->
                           <span class="input-group-text">g/m</span>
@@ -604,7 +604,7 @@
                           <input type="number" class="form-control" id="linearMassAfterShrinkFit" placeholder="Calculée automatiquement" readonly>
         
                           <!-- Tolerance with dynamic color -->
-                          <span class="input-group-text" id="toleranceMasseLineiqueProfileAvant">2,107-2,407</span>
+                          <span class="input-group-text" id="toleranceLinearMassAfterShrinkFit">2,107-2,407</span>
         
                           <!-- Unit of measurement -->
                           <span class="input-group-text">g/m</span>
