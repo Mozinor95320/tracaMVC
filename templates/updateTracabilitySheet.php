@@ -1,6 +1,7 @@
 <?php $title = "Fiche n°".$tracabilitySheet->identifier; ?>
 
 <?php ob_start(); ?>
+
 <div class="container mt-4">
   
   <!-- Generic Data-->
