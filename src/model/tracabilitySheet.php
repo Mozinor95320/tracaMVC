@@ -91,6 +91,7 @@ class TracabilitySheetRepository
         $tracabilitySheet = new TracabilitySheet();
         $tracabilitySheet->identifier = $row['serialNumber'];
         $tracabilitySheet->workOrder = $row['workOrder'];
+        $tracabilitySheet->partNumber = $row['partNumber'];
         $tracabilitySheet->frenchCreationDate = $row['french_creation_date'];
         $tracabilitySheet->spoolBatch = $row['spoolBatch'];
         $tracabilitySheet->spoolNumber = (int) $row['spoolNumber'];
