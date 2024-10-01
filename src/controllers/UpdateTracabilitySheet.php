@@ -1,6 +1,6 @@
 <?php
 
-namespace Application\Controllers\Post;
+namespace Application\Controllers;
 
 require_once('src/lib/database.php');
 require_once('src/model/tracabilitySheet.php');
@@ -15,7 +15,7 @@ class UpdateTracabilitySheet
     {
         $tracabilitySheetRepository = new TracabilitySheetRepository();
         $tracabilitySheetRepository->connection = new DatabaseConnection();
-        $tracabilitySheets = $tracabilitySheetRepository->getTracabilitySheet();
+        $tracabilitySheet = $tracabilitySheetRepository->getTracabilitySheet($identifier);
 
         require('templates/post.php');
     }
