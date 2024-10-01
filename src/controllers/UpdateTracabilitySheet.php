@@ -17,6 +17,6 @@ class UpdateTracabilitySheet
         $tracabilitySheetRepository->connection = new DatabaseConnection();
         $tracabilitySheet = $tracabilitySheetRepository->getTracabilitySheet($identifier);
 
-        require('templates/post.php');
+        require('templates/updateTracabilitySheet.php');
     }
 }
