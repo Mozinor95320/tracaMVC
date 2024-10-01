@@ -154,6 +154,7 @@ class TracabilitySheetRepository
         $tracabilitySheet->qualityConformityDeclaration = $row['qualityConformityDeclaration'];
         $tracabilitySheet->qualityControlDate = $row['qualityControlDate'];
         $tracabilitySheet->qualityInspectorName = $row['qualityInspectorName'];
+        $tracabilitySheet->qualityInspectorRemarks = $row['qualityInspectorRemarks'];
 
         return $tracabilitySheet;
     }
