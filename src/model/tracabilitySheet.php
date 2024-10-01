@@ -19,7 +19,8 @@ class TracabilitySheet
     public float $diameterD;
     public int $massM;
     public int $aspectDimAfterCoating;
-    public float $profileLengthBeforeShrinkFit;
+    public float $profileMassBeforeShrinkFit;
+    public float linearMassBeforeShrinkFit;
     public float $thickness1BeforeShrinkFit;
     public float $thickness2BeforeShrinkFit;
     public float $thickness3BeforeShrinkFit;
@@ -37,7 +38,8 @@ class TracabilitySheet
     public int $aspectFiber5BeforeShrinkFit;
     public float $averageBeforeShrinkFit;
     public float $sigmaBeforeShrinkFit;
-    public float $profileLengthAfterTensileTest;
+    public float $profileMassAfterShrinkFit;
+    public float linearMassAfterShrinkFit;
     public float $thickness1AfterShrinkFit;
     public float $thickness2AfterShrinkFit;
     public float $thickness3AfterShrinkFit;
@@ -96,7 +98,8 @@ class TracabilitySheetRepository
         $tracabilitySheet->diameterD = (float)$row['diameterD'];
         $tracabilitySheet->massM = (int)$row['massM'];
         $tracabilitySheet->aspectDimAfterCoating = (int)$row['aspectDimAfterCoating'];
-        $tracabilitySheet->profileLengthBeforeShrinkFit = (float)$row['profileLengthBeforeShrinkFit'];
+        $tracabilitySheet->profileMassBeforeShrinkFit = (float)$row['profileMassBeforeShrinkFit'];
+        $tracabilitySheet->linearMassBeforeShrinkFit = (float)$row['linearMassBeforeShrinkFit'];
         $tracabilitySheet->thickness1BeforeShrinkFit = (float)$row['thickness1BeforeShrinkFit'];
         $tracabilitySheet->thickness2BeforeShrinkFit = (float)$row['thickness2BeforeShrinkFit'];
         $tracabilitySheet->thickness3BeforeShrinkFit = (float)$row['thickness3BeforeShrinkFit'];
@@ -114,7 +117,8 @@ class TracabilitySheetRepository
         $tracabilitySheet->aspectFiber5BeforeShrinkFit = (int)$row['aspectFiber5BeforeShrinkFit'];
         $tracabilitySheet->averageBeforeShrinkFit = (float)$row['averageBeforeShrinkFit'];
         $tracabilitySheet->sigmaBeforeShrinkFit = (float)$row['sigmaBeforeShrinkFit'];
-        $tracabilitySheet->profileLengthAfterTensileTest = (float)$row['profileLengthAfterTensileTest'];
+        $tracabilitySheet->profileMassAfterShrinkFit = (float)$row['profileMassBeforeShrinkFit'];
+        $tracabilitySheet->linearMassAfterShrinkFit = (float)$row['linearMassBeforeShrinkFit'];
         $tracabilitySheet->thickness1AfterShrinkFit = (float)$row['thickness1AfterShrinkFit'];
         $tracabilitySheet->thickness2AfterShrinkFit = (float)$row['thickness2AfterShrinkFit'];
         $tracabilitySheet->thickness3AfterShrinkFit = (float)$row['thickness3AfterShrinkFit'];
