@@ -1,6 +1,7 @@
 <?php
 
 require_once('src/controllers/homepage.php');
+require_once('src/controllers/homepage.php');
 
 use Application\Controllers\Comment\Add\AddComment;
 use Application\Controllers\Comment\Update\UpdateComment;
