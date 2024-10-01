@@ -15,14 +15,10 @@ class UpdateTracabilitySheet
     public function execute(string $identifier)
     {
         $connection = new DatabaseConnection();
-
-        $postRepository = new PostRepository();
-        $postRepository->connection = $connection;
-        $post = $postRepository->getPost($identifier);
-
-        $commentRepository = new CommentRepository();
-        $commentRepository->connection = $connection;
-        $comments = $commentRepository->getComments($identifier);
+        
+        $tracabilitySheetRepository = new TracabilitySheetRepository();
+        $tracabilitySheetRepository->connection = new DatabaseConnection();
+        $tracabilitySheets = $tracabilitySheetRepository->getTracabilitySheets();
 
         require('templates/post.php');
     }
