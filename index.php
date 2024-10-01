@@ -5,7 +5,7 @@ require_once('src/controllers/homepage.php');
 use Application\Controllers\Comment\Add\AddComment;
 use Application\Controllers\Comment\Update\UpdateComment;
 use Application\Controllers\Homepage\Homepage;
-use Application\Controllers\TracabilitySheet\TracabilitySheet;
+use Application\Controllers\UpdateTracabilitySheet;
 
 try {
     if (isset($_GET['action']) && $_GET['action'] !== '') {
