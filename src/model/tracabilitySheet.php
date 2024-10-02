@@ -22,7 +22,7 @@ class TracabilitySheet
     public float $lengthL;
     public float $diameterD;
     public int $massM;
-    public $aspectDimAfterCoating;
+    public bool $aspectDimAfterCoating;
     public float $profileMassBeforeShrinkFit;
     public float $linearMassBeforeShrinkFit;
     public float $thickness1BeforeShrinkFit;
@@ -61,8 +61,8 @@ class TracabilitySheet
     public int $aspectFiber5AfterShrinkFit;
     public float $averageAfterShrinkFit;
     public float $sigmaAfterShrinkFit;
-    public $bf;
-    public $vf;
+    public bool $bf;
+    public bool $vf;
     public int $mt;
     public int $mf;
     public float $df1;
@@ -72,8 +72,8 @@ class TracabilitySheet
     public string $operatorRemarks;
     public string $dateOperatorConformityDeclaration;
     public string $operatorNameConformityDeclaration;
-    public $firstAccumulatorLot;
-    public $qualityConformityDeclaration;
+    public bool $firstAccumulatorLot;
+    public bool $qualityConformityDeclaration;
     public string $qualityControlDate;
     public string $qualityInspectorName;
     public string $qualityInspectorRemarks;
