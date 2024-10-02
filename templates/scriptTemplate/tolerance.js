@@ -1,4 +1,4 @@
-document.getElementById("serialNumber").value = "<?php echo $tracabilitySheet->partNumber; ?>";
+document.getElementById("serialNumber").value = <?php echo $tracabilitySheet->partNumber; ?>;
 /*
 document.getElementById("partNumber").value =
   "<?= $tracabilitySheet->partNumber ?>";
