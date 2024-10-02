@@ -16,7 +16,7 @@
         <header class="banner">
             <div class="row align-items-center">
                 <div class="col-md-3">
-                <img src="templates/img/logoParker.png" alt="Une belle photo" height="100" />
+                <img src="templates/img/logoParker.png" alt="Une belle photo" height="50" />
                 </div>
             </div>
             <div class="row align-items-center">
