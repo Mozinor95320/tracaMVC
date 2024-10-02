@@ -1126,7 +1126,7 @@
                     <!-- Operator Remarks -->
                     <div class="mb-3">
                       <label for="remarqueValidation" class="form-label">Remarque</label>
-                      <textarea class="form-control" id="operatorRemarks" rows="4" placeholder="Entrez votre commentaire..." maxlength="255" value="<?= htmlspecialchars($tracabilitySheet->operatorRemarks) ?>">
+                      <textarea class="form-control" id="operatorRemarks" rows="4" placeholder="Entrez votre commentaire..." maxlength="255"><?= htmlspecialchars($tracabilitySheet->operatorRemarks) ?>
                       </textarea>
                       <div id="charCount" class="form-text">0/255 caractères</div>
 
@@ -1187,7 +1187,7 @@
                     <!-- Quality Inspector Remarks -->
                     <div class="mb-3">
                       <label for="remarqueValidation" class="form-label">Remarque</label>
-                      <textarea class="form-control" id="qualityInspectorRemarks" rows="4" placeholder="Entrez votre commentaire..." maxlength="255"value="<?= htmlspecialchars($tracabilitySheet->qualityInspectorRemarks) ?>"></textarea>
+                      <textarea class="form-control" id="qualityInspectorRemarks" rows="4" placeholder="Entrez votre commentaire..." maxlength="255"><?= htmlspecialchars($tracabilitySheet->qualityInspectorRemarks) ?></textarea>
                       <div id="charCount2" class="form-text">0/255 caractères</div>
 
                     </div>
