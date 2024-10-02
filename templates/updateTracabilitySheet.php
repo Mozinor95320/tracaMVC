@@ -29,6 +29,7 @@
       <div class="card-body">
           <div class="mb-3 ml-3">
             <h2>Informations générales</h2>
+            <h3>Description de la fiche de tracabilité</h3>
           </div>
           <div class="mb-3">
             <div class="row align-items-center">
@@ -73,6 +74,7 @@
             </div>
           </div>
       </div>
+      <h2>Catégories</h2>
             <!-- Section 2: Fiber Data -->
         <form action="index.php?action=save&id=<?= $tracabilitySheet->identifier ?>" method="post">
           <div class="accordion" id="accordionExample">
