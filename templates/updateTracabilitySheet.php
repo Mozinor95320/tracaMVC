@@ -44,7 +44,7 @@
           <!-- Plan Reference Field -->
           <div class="col-md-6">
             <label for="referencePlan" class="form-label">Référence plan</label>
-            <input type="text" class="form-control" id="refPlan" value="<?= htmlspecialchars($tracabilitySheet->refPlan ?>" readonly>
+            <input type="text" class="form-control" id="refPlan" value="<?= htmlspecialchars($tracabilitySheet->refPlan) ?>" readonly>
           </div>
           <!-- Machine Reference Field -->
           <div class="col-md-6">
