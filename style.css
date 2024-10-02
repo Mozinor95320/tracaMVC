@@ -29,12 +29,12 @@ header h1 {
 }
 
 .accordion-button {
-  background-color: #ffb91d;
+  background-color: #f8f9fa;
   color: #343a40;
 }
 
 .accordion-button:not(.collapsed) {
-  background-color: #007bff;
+  background-color: #ffb91d;
   color: #fff;
 }
 
