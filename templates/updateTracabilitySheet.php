@@ -89,23 +89,24 @@
                  <!-- Material Reference Field -->
                 <div class="mb-3">
                   <label for="matiere" class="form-label">Matière</label>
-                  <select class="form-select" id="matiere">
+                  <select class="form-select" id="material" name="material">
                     <option selected disabled>Sélectionner la matière</option>
-                    <option value="1">TWARON 2200 / PA12-2159 0.24 x 8</option>
-                    <option value="2">TWARON 2200 / PA12-2159 0.16 x 8</option>
+                    <option <?php if($tracabilitySheet->material == 'TWARON 2200 / PA12-2159 0.24 x 8') echo 'selected'; ?>>TWARON 2200 / PA12-2159 0.24 x 8</option>
+                    <option <?php if($tracabilitySheet->material == 'TWARON 2200 / PA12-2159 0.16 x 8') echo 'selected'; ?>>TWARON 2200 / PA12-2159 0.16 x 8</option>
                   </select>
+
                 </div>
                 <div class="mb-3">
                   <div class="row">
                     <!-- Sppol Batch Reference Field -->
                     <div class="col-md-6">
                       <label for="bobine" class="form-label">Bobine</label>
-                      <input type="number" class="form-control" id="spoolBatch">
+                      <input type="number" class="form-control" id="spoolBatch" value="<?= htmlspecialchars($tracabilitySheet->spoolBatch) ?>">
                     </div>
                     <!-- Spool Number Field -->
                     <div class="col-md-6">
                       <label for="lot" class="form-label">Lot</label>
-                      <input type="number" class="form-control" id="spoolNumber">
+                      <input type="number" class="form-control" id="spoolNumber" value="<?= htmlspecialchars($tracabilitySheet->spoolNumber) ?>">
                     </div>
                   </div>
                 </div>
@@ -148,7 +149,7 @@
                 <!-- Date Dimension After Coating -->
                 <div class="mb-3">
                   <label for="dateEnduction" class="form-label">Date</label>
-                  <input type="date" class="form-control" id="dateDimAfterCoating">
+                  <input type="date" class="form-control" id="dateDimAfterCoating" value="<?= htmlspecialchars($tracabilitySheet->dateDimAfterCoating) ?>">
                 </div>
 
                 <div class="row align-items-center">
@@ -158,7 +159,7 @@
                     <div class="mb-3">
                       <label for="longueur" class="form-label">Longueur L</label>
                       <div class="input-group">
-                        <input type="number" class="form-control" id="lengthL" placeholder="Entrez la longueur">
+                        <input type="number" class="form-control" id="lengthL" placeholder="Entrez la longueur" value="<?= htmlspecialchars($tracabilitySheet->lengthL) ?>">
                         
                         <!-- Tolerance with dynamic color -->
                         <span class="input-group-text" id="tolerancelengthL">413,5 (-6/+0)</span>
@@ -174,7 +175,7 @@
                     <div class="mb-3">
                       <label for="diametre" class="form-label">Diamètre D</label>
                       <div class="input-group">
-                        <input type="number" class="form-control" id="diameterD" placeholder="Entrez le diamètre">
+                        <input type="number" class="form-control" id="diameterD" placeholder="Entrez le diamètre" value="<?= htmlspecialchars($tracabilitySheet->diameterD) ?>">
                         
                         <!-- Tolerance with dynamic color -->
                         <span class="input-group-text" id="tolerancediameterD">163(-0/+0,9)</span>
@@ -190,7 +191,7 @@
                     <div class="mb-3">
                       <label for="masseM" class="form-label">Masse M</label>
                       <div class="input-group">
-                        <input type="number" class="form-control" id="massM" placeholder="Entrez la masse">
+                        <input type="number" class="form-control" id="massM" placeholder="Entrez la masse" value="<?= htmlspecialchars($tracabilitySheet->massM) ?>">
                         
                         <!-- Tolerance with dynamic color -->
                         <span class="input-group-text" id="tolerancemassM">Max 7650</span>
@@ -206,12 +207,11 @@
                 <div class="mb-3">
                   <label class="form-label d-block">Aspect</label>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="aspect" id="aspectDimAfterCoatingOk" value="ok">
+                    <input class="form-check-input" type="radio" name="aspectDimAfterCoating" value="1" <?php if ($tracabilitySheet->aspectDimAfterCoating === true) echo 'checked'; ?>>
                     <label class="form-check-label" for="aspectOk">OK</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="aspect" id="aspectDimAfterCoatingNok" value="nok">
-                    <label class="form-check-label" for="aspectNok">NOK</label>
+                    <input class="form-check-input" type="radio" name="aspectDimAfterCoating" value="0" <?php if ($tracabilitySheet->aspectDimAfterCoating === false) echo 'checked'; ?>>
                   </div>
                 </div>
                 
@@ -265,7 +265,7 @@
                       <!--  Input - Profile Mass Before Shrink Fit-->
                       <div class="col-md-3">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="profileMassBeforeShrinkFit" placeholder="Entrez la masse du profilé" oninput="calculateMasseLineiqueAvant()">
+                          <input type="number" class="form-control" id="profileMassBeforeShrinkFit" placeholder="Entrez la masse du profilé" oninput="calculateMasseLineiqueAvant()" value="<?= htmlspecialchars($tracabilitySheet->profileMassBeforeShrinkFit) ?>">
                           
                           <!-- Unit of measurement -->
                           <span class="input-group-text">g</span>
@@ -282,7 +282,7 @@
                       <!--  Input readonly - Linear Mass Before Shrink Fit-->
                       <div class="col-md-3">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="linearMassBeforeShrinkFit" placeholder="Calculée automatiquement" readonly>
+                          <input type="number" class="form-control" id="linearMassBeforeShrinkFit" placeholder="Calculée automatiquement" readonly  value="<?= htmlspecialchars($tracabilitySheet->linearMassBeforeShrinkFit) ?>">
                           
                           <!-- Tolerance with dynamic color -->
                           <span class="input-group-text" id="toleranceLinearMassBeforeShrinkFit">2,107-2,407</span>
@@ -302,7 +302,7 @@
                       <!--  Thickness Sample 1 Before Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="thickness1BeforeShrinkFit" placeholder="Entrez l'épaisseur">
+                          <input type="number" class="form-control" id="thickness1BeforeShrinkFit" placeholder="Entrez l'épaisseur" value="<?= htmlspecialchars($tracabilitySheet->thickness1BeforeShrinkFit) ?>">
                           
                           <!-- Tolerance with dynamic color -->
                           <span class="input-group-text" id="toleranceThickness1BeforeShrinkFit">0,23-0,30</span>
@@ -315,7 +315,7 @@
                       <!--  Force Sample 1 Before Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="force1BeforeShrinkFit" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()">
+                          <input type="number" class="form-control" id="force1BeforeShrinkFit" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()" value="<?= htmlspecialchars($tracabilitySheet->force1BeforeShrinkFit) ?>">
                          
                           <!-- Tolerance with dynamic color -->
                           <span class="input-group-text" id="toleranceForce1BeforeShrinkFit">Min 1820</span>
@@ -327,11 +327,11 @@
 
                       <!--  Aspect Sample 1 Before Shrink Fit -->
                       <div class="col-md-4">
-                        <select class="form-select" id="aspectFiber1BeforeShrinkFit">
-                          <option selected disabled>Selectionnez le cas de rupture </option>
-                          <option value="1">Cas 1 - Trop sérré</option>
-                          <option value="2">Cas 2 - Pas assez sérré</option>
-                          <option value="2">Cas 3 - Rupture parfaite</option>
+                        <select class="form-select" id="aspectFiber1BeforeShrinkFit" name="aspectFiber1BeforeShrinkFit">
+                          <option selected disabled>Selectionnez le cas de rupture</option>
+                          <option <?php if($tracabilitySheet->aspectFiber1BeforeShrinkFit == 1) echo 'selected'; ?>>Cas 1 - Trop sérré</option>
+                          <option <?php if($tracabilitySheet->aspectFiber1BeforeShrinkFit == 2) echo 'selected'; ?>>Cas 2 - Pas assez sérré</option>
+                          <option <?php if($tracabilitySheet->aspectFiber1BeforeShrinkFit == 3) echo 'selected'; ?>>Cas 3 - Rupture parfaite</option>
                         </select>
                       </div>
                     </div>
@@ -345,7 +345,7 @@
                       <!--  Thickness Sample 2 Before Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="thickness2BeforeShrinkFit" placeholder="Entrez l'épaisseur">
+                          <input type="number" class="form-control" id="thickness2BeforeShrinkFit" placeholder="Entrez l'épaisseur" value="<?= htmlspecialchars($tracabilitySheet->thickness2BeforeShrinkFit) ?>">
                           
                           <!-- Tolerance with dynamic color -->
                           <span class="input-group-text" id="toleranceThickness2BeforeShrinkFit">0,23-0,30</span>
@@ -358,7 +358,7 @@
                       <!--  Force Sample 2 Before Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="force2BeforeShrinkFit" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()">
+                          <input type="number" class="form-control" id="force2BeforeShrinkFit" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()" value="<?= htmlspecialchars($tracabilitySheet->force2BeforeShrinkFit) ?>">
                          
                           <!-- Tolerance with dynamic color -->
                           <span class="input-group-text" id="toleranceForce2BeforeShrinkFit">Min 1820</span>
@@ -370,11 +370,11 @@
 
                       <!--  Aspect Sample 2 Before Shrink Fit -->
                       <div class="col-md-4">
-                        <select class="form-select" id="aspectFiber2BeforeShrinkFit">
-                          <option selected disabled>Selectionnez le cas de rupture </option>
-                          <option value="1">Cas 1 - Trop sérré</option>
-                          <option value="2">Cas 2 - Pas assez sérré</option>
-                          <option value="2">Cas 3 - Rupture parfaite</option>
+                        <select class="form-select" id="aspectFiber2BeforeShrinkFit" name="aspectFiber2BeforeShrinkFit">
+                          <option selected disabled>Selectionnez le cas de rupture</option>
+                          <option <?php if($tracabilitySheet->aspectFiber2BeforeShrinkFit == 1) echo 'selected'; ?>>Cas 1 - Trop sérré</option>
+                          <option <?php if($tracabilitySheet->aspectFiber2BeforeShrinkFit == 2) echo 'selected'; ?>>Cas 2 - Pas assez sérré</option>
+                          <option <?php if($tracabilitySheet->aspectFiber2BeforeShrinkFit == 3) echo 'selected'; ?>>Cas 3 - Rupture parfaite</option>
                         </select>
                       </div>
                     </div>
@@ -388,7 +388,7 @@
                       <!--  Thickness Sample 3 Before Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="thickness3BeforeShrinkFit" placeholder="Entrez l'épaisseur">
+                          <input type="number" class="form-control" id="thickness3BeforeShrinkFit" placeholder="Entrez l'épaisseur" value="<?= htmlspecialchars($tracabilitySheet->thickness3BeforeShrinkFit) ?>">
                           
                           <!-- Tolerance with dynamic color -->
                           <span class="input-group-text" id="toleranceThickness3BeforeShrinkFit">0,23-0,30</span>
@@ -401,7 +401,7 @@
                       <!--  Force Sample 3 Before Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="force3BeforeShrinkFit" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()">
+                          <input type="number" class="form-control" id="force3BeforeShrinkFit" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()" value="<?= htmlspecialchars($tracabilitySheet->force3BeforeShrinkFit) ?>">
                          
                           <!-- Tolerance with dynamic color -->
                           <span class="input-group-text" id="toleranceForce3BeforeShrinkFit">Min 1820</span>
@@ -413,11 +413,11 @@
 
                       <!--  Aspect Sample 3 Before Shrink Fit -->
                       <div class="col-md-4">
-                        <select class="form-select" id="aspectFiber3BeforeShrinkFit">
-                          <option selected disabled>Selectionnez le cas de rupture </option>
-                          <option value="1">Cas 1 - Trop sérré</option>
-                          <option value="2">Cas 2 - Pas assez sérré</option>
-                          <option value="2">Cas 3 - Rupture parfaite</option>
+                        <select class="form-select" id="aspectFiber3BeforeShrinkFit" name="aspectFiber3BeforeShrinkFit">
+                          <option selected disabled>Selectionnez le cas de rupture</option>
+                          <option <?php if($tracabilitySheet->aspectFiber3BeforeShrinkFit == 1) echo 'selected'; ?>>Cas 1 - Trop sérré</option>
+                          <option <?php if($tracabilitySheet->aspectFiber3BeforeShrinkFit == 2) echo 'selected'; ?>>Cas 2 - Pas assez sérré</option>
+                          <option <?php if($tracabilitySheet->aspectFiber3BeforeShrinkFit == 3) echo 'selected'; ?>>Cas 3 - Rupture parfaite</option>
                         </select>
                       </div>
                     </div>
@@ -431,7 +431,7 @@
                       <!--  Thickness Sample 4 Before Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="thickness4BeforeShrinkFit" placeholder="Entrez l'épaisseur">
+                          <input type="number" class="form-control" id="thickness4BeforeShrinkFit" placeholder="Entrez l'épaisseur" value="<?= htmlspecialchars($tracabilitySheet->thickness4BeforeShrinkFit) ?>">
                           
                           <!-- Tolerance with dynamic color -->
                           <span class="input-group-text" id="toleranceThickness4BeforeShrinkFit">0,23-0,30</span>
@@ -444,7 +444,7 @@
                       <!--  Force Sample 4 Before Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="force4BeforeShrinkFit" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()">
+                          <input type="number" class="form-control" id="force4BeforeShrinkFit" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()" value="<?= htmlspecialchars($tracabilitySheet->force4BeforeShrinkFit) ?>">
                          
                           <!-- Tolerance with dynamic color -->
                           <span class="input-group-text" id="toleranceForce4BeforeShrinkFit">Min 1820</span>
@@ -456,11 +456,11 @@
 
                       <!--  Aspect Sample 4 Before Shrink Fit -->
                       <div class="col-md-4">
-                        <select class="form-select" id="aspectFiber4BeforeShrinkFit">
-                          <option selected disabled>Selectionnez le cas de rupture </option>
-                          <option value="1">Cas 1 - Trop sérré</option>
-                          <option value="2">Cas 2 - Pas assez sérré</option>
-                          <option value="2">Cas 3 - Rupture parfaite</option>
+                        <select class="form-select" id="aspectFiber4BeforeShrinkFit" name="aspectFiber4BeforeShrinkFit">
+                          <option selected disabled>Selectionnez le cas de rupture</option>
+                          <option <?php if($tracabilitySheet->aspectFiber4BeforeShrinkFit == 1) echo 'selected'; ?>>Cas 1 - Trop sérré</option>
+                          <option <?php if($tracabilitySheet->aspectFiber4BeforeShrinkFit == 2) echo 'selected'; ?>>Cas 2 - Pas assez sérré</option>
+                          <option <?php if($tracabilitySheet->aspectFiber4BeforeShrinkFit == 3) echo 'selected'; ?>>Cas 3 - Rupture parfaite</option>
                         </select>
                       </div>
                     </div>
@@ -474,7 +474,7 @@
                       <!--  Thickness Sample 5 Before Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="thickness5BeforeShrinkFit" placeholder="Entrez l'épaisseur">
+                          <input type="number" class="form-control" id="thickness5BeforeShrinkFit" placeholder="Entrez l'épaisseur" value="<?= htmlspecialchars($tracabilitySheet->thickness5BeforeShrinkFit) ?>">
                           
                           <!-- Tolerance with dynamic color -->
                           <span class="input-group-text" id="toleranceThickness5BeforeShrinkFit">0,23-0,30</span>
@@ -487,7 +487,7 @@
                       <!--  Force Sample 5 Before Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="force5BeforeShrinkFit" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()">
+                          <input type="number" class="form-control" id="force5BeforeShrinkFit" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()" value="<?= htmlspecialchars($tracabilitySheet->force5BeforeShrinkFit) ?>">
                          
                           <!-- Tolerance with dynamic color -->
                           <span class="input-group-text" id="toleranceForce5BeforeShrinkFit">Min 1820</span>
@@ -499,11 +499,11 @@
 
                       <!--  Aspect Sample 5 Before Shrink Fit -->
                       <div class="col-md-4">
-                        <select class="form-select" id="aspectFiber5BeforeShrinkFit">
-                          <option selected disabled>Selectionnez le cas de rupture </option>
-                          <option value="1">Cas 1 - Trop sérré</option>
-                          <option value="2">Cas 2 - Pas assez sérré</option>
-                          <option value="2">Cas 3 - Rupture parfaite</option>
+                        <select class="form-select" id="aspectFiber5BeforeShrinkFit" name="aspectFiber5BeforeShrinkFit">
+                          <option selected disabled>Selectionnez le cas de rupture</option>
+                          <option <?php if($tracabilitySheet->aspectFiber5BeforeShrinkFit == 1) echo 'selected'; ?>>Cas 1 - Trop sérré</option>
+                          <option <?php if($tracabilitySheet->aspectFiber5BeforeShrinkFit == 2) echo 'selected'; ?>>Cas 2 - Pas assez sérré</option>
+                          <option <?php if($tracabilitySheet->aspectFiber5BeforeShrinkFit == 3) echo 'selected'; ?>>Cas 3 - Rupture parfaite</option>
                         </select>
                       </div>
                     </div>
@@ -521,7 +521,7 @@
                       <!--  Value - Mean Force Tensile test Before Shrink Fit -->
                       <div class="col-md-6">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="averageBeforeShrinkFit" placeholder="Calculée automatiquement" readonly>
+                          <input type="number" class="form-control" id="averageBeforeShrinkFit" placeholder="Calculée automatiquement" readonly value="<?= htmlspecialchars($tracabilitySheet->averageBeforeShrinkFit) ?>">
                           
                           <!-- Tolerance with dynamic color -->
                           <span class="input-group-text" id="toleranceAverageBeforeShrinkFit">Min 1820</span>
@@ -545,7 +545,7 @@
                        <!--  Value - Standart deviation Force Tensile test Before Shrink Fit -->
                       <div class="col-md-6">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="sigmaBeforeShrinkFit" placeholder="Calculée automatiquement" readonly>
+                          <input type="number" class="form-control" id="sigmaBeforeShrinkFit" placeholder="Calculée automatiquement" readonly value="<?= htmlspecialchars($tracabilitySheet->sigmaBeforeShrinkFit) ?>">
 
                           <!-- Unit of measurement -->
                           <span class="input-group-text">N</span>
@@ -583,7 +583,7 @@
                       <!--  Input - Profile Mass After Shrink Fit-->
                       <div class="col-md-3">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="profileMassAfterShrinkFit" placeholder="Entrez la masse du profilé" oninput="calculateMasseLineiqueAvant()">
+                          <input type="number" class="form-control" id="profileMassAfterShrinkFit" placeholder="Entrez la masse du profilé" oninput="calculateMasseLineiqueAvant()" value="<?= htmlspecialchars($tracabilitySheet->profileMassAfterShrinkFit) ?>">
         
                           <!-- Unit of measurement -->
                           <span class="input-group-text">g</span>
@@ -600,7 +600,7 @@
                       <!--  Input readonly - Linear Mass After Shrink Fit-->
                       <div class="col-md-3">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="linearMassAfterShrinkFit" placeholder="Calculée automatiquement" readonly>
+                          <input type="number" class="form-control" id="linearMassAfterShrinkFit" placeholder="Calculée automatiquement" readonly value="<?= htmlspecialchars($tracabilitySheet->linearMassAfterShrinkFit) ?>">
         
                           <!-- Tolerance with dynamic color -->
                           <span class="input-group-text" id="toleranceLinearMassAfterShrinkFit">2,107-2,407</span>
@@ -620,7 +620,7 @@
                       <!--  Thickness Sample 1 After Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="thickness1AfterShrinkFit" placeholder="Entrez l'épaisseur">
+                          <input type="number" class="form-control" id="thickness1AfterShrinkFit" placeholder="Entrez l'épaisseur" value="<?= htmlspecialchars($tracabilitySheet->thickness1AfterShrinkFit) ?>">
         
                           <!-- Tolerance with dynamic color -->
                           <span class="input-group-text" id="toleranceThickness1AfterShrinkFit">0,23-0,30</span>
@@ -633,7 +633,7 @@
                       <!--  Force Sample 1 After Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="force1AfterShrinkFit" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()">
+                          <input type="number" class="form-control" id="force1AfterShrinkFit" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()" value="<?= htmlspecialchars($tracabilitySheet->force1AfterShrinkFit) ?>">
         
                           <!-- Tolerance with dynamic color -->
                           <span class="input-group-text" id="toleranceForce1AfterShrinkFit">Min 1820</span>
@@ -645,11 +645,11 @@
         
                       <!--  Aspect Sample 1 After Shrink Fit -->
                       <div class="col-md-4">
-                        <select class="form-select" id="aspectFiber1AfterShrinkFit">
-                          <option selected disabled>Selectionnez le cas de rupture </option>
-                          <option value="1">Cas 1 - Trop sérré</option>
-                          <option value="2">Cas 2 - Pas assez sérré</option>
-                          <option value="2">Cas 3 - Rupture parfaite</option>
+                        <select class="form-select" id="aspectFiber1AfterShrinkFit" name="aspectFiber1AfterShrinkFit">
+                          <option selected disabled>Selectionnez le cas de rupture</option>
+                          <option <?php if($tracabilitySheet->aspectFiber1AfterShrinkFit == 1) echo 'selected'; ?>>Cas 1 - Trop sérré</option>
+                          <option <?php if($tracabilitySheet->aspectFiber1AfterShrinkFit == 2) echo 'selected'; ?>>Cas 2 - Pas assez sérré</option>
+                          <option <?php if($tracabilitySheet->aspectFiber1AfterShrinkFit == 3) echo 'selected'; ?>>Cas 3 - Rupture parfaite</option>
                         </select>
                       </div>
                     </div>
@@ -663,7 +663,7 @@
                       <!--  Thickness Sample 2 After Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="thickness2AfterShrinkFit" placeholder="Entrez l'épaisseur">
+                          <input type="number" class="form-control" id="thickness2AfterShrinkFit" placeholder="Entrez l'épaisseur" value="<?= htmlspecialchars($tracabilitySheet->thickness2AfterShrinkFit) ?>">
         
                           <!-- Tolerance with dynamic color -->
                           <span class="input-group-text" id="toleranceThickness2AfterShrinkFit">0,23-0,30</span>
@@ -676,7 +676,7 @@
                       <!--  Force Sample 2 After Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="force2AfterShrinkFit" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()">
+                          <input type="number" class="form-control" id="force2AfterShrinkFit" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()" value="<?= htmlspecialchars($tracabilitySheet->force2AfterShrinkFit) ?>">
         
                           <!-- Tolerance with dynamic color -->
                           <span class="input-group-text" id="toleranceForce2AfterShrinkFit">Min 1820</span>
@@ -688,11 +688,11 @@
         
                       <!--  Aspect Sample 2 After Shrink Fit -->
                       <div class="col-md-4">
-                        <select class="form-select" id="aspectFiber2AfterShrinkFit">
-                          <option selected disabled>Selectionnez le cas de rupture </option>
-                          <option value="1">Cas 1 - Trop sérré</option>
-                          <option value="2">Cas 2 - Pas assez sérré</option>
-                          <option value="2">Cas 3 - Rupture parfaite</option>
+                        <select class="form-select" id="aspectFiber2AfterShrinkFit" name="aspectFiber2AfterShrinkFit">
+                          <option selected disabled>Selectionnez le cas de rupture</option>
+                          <option <?php if($tracabilitySheet->aspectFiber2AfterShrinkFit == 1) echo 'selected'; ?>>Cas 1 - Trop sérré</option>
+                          <option <?php if($tracabilitySheet->aspectFiber2AfterShrinkFit == 2) echo 'selected'; ?>>Cas 2 - Pas assez sérré</option>
+                          <option <?php if($tracabilitySheet->aspectFiber2AfterShrinkFit == 3) echo 'selected'; ?>>Cas 3 - Rupture parfaite</option>
                         </select>
                       </div>
                     </div>
@@ -706,7 +706,7 @@
                       <!--  Thickness Sample 3 After Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="thickness3AfterShrinkFit" placeholder="Entrez l'épaisseur">
+                          <input type="number" class="form-control" id="thickness3AfterShrinkFit" placeholder="Entrez l'épaisseur" value="<?= htmlspecialchars($tracabilitySheet->thickness3AfterShrinkFit) ?>">
         
                           <!-- Tolerance with dynamic color -->
                           <span class="input-group-text" id="toleranceThickness3AfterShrinkFit">0,23-0,30</span>
@@ -719,7 +719,7 @@
                       <!--  Force Sample 3 After Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="force3AfterShrinkFit" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()">
+                          <input type="number" class="form-control" id="force3AfterShrinkFit" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()" value="<?= htmlspecialchars($tracabilitySheet->force3AfterShrinkFit) ?>">
         
                           <!-- Tolerance with dynamic color -->
                           <span class="input-group-text" id="toleranceForce3AfterShrinkFit">Min 1820</span>
@@ -731,11 +731,11 @@
         
                       <!--  Aspect Sample 3 After Shrink Fit -->
                       <div class="col-md-4">
-                        <select class="form-select" id="aspectFiber3AfterShrinkFit">
-                          <option selected disabled>Selectionnez le cas de rupture </option>
-                          <option value="1">Cas 1 - Trop sérré</option>
-                          <option value="2">Cas 2 - Pas assez sérré</option>
-                          <option value="2">Cas 3 - Rupture parfaite</option>
+                        <select class="form-select" id="aspectFiber3AfterShrinkFit" name="aspectFiber3AfterShrinkFit">
+                          <option selected disabled>Selectionnez le cas de rupture</option>
+                          <option <?php if($tracabilitySheet->aspectFiber3AfterShrinkFit == 1) echo 'selected'; ?>>Cas 1 - Trop sérré</option>
+                          <option <?php if($tracabilitySheet->aspectFiber3AfterShrinkFit == 2) echo 'selected'; ?>>Cas 2 - Pas assez sérré</option>
+                          <option <?php if($tracabilitySheet->aspectFiber3AfterShrinkFit == 3) echo 'selected'; ?>>Cas 3 - Rupture parfaite</option>
                         </select>
                       </div>
                     </div>
@@ -749,7 +749,7 @@
                       <!--  Thickness Sample 4 After Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="thickness4AfterShrinkFit" placeholder="Entrez l'épaisseur">
+                          <input type="number" class="form-control" id="thickness4AfterShrinkFit" placeholder="Entrez l'épaisseur" value="<?= htmlspecialchars($tracabilitySheet->thickness4AfterShrinkFit) ?>">
         
                           <!-- Tolerance with dynamic color -->
                           <span class="input-group-text" id="toleranceThickness4AfterShrinkFit">0,23-0,30</span>
@@ -762,7 +762,7 @@
                       <!--  Force Sample 4 After Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="force4AfterShrinkFit" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()">
+                          <input type="number" class="form-control" id="force4AfterShrinkFit" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()" value="<?= htmlspecialchars($tracabilitySheet->force4AfterShrinkFit) ?>">
         
                           <!-- Tolerance with dynamic color -->
                           <span class="input-group-text" id="toleranceForce4AfterShrinkFit">Min 1820</span>
@@ -774,11 +774,11 @@
         
                       <!--  Aspect Sample 4 After Shrink Fit -->
                       <div class="col-md-4">
-                        <select class="form-select" id="aspectFiber4AfterShrinkFit">
-                          <option selected disabled>Selectionnez le cas de rupture </option>
-                          <option value="1">Cas 1 - Trop sérré</option>
-                          <option value="2">Cas 2 - Pas assez sérré</option>
-                          <option value="2">Cas 3 - Rupture parfaite</option>
+                        <select class="form-select" id="aspectFiber4AfterShrinkFit" name="aspectFiber4AfterShrinkFit">
+                          <option selected disabled>Selectionnez le cas de rupture</option>
+                          <option <?php if($tracabilitySheet->aspectFiber4AfterShrinkFit == 1) echo 'selected'; ?>>Cas 1 - Trop sérré</option>
+                          <option <?php if($tracabilitySheet->aspectFiber4AfterShrinkFit == 2) echo 'selected'; ?>>Cas 2 - Pas assez sérré</option>
+                          <option <?php if($tracabilitySheet->aspectFiber4AfterShrinkFit == 3) echo 'selected'; ?>>Cas 3 - Rupture parfaite</option>
                         </select>
                       </div>
                     </div>
@@ -792,7 +792,7 @@
                       <!--  Thickness Sample 5 After Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="thickness5AfterShrinkFit" placeholder="Entrez l'épaisseur">
+                          <input type="number" class="form-control" id="thickness5AfterShrinkFit" placeholder="Entrez l'épaisseur" value="<?= htmlspecialchars($tracabilitySheet->thickness5AfterShrinkFit) ?>">
         
                           <!-- Tolerance with dynamic color -->
                           <span class="input-group-text" id="toleranceThickness5AfterShrinkFit">0,23-0,30</span>
@@ -805,7 +805,7 @@
                       <!--  Force Sample 5 After Shrink Fit -->
                       <div class="col-md-4">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="force5AfterShrinkFit" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()">
+                          <input type="number" class="form-control" id="force5AfterShrinkFit" placeholder="Entrez la force" oninput="calculateMoyenneEcartTypeAvant()" value="<?= htmlspecialchars($tracabilitySheet->force5AfterShrinkFit) ?>">
         
                           <!-- Tolerance with dynamic color -->
                           <span class="input-group-text" id="toleranceForce5AfterShrinkFit">Min 1820</span>
@@ -817,11 +817,11 @@
         
                       <!--  Aspect Sample 5 After Shrink Fit -->
                       <div class="col-md-4">
-                        <select class="form-select" id="aspectFiber5AfterShrinkFit">
-                          <option selected disabled>Selectionnez le cas de rupture </option>
-                          <option value="1">Cas 1 - Trop sérré</option>
-                          <option value="2">Cas 2 - Pas assez sérré</option>
-                          <option value="2">Cas 3 - Rupture parfaite</option>
+                        <select class="form-select" id="aspectFiber5AfterShrinkFit" name="aspectFiber5AfterShrinkFit">
+                          <option selected disabled>Selectionnez le cas de rupture</option>
+                          <option <?php if($tracabilitySheet->aspectFiber5AfterShrinkFit == 1) echo 'selected'; ?>>Cas 1 - Trop sérré</option>
+                          <option <?php if($tracabilitySheet->aspectFiber5AfterShrinkFit == 2) echo 'selected'; ?>>Cas 2 - Pas assez sérré</option>
+                          <option <?php if($tracabilitySheet->aspectFiber5AfterShrinkFit == 3) echo 'selected'; ?>>Cas 3 - Rupture parfaite</option>
                         </select>
                       </div>
                     </div>
@@ -839,7 +839,7 @@
                       <!--  Value - Mean Force Tensile test After Shrink Fit -->
                       <div class="col-md-6">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="averageAfterShrinkFit" placeholder="Calculée automatiquement" readonly>
+                          <input type="number" class="form-control" id="averageAfterShrinkFit" placeholder="Calculée automatiquement" readonly value="<?= htmlspecialchars($tracabilitySheet->averageAfterShrinkFit) ?>">
         
                           <!-- Tolerance with dynamic color -->
                           <span class="input-group-text" id="toleranceAverageAfterShrinkFit">Min 1820</span>
@@ -863,7 +863,7 @@
                       <!--  Value - Standart deviation Force Tensile test After Shrink Fit -->
                       <div class="col-md-6">
                         <div class="input-group">
-                          <input type="number" class="form-control" id="sigmaAfterShrinkFit" placeholder="Calculée automatiquement" readonly>
+                          <input type="number" class="form-control" id="sigmaAfterShrinkFit" placeholder="Calculée automatiquement" readonly value="<?= htmlspecialchars($tracabilitySheet->sigmaAfterShrinkFit) ?>">
         
                           <!-- Unit of measurement -->
                           <span class="input-group-text">N</span>
@@ -896,7 +896,7 @@
                     <div class="col-md-4">
                       <label for="df1" class="form-label">DF1</label>
                       <div class="input-group">
-                        <input type="text" class="form-control" id="df1">
+                        <input type="text" class="form-control" id="df1" value="<?= htmlspecialchars($tracabilitySheet->df1) ?>">
 
                         <!-- Tolerance with dynamic color -->
                         <span class="input-group-text" id="toleranceDf1">174 +0/+2</span>
@@ -910,7 +910,7 @@
                     <div class="col-md-4">
                       <label for="df2" class="form-label">DF2</label>
                       <div class="input-group">
-                        <input type="text" class="form-control" id="df2">
+                        <input type="text" class="form-control" id="df2" value="<?= htmlspecialchars($tracabilitySheet->df2) ?>">
                         
                         <!-- Tolerance with dynamic color -->
                         <span class="input-group-text" id="toleranceDf2">174 +0/+2</span>
@@ -924,7 +924,7 @@
                     <div class="col-md-4">
                       <label for="df3" class="form-label">DF3</label>
                       <div class="input-group">
-                        <input type="text" class="form-control" id="df3">
+                        <input type="text" class="form-control" id="df3" value="<?= htmlspecialchars($tracabilitySheet->df3) ?>">
                         
                         <!-- Tolerance with dynamic color -->
                         <span class="input-group-text" id="toleranceDf3">174 +0/+2</span>
@@ -943,7 +943,7 @@
                     <div class="col-md-6">
                       <label for="mt" class="form-label">MT</label>
                       <div class="input-group">
-                        <input type="text" class="form-control" id="mt">
+                        <input type="text" class="form-control" id="mt" value="<?= htmlspecialchars($tracabilitySheet->mt) ?>">
                         
                         <!-- Tolerance with dynamic color -->
                         <span class="input-group-text" id="toleranceMt">Max 8700</span>
@@ -957,7 +957,7 @@
                     <div class="col-md-6">
                       <label for="mf" class="form-label">MF</label>
                       <div class="input-group">
-                        <input type="text" class="form-control" id="mf" readonly>
+                        <input type="text" class="form-control" id="mf" readonly value="<?= htmlspecialchars($tracabilitySheet->mf) ?>">
                         
                         <!-- Tolerance with dynamic color -->
                         <span class="input-group-text" id="toleranceMf">Max 1050</span>
@@ -977,11 +977,11 @@
                     <div class="col-md-6">
                       <label class="form-label d-block">BF</label>
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="bf" id="BfOk" value="ok">
+                        <input class="form-check-input" type="radio" name="bf" value="1" <?php if ($tracabilitySheet->bf === true) echo 'checked'; ?>>
                         <label class="form-check-label" for="aspectOk">OK</label>
                       </div>
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="bf" id="BfNok" value="nok">
+                        <input class="form-check-input" type="radio" name="bf" value="0" <?php if ($tracabilitySheet->bf === false) echo 'checked'; ?>>
                         <label class="form-check-label" for="aspectNok">NOK</label>
                       </div>
                     </div>
@@ -990,11 +990,11 @@
                     <div class="col-md-6">
                       <label class="form-label d-block">VF</label>
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="vf" id="VfOk" value="ok">
+                        <input class="form-check-input" type="radio" name="vf" value="1" <?php if ($tracabilitySheet->vf === true) echo 'checked'; ?>>
                         <label class="form-check-label" for="aspectOk">OK</label>
                       </div>
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="vf" id="VfNok" value="nok">
+                        <input class="form-check-input" type="radio" name="vf" value="0" <?php if ($tracabilitySheet->vf === false) echo 'checked'; ?>>
                         <label class="form-check-label" for="aspectNok">NOK</label>
                       </div>
                     </div>
@@ -1042,7 +1042,7 @@
                 <!-- Date Operator Conformity Declaration -->
                 <div class="mb-3">
                   <label for="dateOperatorValidation" class="form-label">Date validation par l'opérateur</label>
-                  <input type="date" class="form-control" id="dateOperatorConformityDeclaration">
+                  <input type="date" class="form-control" id="dateOperatorConformityDeclaration" value="<?= htmlspecialchars($tracabilitySheet->dateOperatorConformityDeclaration) ?>">
                 </div>
       
                 <div class="mb-3">
@@ -1051,7 +1051,7 @@
                     <!-- Operator Name Conformity Declaration -->
                     <div class="col-md-4">
                       <label for="operatorValidation" class="form-label">Opérateur</label>
-                      <input type="text" class="form-control" id="operatorNameConformityDeclaration">
+                      <input type="text" class="form-control" id="operatorNameConformityDeclaration" value="<?= htmlspecialchars($tracabilitySheet->operatorNameConformityDeclaration) ?>">
                     </div>
 
                     <!-- Operator Conformity Declaration -->
@@ -1059,11 +1059,11 @@
                       <label for="conformiteValidation" class="form-label">Conformité</label>
                       <div class="col-md-6">
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="Conformite" id="operatorConformityDeclarationOk" value="ok">
+                          <input class="form-check-input" type="radio" name="operatorConformityDeclaration" value="1" <?php if ($tracabilitySheet->operatorConformityDeclaration === true) echo 'checked'; ?>>
                           <label class="form-check-label" for="aspectOk">Oui</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="Conformite" id="operatorConformityDeclarationNok" value="nok">
+                          <input class="form-check-input" type="radio" name="operatorConformityDeclaration" value="0" <?php if ($tracabilitySheet->operatorConformityDeclaration === false) echo 'checked'; ?>>
                           <label class="form-check-label" for="aspectNok">Non</label>
                         </div>
                       </div>
@@ -1074,11 +1074,11 @@
                       <label for="firstAccumulator" class="form-label">Premier du Lot</label>
                       <div class="col-md-6">
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="PremierDuLot" id="firstAccumulatorLotOk" value="ok">
+                          <input class="form-check-input" type="radio" name="firstAccumulatorLot" value="1" <?php if ($tracabilitySheet->firstAccumulatorLot === true) echo 'checked'; ?>>
                           <label class="form-check-label" for="aspectOk">Oui</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="PremierDuLot" id="firstAccumulatorLotNok" value="nok">
+                          <input class="form-check-input" type="radio" name="firstAccumulatorLot" value="0" <?php if ($tracabilitySheet->firstAccumulatorLot === false) echo 'checked'; ?>>
                           <label class="form-check-label" for="aspectNok">Non</label>
                         </div>
                       </div>
@@ -1112,7 +1112,7 @@
                 <!-- Date Quality Control Conformity Declaration -->
                 <div class="mb-3">
                   <label for="dateValidation" class="form-label">Date de validation par le contrôle</label>
-                  <input type="date" class="form-control" id="qualityControlDate">
+                  <input type="date" class="form-control" id="qualityControlDate" value="<?= htmlspecialchars($tracabilitySheet->qualityControlDate) ?>">
                 </div>
                 <div class="mb-3">
                   <div class="row">
@@ -1120,7 +1120,7 @@
                     <!-- Quality Inspector Name -->
                     <div class="col-md-6">
                       <label for="operateurValidation" class="form-label">Contrôleur</label>
-                      <input type="text" class="form-control" id="qualityInspectorName">
+                      <input type="text" class="form-control" id="qualityInspectorName" value="<?= htmlspecialchars($tracabilitySheet->qualityInspectorName) ?>">
                     </div>
 
                     <!-- Quality Control Conformity Declaration -->
@@ -1132,13 +1132,14 @@
                       <!-- Quality Control Conformity Declaration - CheckBox-->
                       <div class="col-md-6">
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="Conformite" id="qualityConformityDeclarationOk" value="ok">
+                          <input class="form-check-input" type="radio" name="qualityConformityDeclaration" value="1"  <?php if ($tracabilitySheet->qualityConformityDeclaration === true) echo 'checked'; ?>>
                           <label class="form-check-label" for="aspectOk">Oui</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="Conformite" id="qualityConformityDeclarationNok" value="nok">
+                          <input class="form-check-input" type="radio" name="qualityConformityDeclaration" value="0"  <?php if ($tracabilitySheet->qualityConformityDeclaration === false) echo 'checked'; ?>>
                           <label class="form-check-label" for="aspectNok">Non</label>
                         </div>
+                        <label>
                       </div>
                     </div>
                   </div>

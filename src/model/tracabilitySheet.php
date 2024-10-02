@@ -14,6 +14,7 @@ class TracabilitySheet
     public string $sheetCreationDate;
     public string $refPlan;
     public string $refMachine;
+    public string $material;
     public string $spoolBatch;
     public int $spoolNumber;
     public string $dateDimAfterCoating;
@@ -21,7 +22,7 @@ class TracabilitySheet
     public float $lengthL;
     public float $diameterD;
     public int $massM;
-    public int $aspectDimAfterCoating;
+    public bool $aspectDimAfterCoating;
     public float $profileMassBeforeShrinkFit;
     public float $linearMassBeforeShrinkFit;
     public float $thickness1BeforeShrinkFit;
@@ -67,12 +68,12 @@ class TracabilitySheet
     public float $df1;
     public float $df2;
     public float $df3;
-    public int $operatorConformityDeclaration;
+    public bool $operatorConformityDeclaration;
     public string $operatorRemarks;
     public string $dateOperatorConformityDeclaration;
     public string $operatorNameConformityDeclaration;
-    public int $firstAccumulatorLot;
-    public string $qualityConformityDeclaration;
+    public bool $firstAccumulatorLot;
+    public bool $qualityConformityDeclaration;
     public string $qualityControlDate;
     public string $qualityInspectorName;
     public string $qualityInspectorRemarks;
@@ -97,6 +98,7 @@ class TracabilitySheetRepository
         $tracabilitySheet->sheetCreationDate = $row['sheetCreationDate'];
         $tracabilitySheet->refPlan = $row['refPlan'];
         $tracabilitySheet->refMachine = $row['refMachine'];
+        $tracabilitySheet->material = $row['material'];
         $tracabilitySheet->spoolBatch = $row['spoolBatch'];
         $tracabilitySheet->spoolNumber = (int) $row['spoolNumber'];
         $tracabilitySheet->dateDimAfterCoating = $row['dateDimAfterCoating'];
@@ -104,7 +106,7 @@ class TracabilitySheetRepository
         $tracabilitySheet->lengthL= (float)$row['lengthL'];
         $tracabilitySheet->diameterD = (float)$row['diameterD'];
         $tracabilitySheet->massM = (int)$row['massM'];
-        $tracabilitySheet->aspectDimAfterCoating = (int)$row['aspectDimAfterCoating'];
+        $tracabilitySheet->aspectDimAfterCoating = (bool)$row['aspectDimAfterCoating'];
         $tracabilitySheet->profileMassBeforeShrinkFit = (float)$row['profileMassBeforeShrinkFit'];
         $tracabilitySheet->linearMassBeforeShrinkFit = (float)$row['linearMassBeforeShrinkFit'];
         $tracabilitySheet->thickness1BeforeShrinkFit = (float)$row['thickness1BeforeShrinkFit'];
