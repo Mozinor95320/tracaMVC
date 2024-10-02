@@ -4,57 +4,7 @@
 
 <div class="container mt-4">
   
-  <!-- Generic Data-->
-  <div class="card-body">
-    <form>
-      <div class="mb-3 ml-3">
-        <h2>Informations générales</h2>
-      </div>
 
-      <div class="mb-3">
-        <div class="row align-items-center">
-          <!-- Work Order Field -->
-          <div class="col-md-6">
-            <label for="numeroOF" class="form-label">N°OF</label>
-            <input type="text" class="form-control" id="workOrder" value="<?= htmlspecialchars($tracabilitySheet->workOrder) ?>" readonly>
-          </div>
-          <!-- Serial Number Field -->
-          <div class="col-md-6">
-            <label for="numeroOF" class="form-label">SN</label>
-            <input type="text" class="form-control" id="serialNumber" value="<?= htmlspecialchars($tracabilitySheet->identifier) ?>" readonly>
-          </div>
-        </div>
-      </div>
-      <div class="mb-3">
-        <div class="row align-items-center">
-          <!-- Part Number Field -->
-          <div class="col-md-6">
-            <label for="numeroOF" class="form-label">PN</label>
-            <input type="text" class="form-control" id="partNumber" value="<?= htmlspecialchars($tracabilitySheet->partNumber) ?>" readonly>
-          </div>
-          <!-- Sheet Creation Date -->
-          <div class="col-md-6">
-            <label for="date" class="form-label">Date de création de la fiche</label>
-            <input type="datetime-local" class="form-control" id="sheetCreationDate" value="<?= htmlspecialchars($tracabilitySheet->sheetCreationDate) ?>" readonly>
-          </div>
-        </div>
-      </div>
-      <div class="mb-3">
-        <div class="row align-items-center">
-          <!-- Plan Reference Field -->
-          <div class="col-md-6">
-            <label for="referencePlan" class="form-label">Référence plan</label>
-            <input type="text" class="form-control" id="refPlan" value="<?= htmlspecialchars($tracabilitySheet->refPlan) ?>" readonly>
-          </div>
-          <!-- Machine Reference Field -->
-          <div class="col-md-6">
-            <label for="machine" class="form-label">Machine</label>
-            <input type="text" class="form-control" id="refMachine" value="<?= htmlspecialchars($tracabilitySheet->refMachine) ?>" readonly>
-          </div>
-        </div>
-      </div>
-    </form>
-  </div>
   <div class="mb-3 ml-3">
     
     <!-- Nav Tabs -->
@@ -74,10 +24,59 @@
   <!-- Tab Content -->
   <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+      <!-- Generic Data-->
+      <div class="card-body">
+        <form>
+          <div class="mb-3 ml-3">
+            <h2>Informations générales</h2>
+          </div>
+          <div class="mb-3">
+            <div class="row align-items-center">
+              <!-- Work Order Field -->
+              <div class="col-md-6">
+                <label for="numeroOF" class="form-label">N°OF</label>
+                <input type="text" class="form-control" id="workOrder" value="<?= htmlspecialchars($tracabilitySheet->workOrder) ?>" readonly>
+              </div>
+              <!-- Serial Number Field -->
+              <div class="col-md-6">
+                <label for="numeroOF" class="form-label">SN</label>
+                <input type="text" class="form-control" id="serialNumber" value="<?= htmlspecialchars($tracabilitySheet->identifier) ?>" readonly>
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="row align-items-center">
+              <!-- Part Number Field -->
+              <div class="col-md-6">
+                <label for="numeroOF" class="form-label">PN</label>
+                <input type="text" class="form-control" id="partNumber" value="<?= htmlspecialchars($tracabilitySheet->partNumber) ?>" readonly>
+              </div>
+              <!-- Sheet Creation Date -->
+              <div class="col-md-6">
+                <label for="date" class="form-label">Date de création de la fiche</label>
+                <input type="datetime-local" class="form-control" id="sheetCreationDate" value="<?= htmlspecialchars($tracabilitySheet->sheetCreationDate) ?>" readonly>
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="row align-items-center">
+              <!-- Plan Reference Field -->
+              <div class="col-md-6">
+                <label for="referencePlan" class="form-label">Référence plan</label>
+                <input type="text" class="form-control" id="refPlan" value="<?= htmlspecialchars($tracabilitySheet->refPlan) ?>" readonly>
+              </div>
+              <!-- Machine Reference Field -->
+              <div class="col-md-6">
+                <label for="machine" class="form-label">Machine</label>
+                <input type="text" class="form-control" id="refMachine" value="<?= htmlspecialchars($tracabilitySheet->refMachine) ?>" readonly>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      
+      <!-- Section 2: Fiber Data -->
       <div class="accordion" id="accordionExample">
-
-        <!-- Section 2: Fiber Data -->
-        
         <div class="accordion-item form-section">
           <h2 class="accordion-header" id="headingTwo">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
