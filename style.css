@@ -1,5 +1,5 @@
 .banner {
-  background-color: #ff0000;
+  background-color: #000000;
   color: white;
   padding: 10px;
   border-bottom: solid 10px #ffb91d;
@@ -10,59 +10,58 @@ header h1 {
   display: inline-block;
 }
 .card-title {
-font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .card-text {
-font-size: 0.9rem;
-color: #6c757d;
+  font-size: 0.9rem;
+  color: #6c757d;
 }
 
 .btn-outline-primary {
-display: inline-flex;
-align-items: center;
-padding: 6px 12px;
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
 }
 
 .form-section {
-margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .accordion-button {
-background-color: #f8f9fa;
-color: #343a40;
+  background-color: #f8f9fa;
+  color: #343a40;
 }
 
 .accordion-button:not(.collapsed) {
-background-color: #007bff;
-color: #fff;
+  background-color: #007bff;
+  color: #fff;
 }
 
 .accordion-button:focus {
-box-shadow: none;
+  box-shadow: none;
 }
 
 /* Appliquer une couleur de fond spéciale pour les champs readonly */
 input[readonly] {
-background-color: #e0e0e0 !important; /* Couleur de fond gris clair */
-color: #000; /* Couleur du texte */
+  background-color: #e0e0e0 !important; /* Couleur de fond gris clair */
+  color: #000; /* Couleur du texte */
 }
 
 /* Classe pour couleur de tolérance dans la plage acceptable */
 .bg-tolerance-ok {
-background-color: #28a745 !important; /* Vert */
-color: white;
+  background-color: #28a745 !important; /* Vert */
+  color: white;
 }
 
 /* Classe pour couleur de tolérance en dehors de la plage acceptable */
 .bg-tolerance-wrong {
-background-color: #dc3545 !important; /* Rouge */
-color: white;
+  background-color: #dc3545 !important; /* Rouge */
+  color: white;
 }
 
 /* Classe pour couleur de tolérance quand aucune valeur n'est entrée */
 .bg-tolerance-default {
-background-color: #e0e0e0 !important; /* Gris */
-color: white;
+  background-color: #e0e0e0 !important; /* Gris */
+  color: white;
 }
-
