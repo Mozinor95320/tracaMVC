@@ -1,5 +1,5 @@
 document.getElementById("serialNumber").value =
-  "<?= $tracabilitySheet->serialNumber ?>";
+  "test";
 /*
 document.getElementById("partNumber").value =
   "<?= $tracabilitySheet->partNumber ?>";
