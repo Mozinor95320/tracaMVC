@@ -102,7 +102,7 @@
                         <!-- Sppol Batch Reference Field -->
                         <div class="col-md-6">
                           <label for="bobine" class="form-label">Bobine</label>
-                          <input type="number" class="form-control" id="spoolBatch" value="<?= htmlspecialchars($tracabilitySheet->spoolBatch) ?>">
+                          <input type="text" class="form-control" id="spoolBatch" value="<?= htmlspecialchars($tracabilitySheet->spoolBatch) ?>">
                         </div>
                         <!-- Spool Number Field -->
                         <div class="col-md-6">
@@ -149,7 +149,7 @@
                     <!-- Date Dimension After Coating -->
                     <div class="mb-3">
                       <label for="dateEnduction" class="form-label">Date</label>
-                      <input type="date" class="form-control" id="dateDimAfterCoating" value="<?= htmlspecialchars($tracabilitySheet->dateDimAfterCoating) ?>">
+                      <input type="datetime-local" class="form-control" id="dateDimAfterCoating" value="<?= htmlspecialchars($tracabilitySheet->dateDimAfterCoating) ?>">
                     </div>
 
                     <div class="row align-items-center">
@@ -214,6 +214,7 @@
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="aspectDimAfterCoating" value="0" <?php if ($tracabilitySheet->aspectDimAfterCoating === false)
                           echo 'checked'; ?>>
+                        <label class="form-check-label" for="aspectNok">NOK</label>
                       </div>
                     </div>
                     
@@ -1074,7 +1075,7 @@
                     <!-- Date Operator Conformity Declaration -->
                     <div class="mb-3">
                       <label for="dateOperatorValidation" class="form-label">Date validation par l'opérateur</label>
-                      <input type="date" class="form-control" id="dateOperatorConformityDeclaration" value="<?= htmlspecialchars($tracabilitySheet->dateOperatorConformityDeclaration) ?>">
+                      <input type="datetime-local" class="form-control" id="dateOperatorConformityDeclaration" value="<?= htmlspecialchars($tracabilitySheet->dateOperatorConformityDeclaration) ?>">
                     </div>
           
                     <div class="mb-3">
@@ -1147,7 +1148,7 @@
                     <!-- Date Quality Control Conformity Declaration -->
                     <div class="mb-3">
                       <label for="dateValidation" class="form-label">Date de validation par le contrôle</label>
-                      <input type="date" class="form-control" id="qualityControlDate" value="<?= htmlspecialchars($tracabilitySheet->qualityControlDate) ?>">
+                      <input type="datetime-local" class="form-control" id="qualityControlDate" value="<?= htmlspecialchars($tracabilitySheet->qualityControlDate) ?>">
                     </div>
                     <div class="mb-3">
                       <div class="row">

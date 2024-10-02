@@ -158,9 +158,9 @@ class TracabilitySheetRepository
         $tracabilitySheet->dateOperatorConformityDeclaration = $row['dateOperatorConformityDeclaration'];
         $tracabilitySheet->operatorNameConformityDeclaration = $row['operatorNameConformityDeclaration'];
         $tracabilitySheet->firstAccumulatorLot = is_null($row['firstAccumulatorLot']) ? NULL : (bool)$row['firstAccumulatorLot'];
-        $tracabilitySheet->qualityConformityDeclaration = $row['qualityConformityDeclaration'];
+        $tracabilitySheet->qualityConformityDeclaration = is_null($row['qualityConformityDeclaration']) ? NULL : (bool)$row['qualityConformityDeclaration'];
         $tracabilitySheet->qualityControlDate = $row['qualityControlDate'];
-        $tracabilitySheet->qualityInspectorName = is_null($row['qualityInspectorName']) ? NULL : (bool)$row['qualityInspectorName'];
+        $tracabilitySheet->qualityInspectorName = $row['qualityInspectorName'];
         $tracabilitySheet->qualityInspectorRemarks = $row['qualityInspectorRemarks'];
 
         return $tracabilitySheet;
