@@ -22,7 +22,7 @@ class TracabilitySheet
     public float $lengthL;
     public float $diameterD;
     public int $massM;
-    public bool $aspectDimAfterCoating;
+    public $aspectDimAfterCoating;
     public float $profileMassBeforeShrinkFit;
     public float $linearMassBeforeShrinkFit;
     public float $thickness1BeforeShrinkFit;
@@ -61,8 +61,8 @@ class TracabilitySheet
     public int $aspectFiber5AfterShrinkFit;
     public float $averageAfterShrinkFit;
     public float $sigmaAfterShrinkFit;
-    public bool $bf;
-    public bool $vf;
+    public $bf;
+    public $vf;
     public int $mt;
     public int $mf;
     public float $df1;
@@ -72,8 +72,8 @@ class TracabilitySheet
     public string $operatorRemarks;
     public string $dateOperatorConformityDeclaration;
     public string $operatorNameConformityDeclaration;
-    public bool $firstAccumulatorLot;
-    public bool $qualityConformityDeclaration;
+    public $firstAccumulatorLot;
+    public $qualityConformityDeclaration;
     public string $qualityControlDate;
     public string $qualityInspectorName;
     public string $qualityInspectorRemarks;
@@ -169,7 +169,7 @@ class TracabilitySheetRepository
     public function getTracabilitySheets(): array
     {
         $statement = $this->connection->getConnection()->query(
-            "SELECT serialNumber, workOrder, DATE_FORMAT(sheetCreationDate, '%d/%m/%Y à %Hh%imin%ss') AS french_creation_date FROM tracabilitySheets ORDER BY sheetCreationDate DESC LIMIT 0, 5"
+            "SELECT serialNumber, workOrder, sheetCreationDate FROM tracabilitySheets ORDER BY sheetCreationDate DESC LIMIT 0, 5"
         );
         $tracabilitySheets = [];
         while (($row = $statement->fetch())) {
