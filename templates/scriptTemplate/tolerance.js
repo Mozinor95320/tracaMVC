@@ -1,5 +1,6 @@
 document.getElementById("serialNumber").value =
   "<?= $tracabilitySheet->serialNumber ?>";
+/*
 document.getElementById("partNumber").value =
   "<?= $tracabilitySheet->partNumber ?>";
 document.getElementById("workOrder").value =
@@ -436,4 +437,4 @@ document.addEventListener("DOMContentLoaded", function () {
     const currentLength = comment.value.length;
     charCount.textContent = `${currentLength}/255 characters`;
   });
-});
+});*/
