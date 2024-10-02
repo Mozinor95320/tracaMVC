@@ -1,6 +1,9 @@
 <?php $title = "Fiche n°" . $tracabilitySheet->identifier; ?>
 
 <?php ob_start(); ?>
+<a href="votre-url.html" class="text-decoration-none">
+    <i class="bi bi-house"></i> Accueil
+</a>
 
 <div class="container mt-4">
   
@@ -26,7 +29,7 @@
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
       <!-- Generic Data-->
-      <div class="card-body d-flex justify-content-between align-items-center">
+      <div class="card-body">
           <div class="mb-3 ml-3">
             <h2>Informations générales</h2>
             <h3>Description de la fiche de tracabilité</h3>
