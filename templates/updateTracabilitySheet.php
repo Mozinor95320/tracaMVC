@@ -16,12 +16,12 @@
           <!-- Work Order Field -->
           <div class="col-md-6">
             <label for="numeroOF" class="form-label">N°OF</label>
-            <input type="text" class="form-control" id="workOrder" readonly>
+            <input type="text" class="form-control" id="workOrder" value="<?= htmlspecialchars($tracabilitySheet->workOrder) ?>" readonly>
           </div>
           <!-- Serial Number Field -->
           <div class="col-md-6">
             <label for="numeroOF" class="form-label">SN</label>
-            <input type="text" class="form-control" id="serialNumber" readonly>
+            <input type="text" class="form-control" id="serialNumber" value="<?= htmlspecialchars($tracabilitySheet->identifier) ?>" readonly>
           </div>
         </div>
       </div>
@@ -30,12 +30,12 @@
           <!-- Part Number Field -->
           <div class="col-md-6">
             <label for="numeroOF" class="form-label">PN</label>
-            <input type="text" class="form-control" id="PartNumber" readonly>
+            <input type="text" class="form-control" id="partNumber" value="<?= htmlspecialchars($tracabilitySheet->partNumber) ?>" readonly>
           </div>
           <!-- Sheet Creation Date -->
           <div class="col-md-6">
             <label for="date" class="form-label">Date de création de la fiche</label>
-            <input type="date" class="form-control" id="sheetCreationDate" readonly>
+            <input type="date" class="form-control" id="sheetCreationDate" value="<?= htmlspecialchars($tracabilitySheet->sheetCreationDate) ?>" readonly>
           </div>
         </div>
       </div>
@@ -44,12 +44,12 @@
           <!-- Plan Reference Field -->
           <div class="col-md-6">
             <label for="referencePlan" class="form-label">Référence plan</label>
-            <input type="text" class="form-control" id="refPlan" readonly>
+            <input type="text" class="form-control" id="refPlan" value="<?= htmlspecialchars($tracabilitySheet->refPlan) ?>" readonly>
           </div>
           <!-- Machine Reference Field -->
           <div class="col-md-6">
             <label for="machine" class="form-label">Machine</label>
-            <input type="text" class="form-control" id="machine" readonly>
+            <input type="text" class="form-control" id="machine" value="<?= htmlspecialchars($tracabilitySheet->refPlan) ?>" readonly>
           </div>
         </div>
       </div>
