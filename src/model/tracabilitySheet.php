@@ -22,7 +22,7 @@ class TracabilitySheet
     public float $lengthL;
     public float $diameterD;
     public int $massM;
-    public bool $aspectDimAfterCoating;
+    public $aspectDimAfterCoating;
     public float $profileMassBeforeShrinkFit;
     public float $linearMassBeforeShrinkFit;
     public float $thickness1BeforeShrinkFit;
@@ -61,8 +61,8 @@ class TracabilitySheet
     public int $aspectFiber5AfterShrinkFit;
     public float $averageAfterShrinkFit;
     public float $sigmaAfterShrinkFit;
-    public int $bf;
-    public int $vf;
+    public $bf;
+    public $vf;
     public int $mt;
     public int $mf;
     public float $df1;
@@ -72,8 +72,8 @@ class TracabilitySheet
     public string $operatorRemarks;
     public string $dateOperatorConformityDeclaration;
     public string $operatorNameConformityDeclaration;
-    public bool $firstAccumulatorLot;
-    public bool $qualityConformityDeclaration;
+    public $firstAccumulatorLot;
+    public $qualityConformityDeclaration;
     public string $qualityControlDate;
     public string $qualityInspectorName;
     public string $qualityInspectorRemarks;
@@ -106,7 +106,8 @@ class TracabilitySheetRepository
         $tracabilitySheet->lengthL= (float)$row['lengthL'];
         $tracabilitySheet->diameterD = (float)$row['diameterD'];
         $tracabilitySheet->massM = (int)$row['massM'];
-        $tracabilitySheet->aspectDimAfterCoating = (bool)$row['aspectDimAfterCoating'];
+        $tracabilitySheet->aspectDimAfterCoating = (bool)$row['aspectDimAfterCoating']; 
+        $tracabilitySheet->aspectDimAfterCoating = is_null($row['aspectDimAfterCoating']) ? NULL : (bool)$row['aspectDimAfterCoating'];
         $tracabilitySheet->profileMassBeforeShrinkFit = (float)$row['profileMassBeforeShrinkFit'];
         $tracabilitySheet->linearMassBeforeShrinkFit = (float)$row['linearMassBeforeShrinkFit'];
         $tracabilitySheet->thickness1BeforeShrinkFit = (float)$row['thickness1BeforeShrinkFit'];
@@ -145,21 +146,21 @@ class TracabilitySheetRepository
         $tracabilitySheet->aspectFiber5AfterShrinkFit = (int)$row['aspectFiber5AfterShrinkFit'];
         $tracabilitySheet->averageAfterShrinkFit = (float)$row['averageAfterShrinkFit'];
         $tracabilitySheet->sigmaAfterShrinkFit = (float)$row['sigmaAfterShrinkFit'];
-        $tracabilitySheet->bf = (int)$row['bf'];
-        $tracabilitySheet->vf = (int)$row['vf'];
+        $tracabilitySheet->bf = is_null($row['bf']) ? NULL : (bool)$row['bf'];
+        $tracabilitySheet->vf = is_null($row['vf']) ? NULL : (bool)$row['vf'];
         $tracabilitySheet->mt = (int)$row['mt'];
         $tracabilitySheet->mf = (int)$row['mf'];
         $tracabilitySheet->df1 = (float)$row['df1'];
         $tracabilitySheet->df2 = (float)$row['df2'];
         $tracabilitySheet->df3 = (float)$row['df3'];
-        $tracabilitySheet->operatorConformityDeclaration = (int)$row['operatorConformityDeclaration'];
+        $tracabilitySheet->operatorConformityDeclaration = is_null($row['operatorConformityDeclaration']) ? NULL : (bool)$row['operatorConformityDeclaration'];
         $tracabilitySheet->operatorRemarks = $row['operatorRemarks'];
         $tracabilitySheet->dateOperatorConformityDeclaration = $row['dateOperatorConformityDeclaration'];
         $tracabilitySheet->operatorNameConformityDeclaration = $row['operatorNameConformityDeclaration'];
-        $tracabilitySheet->firstAccumulatorLot = (int)$row['firstAccumulatorLot'];
+        $tracabilitySheet->firstAccumulatorLot = is_null($row['firstAccumulatorLot']) ? NULL : (bool)$row['firstAccumulatorLot'];
         $tracabilitySheet->qualityConformityDeclaration = $row['qualityConformityDeclaration'];
         $tracabilitySheet->qualityControlDate = $row['qualityControlDate'];
-        $tracabilitySheet->qualityInspectorName = $row['qualityInspectorName'];
+        $tracabilitySheet->qualityInspectorName = is_null($row['qualityInspectorName']) ? NULL : (bool)$row['qualityInspectorName'];
         $tracabilitySheet->qualityInspectorRemarks = $row['qualityInspectorRemarks'];
 
         return $tracabilitySheet;
