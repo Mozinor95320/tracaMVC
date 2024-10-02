@@ -12,6 +12,8 @@ class TracabilitySheet
     public string $partNumber;
     public string $workOrder;
     public string $frenchCreationDate;
+    public string $refPlan;
+    public string $refMachine;
     public string $spoolBatch;
     public int $spoolNumber;
     public string $dateDimAfterCoating;
@@ -93,6 +95,8 @@ class TracabilitySheetRepository
         $tracabilitySheet->workOrder = $row['workOrder'];
         $tracabilitySheet->partNumber = $row['partNumber'];
         $tracabilitySheet->frenchCreationDate = $row['french_creation_date'];
+        $tracabilitySheet->refPlan = $row['refPlan'];
+        $tracabilitySheet->refMachine = $row['refMachine'];
         $tracabilitySheet->spoolBatch = $row['spoolBatch'];
         $tracabilitySheet->spoolNumber = (int) $row['spoolNumber'];
         $tracabilitySheet->dateDimAfterCoating = $row['dateDimAfterCoating'];
