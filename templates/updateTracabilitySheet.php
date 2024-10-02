@@ -74,7 +74,9 @@
             </div>
           </div>
       </div>
-      <h2>Catégories</h2>
+      <div class="mb-3">
+        <h2>Catégories</h2>
+      </div>
             <!-- Section 2: Fiber Data -->
         <form action="index.php?action=save&id=<?= $tracabilitySheet->identifier ?>" method="post">
           <div class="accordion" id="accordionExample">
