@@ -11,7 +11,7 @@ class TracabilitySheet
     public string $identifier;
     public string $partNumber;
     public string $workOrder;
-    public string $frenchCreationDate;
+    public string $sheetCreationDate;
     public string $refPlan;
     public string $refMachine;
     public string $spoolBatch;
@@ -85,7 +85,7 @@ class TracabilitySheetRepository
     public function getTracabilitySheet(string $identifier): TracabilitySheet
     {
         $statement = $this->connection->getConnection()->prepare(
-            "SELECT *, DATE_FORMAT(sheetCreationDate, '%d/%m/%Y à %Hh%imin%ss') AS french_creation_date FROM tracabilitySheets WHERE serialNumber = ?"
+            "SELECT * FROM tracabilitySheets WHERE serialNumber = ?"
         );
         $statement->execute([$identifier]);
 
@@ -94,7 +94,7 @@ class TracabilitySheetRepository
         $tracabilitySheet->identifier = $row['serialNumber'];
         $tracabilitySheet->workOrder = $row['workOrder'];
         $tracabilitySheet->partNumber = $row['partNumber'];
-        $tracabilitySheet->frenchCreationDate = $row['french_creation_date'];
+        $tracabilitySheet->sheetCreationDate = $row['sheetCreationDate'];
         $tracabilitySheet->refPlan = $row['refPlan'];
         $tracabilitySheet->refMachine = $row['refMachine'];
         $tracabilitySheet->spoolBatch = $row['spoolBatch'];
@@ -172,7 +172,7 @@ class TracabilitySheetRepository
         while (($row = $statement->fetch())) {
             $tracabilitySheet = new TracabilitySheet();
             $tracabilitySheet->workOrder = $row['workOrder'];
-            $tracabilitySheet->frenchCreationDate = $row['french_creation_date'];
+            $tracabilitySheet->sheetCreationDate = $row['sheetCreationDate'];
             $tracabilitySheet->identifier = $row['serialNumber'];
 
             $tracabilitySheets[] = $tracabilitySheet;
