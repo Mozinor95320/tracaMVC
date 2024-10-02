@@ -35,7 +35,7 @@
           <!-- Sheet Creation Date -->
           <div class="col-md-6">
             <label for="date" class="form-label">Date de création de la fiche</label>
-            <input type="date" class="form-control" id="sheetCreationDate" value="<?= htmlspecialchars($tracabilitySheet->sheetCreationDate) ?>" readonly>
+            <input type="datetime-local" class="form-control" id="sheetCreationDate" value="<?= htmlspecialchars($tracabilitySheet->sheetCreationDate) ?>" readonly>
           </div>
         </div>
       </div>
