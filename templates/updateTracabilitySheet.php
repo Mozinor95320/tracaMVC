@@ -36,11 +36,13 @@
           </div>
           <div class="mb-3">
             <div class="row align-items-center">
+
               <!-- Work Order Field -->
               <div class="col-md-6">
                 <label for="numeroOF" class="form-label">N°OF</label>
                 <input type="text" class="form-control" id="workOrder" value="<?= htmlspecialchars($tracabilitySheet->workOrder) ?>" readonly>
               </div>
+
               <!-- Serial Number Field -->
               <div class="col-md-6">
                 <label for="numeroOF" class="form-label">SN</label>
@@ -50,11 +52,13 @@
           </div>
           <div class="mb-3">
             <div class="row align-items-center">
+
               <!-- Part Number Field -->
               <div class="col-md-6">
                 <label for="numeroOF" class="form-label">PN</label>
                 <input type="text" class="form-control" id="partNumber" value="<?= htmlspecialchars($tracabilitySheet->partNumber) ?>" readonly>
               </div>
+
               <!-- Sheet Creation Date -->
               <div class="col-md-6">
                 <label for="date" class="form-label">Date de création de la fiche</label>
@@ -64,11 +68,13 @@
           </div>
           <div class="mb-3">
             <div class="row align-items-center">
+
               <!-- Plan Reference Field -->
               <div class="col-md-6">
                 <label for="referencePlan" class="form-label">Référence plan</label>
                 <input type="text" class="form-control" id="refPlan" value="<?= htmlspecialchars($tracabilitySheet->refPlan) ?>" readonly>
               </div>
+
               <!-- Machine Reference Field -->
               <div class="col-md-6">
                 <label for="machine" class="form-label">Machine</label>
@@ -170,7 +176,7 @@
                             <input type="number" class="form-control" id="lengthL" placeholder="Entrez la longueur" value="<?= htmlspecialchars($tracabilitySheet->lengthL) ?>">
                             
                             <!-- Tolerance with dynamic color -->
-                            <span class="input-group-text" id="tolerancelengthL">413,5 (-6/+0)</span>
+                            <span class="input-group-text" id="toleranceLengthL">413,5 (-6/+0)</span>
                             
                             <!-- Unit of measurement -->
                             <span class="input-group-text">mm</span>
@@ -186,7 +192,7 @@
                             <input type="number" class="form-control" id="diameterD" placeholder="Entrez le diamètre" value="<?= htmlspecialchars($tracabilitySheet->diameterD) ?>">
                             
                             <!-- Tolerance with dynamic color -->
-                            <span class="input-group-text" id="tolerancediameterD">163(-0/+0,9)</span>
+                            <span class="input-group-text" id="toleranceDiameterD">163(-0/+0,9)</span>
                             
                             <!-- Unit of measurement -->
                             <span class="input-group-text">mm</span>
@@ -202,7 +208,7 @@
                             <input type="number" class="form-control" id="massM" placeholder="Entrez la masse" value="<?= htmlspecialchars($tracabilitySheet->massM) ?>">
                             
                             <!-- Tolerance with dynamic color -->
-                            <span class="input-group-text" id="tolerancemassM">Max 7650</span>
+                            <span class="input-group-text" id="toleranceMassM">Max 7650</span>
                             
                             <!-- Unit of measurement -->
                             <span class="input-group-text">mm</span>
