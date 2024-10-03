@@ -22,7 +22,7 @@
             <div class="row align-items-center">
             </div>
         </header>
-        <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary" data-bs-theme="dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"><img src="templates/img/Parker.png" alt="Bootstrap" height="24">
             </a>
