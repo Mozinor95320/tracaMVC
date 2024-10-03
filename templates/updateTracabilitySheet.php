@@ -80,16 +80,17 @@
       <div class="mb-3">
         <h2>Catégories</h2>
       </div>
-            <!-- Section 2: Fiber Data -->
+            <!-- Section 1: Fiber Data -->
         <form action="index.php?action=save&id=<?= $tracabilitySheet->identifier ?>" method="post">
           <div class="accordion" id="accordionExample">
+            
             <div class="accordion-item form-section">
-              <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                   Données Matière
                 </button>
               </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
 
                     <!-- Material Reference Field -->
@@ -142,15 +143,15 @@
               </div>
             </div>
 
-            <!-- Section 3: Dimensions After Coating -->
+            <!-- Section 2: Dimensions After Coating -->
             
             <div class="accordion-item form-section">
-              <h2 class="accordion-header" id="headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                   Dimensions après enduction
                 </button>
               </h2>
-              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
 
                     <!-- Date Dimension After Coating -->
@@ -250,17 +251,15 @@
               </div>
             </div>
 
-            <!-- Section 4: Tensile Test before Shrink Fit -->
+            <!-- Section 3: Tensile Test before Shrink Fit -->
             <div class="accordion-item form-section">
-              <h2 class="accordion-header" id="headingFour">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                   Essais traction avant frettage
                 </button>
               </h2>
-              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-
-                    <div class="mb-3">
                       <div class="mb-3">
                         <div class="row align-items-center">
                           
@@ -441,7 +440,7 @@
                         </div>
                       </div>
 
-                    <!--  Tensile Test Sample 4 Before Shrink Fit -->
+                      <!--  Tensile Test Sample 4 Before Shrink Fit -->
                       <div class="mb-3">
                         <label for="meche4" class="form-label">Mèche 4</label>
                         <div class="row">
@@ -557,7 +556,7 @@
                         </div>
                       </div>
 
-                    <!--  Standart deviation - Tensile Test Before Shrink Fit -->
+                      <!--  Standart deviation - Tensile Test Before Shrink Fit -->
                       <div class="mb-3">
                         <div class="row">
                           
@@ -577,7 +576,6 @@
                           </div>
                         </div>
                       </div>
-                    </div>
                 </div>
               </div>
             </div>
