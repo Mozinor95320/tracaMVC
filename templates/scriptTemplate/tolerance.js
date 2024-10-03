@@ -43,7 +43,7 @@ document.getElementById(inputId).addEventListener("input", () => {
     toleranceId: "toleranceLengthL",
     tolMin: 413.5 - 6,
     tolMax: 413.5,
-  });
+  })
 });
 
 // Dynamic tolerance change - Diameter D
@@ -53,7 +53,7 @@ document.getElementById(inputId).addEventListener("input", () => {
     toleranceId: "toleranceDiameterD",
     tolMin: 163,
     tolMax: 163 + 0.9,
-  });
+  })
 });
 
 // Dynamic tolerance change - Mass M
@@ -62,7 +62,7 @@ document.getElementById(inputId).addEventListener("input", () => {
     inputId: "massM",
     toleranceId: "toleranceMassM",
     tolMax: 7650,
-  });
+  })
 });
 
 // Dynamic tolerance change - Thickness Sample 1 Before Shrink Test
@@ -72,7 +72,7 @@ document.getElementById(inputId).addEventListener("input", () => {
     toleranceId: "toleranceThickness1BeforeShrinkFit",
     tolMin: 0.23,
     tolMax: 0.3,
-  });
+  })
 });
 
 // Dynamic tolerance change - Force Sample 1 Before Shrink Test
@@ -81,7 +81,7 @@ document.getElementById(inputId).addEventListener("input", () => {
     inputId: "force1BeforeShrinkFit",
     toleranceId: "toleranceForce1BeforeShrinkFit",
     tolMin: 1820,
-  });
+  })
 });
 
 // Dynamic tolerance change - Thickness Sample 2 Before Shrink Test
@@ -91,7 +91,7 @@ document.getElementById(inputId).addEventListener("input", () => {
     toleranceId: "toleranceThickness2BeforeShrinkFit",
     tolMin: 0.23,
     tolMax: 0.3,
-  });
+  })
 });
 
 // Dynamic tolerance change - Force Sample 2 Before Shrink Test
@@ -100,7 +100,7 @@ document.getElementById(inputId).addEventListener("input", () => {
     inputId: "force2BeforeShrinkFit",
     toleranceId: "toleranceForce2BeforeShrinkFit",
     tolMin: 1820,
-  });
+  })
 });
 
 // Dynamic tolerance change - Thickness Sample 3 Before Shrink Test
@@ -110,7 +110,7 @@ document.getElementById(inputId).addEventListener("input", () => {
     toleranceId: "toleranceThickness3BeforeShrinkFit",
     tolMin: 0.23,
     tolMax: 0.3,
-  });
+  })
 });
 
 // Dynamic tolerance change - Force Sample 3 Before Shrink Test
@@ -119,7 +119,7 @@ document.getElementById(inputId).addEventListener("input", () => {
     inputId: "force3BeforeShrinkFit",
     toleranceId: "toleranceForce3BeforeShrinkFit",
     tolMin: 1820,
-  });
+  })
 });
 
 // Dynamic tolerance change - Thickness Sample 4 Before Shrink Test
@@ -129,7 +129,7 @@ document.getElementById(inputId).addEventListener("input", () => {
     toleranceId: "toleranceThickness4BeforeShrinkFit",
     tolMin: 0.23,
     tolMax: 0.3,
-  });
+  })
 });
 
 // Dynamic tolerance change - Force Sample 4 Before Shrink Test
@@ -138,7 +138,7 @@ document.getElementById(inputId).addEventListener("input", () => {
     inputId: "force4BeforeShrinkFit",
     toleranceId: "toleranceForce4BeforeShrinkFit",
     tolMin: 1820,
-  });
+  })
 });
 
 // Dynamic tolerance change - Thickness Sample 5 Before Shrink Test
@@ -148,7 +148,7 @@ document.getElementById(inputId).addEventListener("input", () => {
     toleranceId: "toleranceThickness5BeforeShrinkFit",
     tolMin: 0.23,
     tolMax: 0.3,
-  });
+  })
 });
 
 // Dynamic tolerance change - Force Sample 5 Before Shrink Test
@@ -157,7 +157,7 @@ document.getElementById(inputId).addEventListener("input", () => {
     inputId: "force5BeforeShrinkFit",
     toleranceId: "toleranceForce5BeforeShrinkFit",
     tolMin: 1820,
-  });
+  })
 });
 
 // Dynamic tolerance change - Thickness Sample 1 After Shrink Test
@@ -167,7 +167,7 @@ document.getElementById(inputId).addEventListener("input", () => {
     toleranceId: "toleranceThickness1AfterShrinkFit",
     tolMin: 0.23,
     tolMax: 0.3,
-  });
+  })
 });
 
 // Dynamic tolerance change - Force Sample 1 After Shrink Test
@@ -176,7 +176,7 @@ document.getElementById(inputId).addEventListener("input", () => {
     inputId: "force1AfterShrinkFit",
     toleranceId: "toleranceForce1AfterShrinkFit",
     tolMin: 1820,
-  });
+  })
 });
 
 // Dynamic tolerance change - Thickness Sample 2 After Shrink Test
@@ -186,7 +186,7 @@ document.getElementById(inputId).addEventListener("input", () => {
     toleranceId: "toleranceThickness2AfterShrinkFit",
     tolMin: 0.23,
     tolMax: 0.3,
-  });
+  })
 });
 
 // Dynamic tolerance change - Force Sample 2 After Shrink Test
@@ -195,7 +195,7 @@ document.getElementById(inputId).addEventListener("input", () => {
     inputId: "force2AfterShrinkFit",
     toleranceId: "toleranceForce2AfterShrinkFit",
     tolMin: 1820,
-  });
+  })
 });
 
 // Dynamic tolerance change - Thickness Sample 3 After Shrink Test
@@ -205,7 +205,7 @@ document.getElementById(inputId).addEventListener("input", () => {
     toleranceId: "toleranceThickness3AfterShrinkFit",
     tolMin: 0.23,
     tolMax: 0.3,
-  });
+  })
 });
 
 // Dynamic tolerance change - Force Sample 3 After Shrink Test
@@ -214,7 +214,7 @@ document.getElementById(inputId).addEventListener("input", () => {
     inputId: "force3AfterShrinkFit",
     toleranceId: "toleranceForce3AfterShrinkFit",
     tolMin: 1820,
-  });
+  })
 });
 
 // Dynamic tolerance change - Thickness Sample 4 After Shrink Test
@@ -224,7 +224,7 @@ document.getElementById(inputId).addEventListener("input", () => {
     toleranceId: "toleranceThickness4AfterShrinkFit",
     tolMin: 0.23,
     tolMax: 0.3,
-  });
+  })
 });
 
 // Dynamic tolerance change - Force Sample 4 After Shrink Test
@@ -233,7 +233,7 @@ document.getElementById(inputId).addEventListener("input", () => {
     inputId: "force4AfterShrinkFit",
     toleranceId: "toleranceForce4AfterShrinkFit",
     tolMin: 1820,
-  });
+  })
 });
 
 // Dynamic tolerance change - Thickness Sample 5 After Shrink Test
@@ -243,7 +243,7 @@ document.getElementById(inputId).addEventListener("input", () => {
     toleranceId: "toleranceThickness5AfterShrinkFit",
     tolMin: 0.23,
     tolMax: 0.3,
-  });
+  })
 });
 
 // Dynamic tolerance change - Force Sample 5 After Shrink Test
@@ -252,7 +252,7 @@ document.getElementById(inputId).addEventListener("input", () => {
     inputId: "force5AfterShrinkFit",
     toleranceId: "toleranceForce5AfterShrinkFit",
     tolMin: 1820,
-  });
+  })
 });
 
 // Dynamic tolerance change - df1
@@ -262,7 +262,7 @@ document.getElementById(inputId).addEventListener("input", () => {
     toleranceId: "toleranceDf1",
     tolMin: 174,
     tolMax: 174 + 2,
-  });
+  })
 });
 
 // Dynamic tolerance change - df2
@@ -272,7 +272,7 @@ document.getElementById(inputId).addEventListener("input", () => {
     toleranceId: "toleranceDf2",
     tolMin: 174,
     tolMax: 174 + 2,
-  });
+  })
 });
 
 // Dynamic tolerance change - df3
@@ -282,7 +282,7 @@ document.getElementById(inputId).addEventListener("input", () => {
     toleranceId: "toleranceDf3",
     tolMin: 174,
     tolMax: 174 + 2,
-  });
+  })
 });
 
 // Dynamic tolerance change - mt
@@ -291,7 +291,7 @@ document.getElementById(inputId).addEventListener("input", () => {
     inputId: "mt",
     toleranceId: "toleranceMt",
     tolMax: 8700,
-  });
+  })
 });
 
 // Automatic update of the remaining character count for the field
