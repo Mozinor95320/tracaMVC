@@ -294,6 +294,7 @@ document.getElementById("mt").addEventListener("input", () => {
   });
 });
 
+/*
 // Automatic update of the remaining character count for the field
 document.addEventListener("DOMContentLoaded", function () {
   const comment = document.getElementById("operationComment");
@@ -314,4 +315,4 @@ document.addEventListener("DOMContentLoaded", function () {
     const currentLength = comment.value.length;
     charCount.textContent = `${currentLength}/255 characters`;
   });
-});
+});*/
