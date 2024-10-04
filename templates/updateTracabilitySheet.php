@@ -4,7 +4,7 @@
 <a href="votre-url.html" class="text-decoration-none">
     <i class="bi bi-house"></i> Accueil
 </a>
-<?php echo json_encode($tracabilitySheet->$datagraph); ?>
+<?php echo json_encode($tracabilitySheet->$dataGraph); ?>
 <div class="container mt-4">
   
 
@@ -1266,7 +1266,7 @@
 <script src="templates/scriptTemplate/tolerance.js"></script>
 <script>
 // Fonction pour construire et afficher le graphique
-    const temp = <?php echo json_encode($tracabilitySheet->$datagraph); ?>;
+    const temp = <?php echo json_encode($tracabilitySheet->$dataGraph); ?>;
     const dataFromDB = temp.json(); // Conversion en JSON
 
     // Extraire les données pour chaque colonne
