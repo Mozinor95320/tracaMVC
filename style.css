@@ -60,7 +60,7 @@ input[readonly] {
 /* Classe pour couleur de tolérance quand aucune valeur n'est entrée */
 .bg-tolerance-default {
   background-color: #F8F9FA !important; /* Gris */
-  color: white;
+  color: #212529;
 }
 
 .chart-container {
