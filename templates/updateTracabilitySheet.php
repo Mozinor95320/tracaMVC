@@ -1220,6 +1220,28 @@
           </div>
         </div>
       </div>
+      <div class="container">
+        <h1 class="text-center mt-5">Graphique avec Échelle Temporelle</h1>
+        <div class="mb-3">
+          <div class="row">
+            <div class="chart-container">
+              <canvas id="myChartPreTension"></canvas>
+            </div>
+            <button onclick="resetZoomChartPreTension()" class="btn btn-danger">Réinitialiser le Zoom</button>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <h1 class="text-center mt-5">Graphique avec Échelle Temporelle</h1>
+        <div class="mb-3">
+          <div class="row">
+            <div class="chart-container">
+              <canvas id="myChartPostTension"></canvas>
+            </div>
+            <button onclick="resetZoomChartPostTension()" class="btn btn-danger">Réinitialiser le Zoom</button>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
       <p>Contenu de l'onglet 3.</p>
@@ -1365,15 +1387,151 @@ async function renderChart() {
             }
         }
     });
+
+        // Création du graphique PRE TENSION
+        const ctx2 = document.getElementById('myChartPreTension').getContext('2d');
+    chartGeneral = new Chart(ctx2, {
+        type: 'line',
+        data: {
+            labels: temps, // Utilisation de la colonne 'temps' sur l'axe X
+            datasets: [
+                {
+                    label: 'Pre Tension Setpoint',
+                    data: preTensionSetpoint,
+                    borderColor: 'rgba(153, 102, 255, 1)',
+                    fill: false
+                },
+                {
+                    label: 'Pre Tension Actual',
+                    data: preTensionActual,
+                    borderColor: 'rgba(255, 159, 64, 1)',
+                    fill: false
+                }
+            ]
+        },
+        options: {
+            responsive: true, // Rend le graphique responsive
+            maintainAspectRatio: false, // Permet d'adapter la hauteur en fonction de la largeur
+            scales: {
+                x: {
+                    type: 'time', // Échelle temporelle
+                    time: {
+                        unit: 'minute', // Affichage par minute
+                        tooltipFormat: 'YYYY-MM-DD HH:mm:ss', // Format des tooltips
+                        displayFormats: {
+                            minute: 'HH:mm:ss' // Format affiché
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Temps'
+                    }
+                },
+                y: {
+                    beginAtZero: true, // Début de l'axe Y à zéro
+                    title: {
+                        display: true,
+                        text: 'Valeurs'
+                    }
+                }
+            },
+            plugins: {
+              zoom: {
+                zoom: {
+                  wheel: {
+                    enabled: true,
+                  },
+                  pinch: {
+                    enabled: true
+                  },
+                  mode: 'xy',
+                }
+              }
+            }
+        }
+    });
+    
+        // Création du graphique POST TENSION
+    const ctx3 = document.getElementById('myChartPostTension').getContext('2d');
+    chartGeneral = new Chart(ctx3, {
+        type: 'line',
+        data: {
+            labels: temps, // Utilisation de la colonne 'temps' sur l'axe X
+            datasets: [
+                {
+                    label: 'dancer Arm Pressure Setpoint',
+                    data: dancerArmPressureSetpoint,
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    fill: false
+                },
+                {
+                    label: 'dancer Arm Tension Actual',
+                    data: dancerArmTensionActual,
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    fill: false
+                },
+                {
+                    label: 'post Tension Actual',
+                    data: postTensionActual,
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    fill: false
+                }
+            ]
+        },
+        options: {
+            responsive: true, // Rend le graphique responsive
+            maintainAspectRatio: false, // Permet d'adapter la hauteur en fonction de la largeur
+            scales: {
+                x: {
+                    type: 'time', // Échelle temporelle
+                    time: {
+                        unit: 'minute', // Affichage par minute
+                        tooltipFormat: 'YYYY-MM-DD HH:mm:ss', // Format des tooltips
+                        displayFormats: {
+                            minute: 'HH:mm:ss' // Format affiché
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Temps'
+                    }
+                },
+                y: {
+                    beginAtZero: true, // Début de l'axe Y à zéro
+                    title: {
+                        display: true,
+                        text: 'Valeurs'
+                    }
+                }
+            },
+            plugins: {
+              zoom: {
+                zoom: {
+                  wheel: {
+                    enabled: true,
+                  },
+                  pinch: {
+                    enabled: true
+                  },
+                  mode: 'xy',
+                }
+              }
+            }
+        }
+    });
 }
 
 function resetZoomChartGeneral(){
     chartGeneral.resetZoom();
 }
 
+function resetZoomChartPreTension(){
+    chartPreTension.resetZoom();
+}
 
-// Appel à la fonction pour afficher le graphique
-renderChart();
+function resetZoomChartPostTension(){
+    chartPostTension.resetZoom();
+}
 
 </script>
 
