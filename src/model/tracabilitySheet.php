@@ -168,9 +168,8 @@ class TracabilitySheetRepository
         );
 
         $stmt->execute([$identifier]);
-        echo $stmt;
 
-        $tracabilitySheet->dataGraph = $stmt->fetchAll();
+        $tracabilitySheet->dataGraph = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 
         return $tracabilitySheet;
     }

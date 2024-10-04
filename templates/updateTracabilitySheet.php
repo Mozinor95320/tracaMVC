@@ -1266,7 +1266,7 @@
 <script src="templates/scriptTemplate/tolerance.js"></script>
 <script>
 // Fonction pour construire et afficher le graphique
-    const temp = <?php echo json_encode($tracabilitySheet->$dataGraph); ?>;
+    const temp = fetch(<?php echo json_encode($tracabilitySheet->$dataGraph); ?>);
     const dataFromDB = temp.json(); // Conversion en JSON
 
     // Extraire les données pour chaque colonne
