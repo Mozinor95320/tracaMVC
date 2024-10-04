@@ -1260,9 +1260,6 @@
 </div>
 
 
-
-
-
 <script src="templates/scriptTemplate/tolerance.js"></script>
 <script>
 // Fonction pour construire et afficher le graphique
