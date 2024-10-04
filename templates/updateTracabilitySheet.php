@@ -1259,11 +1259,6 @@
   </div>
 </div>
 
-
-   <?php echo json_encode($tracabilitySheet->timeLog); ?>
-    <?php echo json_encode($tracabilitySheet->dancerArmPressureSetpoint); ?>
-    <?php echo json_encode($tracabilitySheet->dancerArmTensionActual); ?>
-
 <script src="templates/scriptTemplate/tolerance.js"></script>
 
 
