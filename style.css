@@ -59,7 +59,7 @@ input[readonly] {
 
 /* Classe pour couleur de tolérance quand aucune valeur n'est entrée */
 .bg-tolerance-default {
-  background-color: #e0e0e0 !important; /* Gris */
+  background-color: #F8F9FA !important; /* Gris */
   color: white;
 }
 
@@ -70,7 +70,7 @@ input[readonly] {
   width: 90vw;  /* Largeur du graphique */
 }
 
-      .chart-container2 {
+.chart-container2 {
   position: relative;
   margin: auto;
   height: 50vh; /* Hauteur du graphique */

@@ -1211,11 +1211,11 @@
 
      <!-- TAB 2 - WINDIND CHARTS -->
     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-      <!-- Chart GENERAL-->
+      
+    <!-- Chart GENERAL-->
       <div class="container">
-        <h1 class="text-center mt-5">Graphique avec Échelle Temporelle</h1>
+        <h1 class="text-center mt-5">Graphique général</h1>
         <div class="mb-3">
-          <div class="row">
             <div class="chart-container">
               <canvas id="myChartGeneral"></canvas>
             </div>
@@ -1225,7 +1225,7 @@
       </div>
       <!-- Chart Pre Tension-->
       <div class="container">
-        <h1 class="text-center mt-5">Graphique avec Échelle Temporelle</h1>
+        <h1 class="text-center mt-5">Graphique pré-tension</h1>
         <div class="mb-3">
           <div class="row">
             <div class="chart-container">
@@ -1238,7 +1238,7 @@
 
       <!-- Chart Post Tension-->
       <div class="container">
-        <h1 class="text-center mt-5">Graphique avec Échelle Temporelle</h1>
+        <h1 class="text-center mt-5">Graphique post-tension</h1>
         <div class="mb-3">
           <div class="row">
             <div class="chart-container">
@@ -1251,7 +1251,7 @@
 
       <!-- Chart Temperature-->
       <div class="container">
-        <h1 class="text-center mt-5">Graphique avec Échelle Temporelle</h1>
+        <h1 class="text-center mt-5">Graphique température</h1>
         <div class="mb-3">
           <div class="row">
             <div class="chart-container">
