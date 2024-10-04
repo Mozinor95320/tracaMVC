@@ -180,7 +180,9 @@ class TracabilitySheetRepository
 
         $statement->execute([$identifier]);
 
-        while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+        $row = $statement->fetch(PDO::FETCH_ASSOC);
+
+        if($row) {
             $tracabilitySheet->timeLog= $row['timeLog'];
             $tracabilitySheet->dancerArmPressureSetpoint= $row['dancerArmPressureSetpoint'];
             $tracabilitySheet->dancerArmTensionActual= $row['dancerArmTensionActual'];
