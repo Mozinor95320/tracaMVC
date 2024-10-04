@@ -1219,38 +1219,6 @@
             <button onclick="resetZoomChartGeneral()" class="btn btn-danger">Réinitialiser le Zoom</button>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="chart-container2">
-              <canvas id="chart2"></canvas>
-            </div>
-            <h5 class="text-center">Graphique 2</h5>
-            <button onclick=" resetZoomChartPreTension()" class="btn btn-danger">Réinitialiser le Zoom</button>
-          </div>
-
-          <div class="col-md-6">
-            <div class="chart-container2">
-              <canvas id="chart3"></canvas>
-            </div>
-            <h5 class="text-center">Graphique 3</h5>
-            <button onclick=" resetZoomChartPostTension()" class="btn btn-danger">Réinitialiser le Zoom</button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="chart-container2">
-              <canvas id="chart4"></canvas>
-            </div>
-            <h5 class="text-center">Graphique 2</h5>
-          </div>
-
-          <div class="col-md-6">
-            <div class="chart-container2">
-              <canvas id="chart5"></canvas>
-            </div>
-            <h5 class="text-center">Graphique 3</h5>
-          </div>
-        </div>
       </div>
     </div>
     <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
