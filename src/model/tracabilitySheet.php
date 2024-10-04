@@ -179,8 +179,6 @@ class TracabilitySheetRepository
 
         $statement->execute([$identifier]);
 
-        $row = $statement->fetch(PDO::FETCH_ASSOC);
-
         return $tracabilitySheet;
     }
 
