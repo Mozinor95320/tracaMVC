@@ -173,6 +173,13 @@ class TracabilitySheetRepository
         $tracabilitySheet->qualityInspectorName = $row['qualityInspectorName'];
         $tracabilitySheet->qualityInspectorRemarks = $row['qualityInspectorRemarks'];
 
+        $statement = $this->connection->getConnection()->prepare(
+            "SELECT timeLog, dancerArmPressureSetpoint, dancerArmTensionActual, postTensionActual, preTensionSetpoint, preTensionActual, hotAirBlowerSetpoint, nozzleHeaterActual, nozzleHeaterSetpoint, tapeHeaterActual, tapeHeaterSetpoint FROM windingMachineReccord WHERE idTracabiltySheet = ? ORDER BY timeLog ASC"
+        );
+
+        $statement->execute([$identifier]);
+
+        $row = $statement->fetch(PDO::FETCH_ASSOC);
 
         return $tracabilitySheet;
     }
