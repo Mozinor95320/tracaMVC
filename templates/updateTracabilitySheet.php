@@ -1209,7 +1209,49 @@
       </form>
     </div>
     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-      <p>Contenu de l'onglet 2.</p>
+      <div class="container">
+        <h1 class="text-center mt-5">Graphique avec Échelle Temporelle</h1>
+        <div class="mb-3">
+          <div class="row">
+            <div class="chart-container">
+              <canvas id="myChartGeneral"></canvas>
+            </div>
+            <button onclick="resetZoomChartGeneral()" class="btn btn-danger">Réinitialiser le Zoom</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="chart-container2">
+              <canvas id="chart2"></canvas>
+            </div>
+            <h5 class="text-center">Graphique 2</h5>
+            <button onclick=" resetZoomChartPreTension()" class="btn btn-danger">Réinitialiser le Zoom</button>
+          </div>
+
+          <div class="col-md-6">
+            <div class="chart-container2">
+              <canvas id="chart3"></canvas>
+            </div>
+            <h5 class="text-center">Graphique 3</h5>
+            <button onclick=" resetZoomChartPostTension()" class="btn btn-danger">Réinitialiser le Zoom</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="chart-container2">
+              <canvas id="chart4"></canvas>
+            </div>
+            <h5 class="text-center">Graphique 2</h5>
+          </div>
+
+          <div class="col-md-6">
+            <div class="chart-container2">
+              <canvas id="chart5"></canvas>
+            </div>
+            <h5 class="text-center">Graphique 3</h5>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
       <p>Contenu de l'onglet 3.</p>
@@ -1218,6 +1260,155 @@
 </div>
 
 <script src="templates/scriptTemplate/tolerance.js"></script>
+<script>
+    const ctx = document.getElementById('myChartGeneral').getContext('2d');
+    const myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: <?php echo json_encode($tracabilitySheet->timeLog); ?>,
+            datasets: [{
+                label: 'Ventes par mois',
+                data: <?php echo json_encode($data['data']); ?>,
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    // Extraire les données pour chaque colonne
+    const temps = dataFromDB.map(item => item.temps); // Colonne 'temps'
+    const dancerArmPressureSetpoint = dataFromDB.map(item => item.DancerArmPressureSetpoint);
+    const dancerArmTensionActual = dataFromDB.map(item => item.DancerArmTensionActual);
+    const postTensionActual = dataFromDB.map(item => item.PostTensionActual);
+    const preTensionSetpoint = dataFromDB.map(item => item.PreTensionSetpoint);
+    const preTensionActual = dataFromDB.map(item => item.PreTensionActual);
+    const hotAirBlowerSetpoint = dataFromDB.map(item => item.HotAirBlowerSetpoint);
+    const nozzleHeaterActual = dataFromDB.map(item => item.NozzleHeaterActual);
+    const nozzleHeaterSetpoint = dataFromDB.map(item => item.NozzleHeaterSetpoint);
+    const tapeHeaterActual = dataFromDB.map(item => item.TapeHeaterActual);
+    const tapeHeaterSetpoint = dataFromDB.map(item => item.TapeHeaterSetpoint);
+
+    // Création du graphique avec Chart.js
+    const ctx = document.getElementById('myChart1').getContext('2d');
+    chartGeneral = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: temps, // Utilisation de la colonne 'temps' sur l'axe X
+            datasets: [
+                {
+                    label: 'Dancer Arm Pressure Setpoint',
+                    data: dancerArmPressureSetpoint,
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    fill: false
+                },
+                {
+                    label: 'Dancer Arm Tension Actual',
+                    data: dancerArmTensionActual,
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    fill: false
+                },
+                {
+                    label: 'Post Tension Actual',
+                    data: postTensionActual,
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    fill: false
+                },
+                {
+                    label: 'Pre Tension Setpoint',
+                    data: preTensionSetpoint,
+                    borderColor: 'rgba(153, 102, 255, 1)',
+                    fill: false
+                },
+                {
+                    label: 'Pre Tension Actual',
+                    data: preTensionActual,
+                    borderColor: 'rgba(255, 159, 64, 1)',
+                    fill: false
+                },
+                {
+                    label: 'Hot Air Blower Setpoint',
+                    data: hotAirBlowerSetpoint,
+                    borderColor: 'rgba(255, 206, 86, 1)',
+                    fill: false
+                },
+                {
+                    label: 'Nozzle Heater Actual',
+                    data: nozzleHeaterActual,
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    fill: false
+                },
+                {
+                    label: 'Nozzle Heater Setpoint',
+                    data: nozzleHeaterSetpoint,
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    fill: false
+                },
+                {
+                    label: 'Tape Heater Actual',
+                    data: tapeHeaterActual,
+                    borderColor: 'rgba(153, 102, 255, 1)',
+                    fill: false
+                },
+                {
+                    label: 'Tape Heater Setpoint',
+                    data: tapeHeaterSetpoint,
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    fill: false
+                }
+            ]
+        },
+        options: {
+            responsive: true, // Rend le graphique responsive
+            maintainAspectRatio: false, // Permet d'adapter la hauteur en fonction de la largeur
+            scales: {
+                x: {
+                    type: 'time', // Échelle temporelle
+                    time: {
+                        unit: 'minute', // Affichage par minute
+                        tooltipFormat: 'YYYY-MM-DD HH:mm:ss', // Format des tooltips
+                        displayFormats: {
+                            minute: 'YYYY-MM-DD HH:mm:ss' // Format affiché
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Temps'
+                    }
+                },
+                y: {
+                    beginAtZero: true, // Début de l'axe Y à zéro
+                    title: {
+                        display: true,
+                        text: 'Valeurs'
+                    }
+                }
+            },
+            plugins: {
+                zoom: {
+                    zoom: {
+                        wheel: {
+                            enabled: true,
+                        },
+                        pinch: {
+                            enabled: true
+                        },
+                        mode: 'xy',
+                    }
+                }
+            }
+        }
+    });
+
+</script>
+
 
 <?php $content = ob_get_clean(); ?>
 <?php require('layout.php') ?>

@@ -62,3 +62,16 @@ input[readonly] {
   background-color: #e0e0e0 !important; /* Gris */
   color: white;
 }
+
+.chart-container {
+  position: relative;
+  margin: auto;
+  height: 90vh; /* Hauteur du graphique */
+  width: 90vw;  /* Largeur du graphique */
+}
+
+      .chart-container2 {
+  position: relative;
+  margin: auto;
+  height: 50vh; /* Hauteur du graphique */
+}

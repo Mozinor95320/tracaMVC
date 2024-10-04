@@ -77,6 +77,17 @@ class TracabilitySheet
     public string $qualityControlDate;
     public string $qualityInspectorName;
     public string $qualityInspectorRemarks;
+    public timeLog;
+    public dancerArmPressureSetpoint;
+    public dancerArmTensionActual;
+    public postTensionActual;
+    public preTensionSetpoint;
+    public preTensionActual;
+    public hotAirBlowerSetpoint;
+    public nozzleHeaterActual;
+    public nozzleHeaterSetpoint;
+    public tapeHeaterActual;
+    public tapeHeaterSetpoint;
 }
 
 class TracabilitySheetRepository
@@ -162,6 +173,25 @@ class TracabilitySheetRepository
         $tracabilitySheet->qualityControlDate = $row['qualityControlDate'];
         $tracabilitySheet->qualityInspectorName = $row['qualityInspectorName'];
         $tracabilitySheet->qualityInspectorRemarks = $row['qualityInspectorRemarks'];
+
+        $statement = $this->connection->getConnection()->prepare(
+            "SELECT timeLog, dancerArmPressureSetpoint, dancerArmTensionActual, postTensionActual, preTensionSetpoint, preTensionActual, 
+            hotAirBlowerSetpoint, nozzleHeaterActual, nozzleHeaterSetpoint, tapeHeaterActual, tapeHeaterSetpoint FROM windingMachineReccord WHERE idTracabiltySheet = ? ORDER BY timeLog ASC"
+        );
+
+        $statement->execute([$identifier]);
+        $row = $statement->fetch();
+        $tracabilitySheet->timeLog= $row['timeLog'];
+        $tracabilitySheet->dancerArmPressureSetpoint= $row['dancerArmPressureSetpoint'];
+        $tracabilitySheet->dancerArmTensionActual= $row['dancerArmTensionActual'];
+        $tracabilitySheet->postTensionActual= $row['postTensionActual'];
+        $tracabilitySheet->preTensionSetpoint= $row['preTensionSetpoint'];
+        $tracabilitySheet->preTensionActual= $row['preTensionActual'];
+        $tracabilitySheet->hotAirBlowerSetpoint= $row['hotAirBlowerSetpoint'];
+        $tracabilitySheet->nozzleHeaterActual= $row['nozzleHeaterActual'];
+        $tracabilitySheet->nozzleHeaterSetpoint= $row['nozzleHeaterSetpoint'];
+        $tracabilitySheet->tapeHeaterActual= $row['tapeHeaterActual'];
+        $tracabilitySheet->tapeHeaterSetpoint= $row['tapeHeaterSetpoint'];
 
         return $tracabilitySheet;
     }
