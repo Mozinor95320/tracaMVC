@@ -1268,7 +1268,6 @@
       <p>Contenu de l'onglet 3.</p>
     </div>
   </div>
-</div>
 
 
 <script src="templates/scriptTemplate/tolerance.js"></script>
