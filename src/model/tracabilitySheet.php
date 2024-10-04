@@ -173,28 +173,6 @@ class TracabilitySheetRepository
         $tracabilitySheet->qualityInspectorName = $row['qualityInspectorName'];
         $tracabilitySheet->qualityInspectorRemarks = $row['qualityInspectorRemarks'];
 
-        $statement = $this->connection->getConnection()->prepare(
-            "SELECT timeLog, dancerArmPressureSetpoint, dancerArmTensionActual, postTensionActual, preTensionSetpoint, preTensionActual, 
-            hotAirBlowerSetpoint, nozzleHeaterActual, nozzleHeaterSetpoint, tapeHeaterActual, tapeHeaterSetpoint FROM windingMachineReccord WHERE idTracabiltySheet = ? ORDER BY timeLog ASC"
-        );
-
-        $statement->execute([$identifier]);
-
-        $row = $statement->fetch(PDO::FETCH_ASSOC);
-
-        if($row) {
-            $tracabilitySheet->timeLog= $row['timeLog'];
-            $tracabilitySheet->dancerArmPressureSetpoint= $row['dancerArmPressureSetpoint'];
-            $tracabilitySheet->dancerArmTensionActual= $row['dancerArmTensionActual'];
-            $tracabilitySheet->postTensionActual= $row['postTensionActual'];
-            $tracabilitySheet->preTensionSetpoint= $row['preTensionSetpoint'];
-            $tracabilitySheet->preTensionActual= $row['preTensionActual'];
-            $tracabilitySheet->hotAirBlowerSetpoint= $row['hotAirBlowerSetpoint'];
-            $tracabilitySheet->nozzleHeaterActual= $row['nozzleHeaterActual'];
-            $tracabilitySheet->nozzleHeaterSetpoint= $row['nozzleHeaterSetpoint'];
-            $tracabilitySheet->tapeHeaterActual= $row['tapeHeaterActual'];
-            $tracabilitySheet->tapeHeaterSetpoint= $row['tapeHeaterSetpoint'];
-        }
 
         return $tracabilitySheet;
     }
