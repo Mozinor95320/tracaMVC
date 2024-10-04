@@ -168,6 +168,7 @@ class TracabilitySheetRepository
         );
 
         $stmt->execute([$identifier]);
+        echo $stmt;
 
         $tracabilitySheet->dataGraph = $stmt->fetchAll();
 
