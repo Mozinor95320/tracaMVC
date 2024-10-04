@@ -1390,7 +1390,7 @@ async function renderChart() {
 
     // Création du graphique PRE TENSION
     const ctx2 = document.getElementById('myChartPreTension').getContext('2d');
-    chartGeneral = new Chart(ctx2, {
+    chartPreTension = new Chart(ctx2, {
         type: 'line',
         data: {
             labels: timeLog, // Utilisation de la colonne 'temps' sur l'axe X
@@ -1453,7 +1453,7 @@ async function renderChart() {
     
         // Création du graphique POST TENSION
     const ctx3 = document.getElementById('myChartPostTension').getContext('2d');
-    chartGeneral = new Chart(ctx3, {
+    chartPostTension = new Chart(ctx3, {
         type: 'line',
         data: {
             labels: timeLog, // Utilisation de la colonne 'temps' sur l'axe X
