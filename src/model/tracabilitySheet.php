@@ -179,6 +179,22 @@ class TracabilitySheetRepository
 
         $statement->execute([$identifier]);
 
+        $row = $statement->fetch();
+
+        if($row) {
+            $tracabilitySheet->timeLog= $row['timeLog'];
+            $tracabilitySheet->dancerArmPressureSetpoint= $row['dancerArmPressureSetpoint'];
+            $tracabilitySheet->dancerArmTensionActual= $row['dancerArmTensionActual'];
+            $tracabilitySheet->postTensionActual= $row['postTensionActual'];
+            $tracabilitySheet->preTensionSetpoint= $row['preTensionSetpoint'];
+            $tracabilitySheet->preTensionActual= $row['preTensionActual'];
+            $tracabilitySheet->hotAirBlowerSetpoint= $row['hotAirBlowerSetpoint'];
+            $tracabilitySheet->nozzleHeaterActual= $row['nozzleHeaterActual'];
+            $tracabilitySheet->nozzleHeaterSetpoint= $row['nozzleHeaterSetpoint'];
+            $tracabilitySheet->tapeHeaterActual= $row['tapeHeaterActual'];
+            $tracabilitySheet->tapeHeaterSetpoint= $row['tapeHeaterSetpoint'];
+        }
+
         return $tracabilitySheet;
     }
 
