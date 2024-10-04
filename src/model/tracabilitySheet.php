@@ -77,7 +77,7 @@ class TracabilitySheet
     public string $qualityControlDate;
     public string $qualityInspectorName;
     public string $qualityInspectorRemarks;
-    public $data_graph;
+    public $dataGraph;
 }
 
 class TracabilitySheetRepository
@@ -169,7 +169,7 @@ class TracabilitySheetRepository
 
         $stmt->execute([$identifier]);
 
-        $tracabilitySheet->data_graph = $stmt->fetch();
+        $tracabilitySheet->dataGraph = $stmt->fetch();
 
         return $tracabilitySheet;
     }
