@@ -1388,12 +1388,12 @@ async function renderChart() {
         }
     });
 
-        // Création du graphique PRE TENSION
-        const ctx2 = document.getElementById('myChartPreTension').getContext('2d');
+    // Création du graphique PRE TENSION
+    const ctx2 = document.getElementById('myChartPreTension').getContext('2d');
     chartGeneral = new Chart(ctx2, {
         type: 'line',
         data: {
-            labels: temps, // Utilisation de la colonne 'temps' sur l'axe X
+            labels: timeLog, // Utilisation de la colonne 'temps' sur l'axe X
             datasets: [
                 {
                     label: 'Pre Tension Setpoint',
@@ -1456,7 +1456,7 @@ async function renderChart() {
     chartGeneral = new Chart(ctx3, {
         type: 'line',
         data: {
-            labels: temps, // Utilisation de la colonne 'temps' sur l'axe X
+            labels: timeLog, // Utilisation de la colonne 'temps' sur l'axe X
             datasets: [
                 {
                     label: 'dancer Arm Pressure Setpoint',
