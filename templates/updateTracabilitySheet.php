@@ -1334,7 +1334,7 @@ async function renderChart() {
                         unit: 'minute', // Affichage par minute
                         tooltipFormat: 'YYYY-MM-DD HH:mm:ss', // Format des tooltips
                         displayFormats: {
-                            minute: 'YYYY-MM-DD HH:mm:ss' // Format affiché
+                            minute: 'HH:mm:ss' // Format affiché
                         }
                     },
                     title: {
