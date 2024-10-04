@@ -117,7 +117,6 @@ class TracabilitySheetRepository
         $tracabilitySheet->lengthL= (float)$row['lengthL'];
         $tracabilitySheet->diameterD = (float)$row['diameterD'];
         $tracabilitySheet->massM = (int)$row['massM'];
-        $tracabilitySheet->aspectDimAfterCoating = (bool)$row['aspectDimAfterCoating']; 
         $tracabilitySheet->aspectDimAfterCoating = is_null($row['aspectDimAfterCoating']) ? NULL : (bool)$row['aspectDimAfterCoating'];
         $tracabilitySheet->profileMassBeforeShrinkFit = (float)$row['profileMassBeforeShrinkFit'];
         $tracabilitySheet->linearMassBeforeShrinkFit = (float)$row['linearMassBeforeShrinkFit'];
@@ -182,17 +181,17 @@ class TracabilitySheetRepository
         $statement->execute([$identifier]);
 
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-            $tracabilitySheet->timeLog[]= $row['timeLog'];
-            $tracabilitySheet->dancerArmPressureSetpoint[]= $row['dancerArmPressureSetpoint'];
-            $tracabilitySheet->dancerArmTensionActual[]= $row['dancerArmTensionActual'];
-            $tracabilitySheet->postTensionActual[]= $row['postTensionActual'];
-            $tracabilitySheet->preTensionSetpoint[]= $row['preTensionSetpoint'];
-            $tracabilitySheet->preTensionActual[]= $row['preTensionActual'];
-            $tracabilitySheet->hotAirBlowerSetpoint[]= $row['hotAirBlowerSetpoint'];
-            $tracabilitySheet->nozzleHeaterActual[]= $row['nozzleHeaterActual'];
-            $tracabilitySheet->nozzleHeaterSetpoint[]= $row['nozzleHeaterSetpoint'];
-            $tracabilitySheet->tapeHeaterActual[]= $row['tapeHeaterActual'];
-            $tracabilitySheet->tapeHeaterSetpoint[]= $row['tapeHeaterSetpoint'];
+            $tracabilitySheet->timeLog= $row['timeLog'];
+            $tracabilitySheet->dancerArmPressureSetpoint= $row['dancerArmPressureSetpoint'];
+            $tracabilitySheet->dancerArmTensionActual= $row['dancerArmTensionActual'];
+            $tracabilitySheet->postTensionActual= $row['postTensionActual'];
+            $tracabilitySheet->preTensionSetpoint= $row['preTensionSetpoint'];
+            $tracabilitySheet->preTensionActual= $row['preTensionActual'];
+            $tracabilitySheet->hotAirBlowerSetpoint= $row['hotAirBlowerSetpoint'];
+            $tracabilitySheet->nozzleHeaterActual= $row['nozzleHeaterActual'];
+            $tracabilitySheet->nozzleHeaterSetpoint= $row['nozzleHeaterSetpoint'];
+            $tracabilitySheet->tapeHeaterActual= $row['tapeHeaterActual'];
+            $tracabilitySheet->tapeHeaterSetpoint= $row['tapeHeaterSetpoint'];
         }
 
         return $tracabilitySheet;
