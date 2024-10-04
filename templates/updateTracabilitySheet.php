@@ -4,7 +4,7 @@
 <a href="votre-url.html" class="text-decoration-none">
     <i class="bi bi-house"></i> Accueil
 </a>
-
+<?php echo json_encode($tracabilitySheet->$datagraph); ?>
 <div class="container mt-4">
   
 
