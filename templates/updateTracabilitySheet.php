@@ -1229,14 +1229,27 @@
 
 
 <script src="templates/scriptTemplate/tolerance.js"></script>
+
 <script>
+    // Fonction pour récupérer les données depuis le fichier PHP
+async function fetchData() {
+    const response = await fetch(<?php echo json_encode($tracabilitySheet->dataGraph); ?>); // Appel au fichier PHP
+    const data = await response.json(); // Conversion en JSON
+    return data;
+}
+var chartGeneral;
+var chartPreTension;
+var chartPostTension;
+var chartPreTemperature;
+var chartPostTemperature;
+
 // Fonction pour construire et afficher le graphique
-    const temp = fetch(<?php echo json_encode($tracabilitySheet->dataGraph); ?>);
-    const dataFromDB = temp.json(); // Conversion en JSON
+async function renderChart() {
+    const dataFromDB = await fetchData();
 
     // Extraire les données pour chaque colonne
     const timeLog = dataFromDB.map(item => item.timeLog); // Colonne 'temps'
-    const dancerArmPressureSetpoint = dataFromDB.map(item => item.dancerArmPressureSetpoint);
+    const dancerArmPressureSetpoint = dataFromDB.map(item => item.DancerArmPressureSetpoint);
     const dancerArmTensionActual = dataFromDB.map(item => item.DancerArmTensionActual);
     const postTensionActual = dataFromDB.map(item => item.PostTensionActual);
     const preTensionSetpoint = dataFromDB.map(item => item.PreTensionSetpoint);
@@ -1357,8 +1370,18 @@
             }
         }
     });
+}
+
+function resetZoomChartGeneral(){
+    chartGeneral.resetZoom();
+}
+
+
+// Appel à la fonction pour afficher le graphique
+renderChart();
 
 </script>
+
 
 <?php $content = ob_get_clean(); ?>
 <?php require('layout.php') ?>
