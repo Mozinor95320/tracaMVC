@@ -1249,16 +1249,16 @@ async function renderChart() {
 
     // Extraire les données pour chaque colonne
     const timeLog = dataFromDB.map(item => item.timeLog); // Colonne 'temps'
-    const dancerArmPressureSetpoint = dataFromDB.map(item => item.DancerArmPressureSetpoint);
-    const dancerArmTensionActual = dataFromDB.map(item => item.DancerArmTensionActual);
-    const postTensionActual = dataFromDB.map(item => item.PostTensionActual);
-    const preTensionSetpoint = dataFromDB.map(item => item.PreTensionSetpoint);
-    const preTensionActual = dataFromDB.map(item => item.PreTensionActual);
-    const hotAirBlowerSetpoint = dataFromDB.map(item => item.HotAirBlowerSetpoint);
-    const nozzleHeaterActual = dataFromDB.map(item => item.NozzleHeaterActual);
-    const nozzleHeaterSetpoint = dataFromDB.map(item => item.NozzleHeaterSetpoint);
-    const tapeHeaterActual = dataFromDB.map(item => item.TapeHeaterActual);
-    const tapeHeaterSetpoint = dataFromDB.map(item => item.TapeHeaterSetpoint);
+    const dancerArmPressureSetpoint = dataFromDB.map(item => item.dancerArmPressureSetpoint);
+    const dancerArmTensionActual = dataFromDB.map(item => item.dancerArmTensionActual);
+    const postTensionActual = dataFromDB.map(item => item.postTensionActual);
+    const preTensionSetpoint = dataFromDB.map(item => item.preTensionSetpoint);
+    const preTensionActual = dataFromDB.map(item => item.preTensionActual);
+    const hotAirBlowerSetpoint = dataFromDB.map(item => item.hotAirBlowerSetpoint);
+    const nozzleHeaterActual = dataFromDB.map(item => item.nozzleHeaterActual);
+    const nozzleHeaterSetpoint = dataFromDB.map(item => item.nozzleHeaterSetpoint);
+    const tapeHeaterActual = dataFromDB.map(item => item.tapeHeaterActual);
+    const tapeHeaterSetpoint = dataFromDB.map(item => item.tapeHeaterSetpoint);
 
     // Création du graphique General
     const ctx = document.getElementById('myChartGeneral').getContext('2d');
