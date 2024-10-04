@@ -1533,6 +1533,9 @@ function resetZoomChartPostTension(){
     chartPostTension.resetZoom();
 }
 
+// Appel à la fonction pour afficher le graphique
+renderChart();
+
 </script>
 
 
