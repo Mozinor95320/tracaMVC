@@ -179,20 +179,20 @@ class TracabilitySheetRepository
 
         $statement->execute([$identifier]);
 
-        $row = $statement->fetch();
+        $row1 = $statement->fetch(PDO::FETCH_ASSOC);
 
-        if($row) {
-            $tracabilitySheet->timeLog= $row['timeLog'];
-            $tracabilitySheet->dancerArmPressureSetpoint= $row['dancerArmPressureSetpoint'];
-            $tracabilitySheet->dancerArmTensionActual= $row['dancerArmTensionActual'];
-            $tracabilitySheet->postTensionActual= $row['postTensionActual'];
-            $tracabilitySheet->preTensionSetpoint= $row['preTensionSetpoint'];
-            $tracabilitySheet->preTensionActual= $row['preTensionActual'];
-            $tracabilitySheet->hotAirBlowerSetpoint= $row['hotAirBlowerSetpoint'];
-            $tracabilitySheet->nozzleHeaterActual= $row['nozzleHeaterActual'];
-            $tracabilitySheet->nozzleHeaterSetpoint= $row['nozzleHeaterSetpoint'];
-            $tracabilitySheet->tapeHeaterActual= $row['tapeHeaterActual'];
-            $tracabilitySheet->tapeHeaterSetpoint= $row['tapeHeaterSetpoint'];
+        if($row1) {
+            $tracabilitySheet->timeLog= $row1['timeLog'];
+            $tracabilitySheet->dancerArmPressureSetpoint= $row1['dancerArmPressureSetpoint'];
+            $tracabilitySheet->dancerArmTensionActual= $row1['dancerArmTensionActual'];
+            $tracabilitySheet->postTensionActual= $row1['postTensionActual'];
+            $tracabilitySheet->preTensionSetpoint= $row1['preTensionSetpoint'];
+            $tracabilitySheet->preTensionActual= $row1['preTensionActual'];
+            $tracabilitySheet->hotAirBlowerSetpoint= $row1['hotAirBlowerSetpoint'];
+            $tracabilitySheet->nozzleHeaterActual= $row1['nozzleHeaterActual'];
+            $tracabilitySheet->nozzleHeaterSetpoint= $row1['nozzleHeaterSetpoint'];
+            $tracabilitySheet->tapeHeaterActual= $row1['tapeHeaterActual'];
+            $tracabilitySheet->tapeHeaterSetpoint= $row1['tapeHeaterSetpoint'];
         }
 
         return $tracabilitySheet;
