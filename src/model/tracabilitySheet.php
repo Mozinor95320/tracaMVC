@@ -169,7 +169,7 @@ class TracabilitySheetRepository
 
         $stmt->execute([$identifier]);
 
-        $tracabilitySheet->dataGraph = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        $tracabilitySheet->dataGraph = $stmt;
 
         return $tracabilitySheet;
     }
