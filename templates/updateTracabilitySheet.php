@@ -1260,7 +1260,7 @@
 </div>
 
 
-<?php echo $tracabilitySheet->$data_graph; ?>
+<?php echo json_encode($tracabilitySheet->$data_graph); ?>
 
 
 <script src="templates/scriptTemplate/tolerance.js"></script>
