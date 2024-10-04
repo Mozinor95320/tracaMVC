@@ -77,17 +77,7 @@ class TracabilitySheet
     public string $qualityControlDate;
     public string $qualityInspectorName;
     public string $qualityInspectorRemarks;
-    public $timeLog;
-    public $dancerArmPressureSetpoint;
-    public $dancerArmTensionActual;
-    public $postTensionActual;
-    public $preTensionSetpoint;
-    public $preTensionActual;
-    public $hotAirBlowerSetpoint;
-    public $nozzleHeaterActual;
-    public $nozzleHeaterSetpoint;
-    public $tapeHeaterActual;
-    public $tapeHeaterSetpoint;
+    public $data_graph;
 }
 
 class TracabilitySheetRepository
@@ -179,21 +169,7 @@ class TracabilitySheetRepository
 
         $statement->execute([$identifier]);
 
-        $row1 = $statement->fetch(PDO::FETCH_ASSOC);
-
-        if($row1) {
-            $tracabilitySheet->timeLog= $row1['timeLog'];
-            $tracabilitySheet->dancerArmPressureSetpoint= $row1['dancerArmPressureSetpoint'];
-            $tracabilitySheet->dancerArmTensionActual= $row1['dancerArmTensionActual'];
-            $tracabilitySheet->postTensionActual= $row1['postTensionActual'];
-            $tracabilitySheet->preTensionSetpoint= $row1['preTensionSetpoint'];
-            $tracabilitySheet->preTensionActual= $row1['preTensionActual'];
-            $tracabilitySheet->hotAirBlowerSetpoint= $row1['hotAirBlowerSetpoint'];
-            $tracabilitySheet->nozzleHeaterActual= $row1['nozzleHeaterActual'];
-            $tracabilitySheet->nozzleHeaterSetpoint= $row1['nozzleHeaterSetpoint'];
-            $tracabilitySheet->tapeHeaterActual= $row1['tapeHeaterActual'];
-            $tracabilitySheet->tapeHeaterSetpoint= $row1['tapeHeaterSetpoint'];
-        }
+        $tracabilitySheet->data_graph = $statement->fetch(PDO::FETCH_ASSOC);
 
         return $tracabilitySheet;
     }
