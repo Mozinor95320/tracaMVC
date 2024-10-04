@@ -199,7 +199,7 @@ class TracabilitySheetRepository
     public function getTracabilitySheets(): array
     {
         $statement = $this->connection->getConnection()->query(
-            "SELECT serialNumber, workOrder, sheetCreationDate FROM tracabilitySheets ORDER BY sheetCreationDate DESC LIMIT 0, 5"
+            "SELECT serialNumber, workOrder, sheetCreationDate FROM tracabilitySheets ORDER BY sheetCreationDate DESC"
         );
         $tracabilitySheets = [];
         while (($row = $statement->fetch())) {
