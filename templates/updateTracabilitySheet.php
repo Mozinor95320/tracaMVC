@@ -1208,7 +1208,10 @@
           </div>
       </form>
     </div>
+
+     <!-- TAB 2 - WINDIND CHARTS -->
     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+      <!-- Chart GENERAL-->
       <div class="container">
         <h1 class="text-center mt-5">Graphique avec Échelle Temporelle</h1>
         <div class="mb-3">
@@ -1220,6 +1223,7 @@
           </div>
         </div>
       </div>
+      <!-- Chart Pre Tension-->
       <div class="container">
         <h1 class="text-center mt-5">Graphique avec Échelle Temporelle</h1>
         <div class="mb-3">
@@ -1231,6 +1235,8 @@
           </div>
         </div>
       </div>
+
+      <!-- Chart Post Tension-->
       <div class="container">
         <h1 class="text-center mt-5">Graphique avec Échelle Temporelle</h1>
         <div class="mb-3">
@@ -1242,7 +1248,22 @@
           </div>
         </div>
       </div>
+
+      <!-- Chart Temperature-->
+      <div class="container">
+        <h1 class="text-center mt-5">Graphique avec Échelle Temporelle</h1>
+        <div class="mb-3">
+          <div class="row">
+            <div class="chart-container">
+              <canvas id="myChartTemperature"></canvas>
+            </div>
+            <button onclick="resetZoomChartTemperature()" class="btn btn-danger">Réinitialiser le Zoom</button>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- TAB 3 - TENSILE TEST CHARTS-->
     <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
       <p>Contenu de l'onglet 3.</p>
     </div>
@@ -1519,6 +1540,75 @@ async function renderChart() {
             }
         }
     });
+
+    // Création du graphique POST TENSION
+    const ctx4 = document.getElementById('myChartTemperature').getContext('2d');
+    chartTemperature = new Chart(ctx4, {
+        type: 'line',
+        data: {
+            labels: timeLog, // Utilisation de la colonne 'temps' sur l'axe X
+            datasets: [
+                {
+                    label: 'Nozzle Heater Actual',
+                    data: nozzleHeaterActual,
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    fill: false
+                },
+                {
+                    label: 'Nozzle Heater Setpoint',
+                    data: nozzleHeaterSetpoint,
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    fill: false
+                },
+                {
+                    label: 'Hot Air Blower Setpoint',
+                    data: hotAirBlowerSetpoint,
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    fill: false
+                }
+            ]
+        },
+        options: {
+            responsive: true, // Rend le graphique responsive
+            maintainAspectRatio: false, // Permet d'adapter la hauteur en fonction de la largeur
+            scales: {
+                x: {
+                    type: 'time', // Échelle temporelle
+                    time: {
+                        unit: 'minute', // Affichage par minute
+                        tooltipFormat: 'YYYY-MM-DD HH:mm:ss', // Format des tooltips
+                        displayFormats: {
+                            minute: 'HH:mm:ss' // Format affiché
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Temps'
+                    }
+                },
+                y: {
+                    beginAtZero: true, // Début de l'axe Y à zéro
+                    title: {
+                        display: true,
+                        text: 'Valeurs'
+                    }
+                }
+            },
+            plugins: {
+              zoom: {
+                zoom: {
+                  wheel: {
+                    enabled: true,
+                  },
+                  pinch: {
+                    enabled: true
+                  },
+                  mode: 'xy',
+                }
+              }
+            }
+        }
+    });
 }
 
 function resetZoomChartGeneral(){
@@ -1531,6 +1621,10 @@ function resetZoomChartPreTension(){
 
 function resetZoomChartPostTension(){
     chartPostTension.resetZoom();
+}
+
+function resetZoomChartTemperature(){
+    chartTemperature.resetZoom();
 }
 
 // Appel à la fonction pour afficher le graphique
