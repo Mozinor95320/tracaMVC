@@ -91,7 +91,7 @@ class TracabilitySheetRepository
         );
         $statement->execute([$identifier]);
 
-        $row = $statement->fetch();
+        $row = $statement->fetch(PDO::FETCH_ASSOC);
         $tracabilitySheet = new TracabilitySheet();
         $tracabilitySheet->identifier = $row['serialNumber'];
         $tracabilitySheet->workOrder = $row['workOrder'];
