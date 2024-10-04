@@ -77,17 +77,17 @@ class TracabilitySheet
     public string $qualityControlDate;
     public string $qualityInspectorName;
     public string $qualityInspectorRemarks;
-    public $timeLog = [];
-    public $dancerArmPressureSetpoint= [];
-    public $dancerArmTensionActual= [];
-    public $postTensionActual= [];
-    public $preTensionSetpoint= [];
-    public $preTensionActual= [];
-    public $hotAirBlowerSetpoint= [];
-    public $nozzleHeaterActual= [];
-    public $nozzleHeaterSetpoint= [];
-    public $tapeHeaterActual= [];
-    public $tapeHeaterSetpoint= [];
+    public $timeLog;
+    public $dancerArmPressureSetpoint;
+    public $dancerArmTensionActual;
+    public $postTensionActual;
+    public $preTensionSetpoint;
+    public $preTensionActual;
+    public $hotAirBlowerSetpoint;
+    public $nozzleHeaterActual;
+    public $nozzleHeaterSetpoint;
+    public $tapeHeaterActual;
+    public $tapeHeaterSetpoint;
 }
 
 class TracabilitySheetRepository
