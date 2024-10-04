@@ -1261,47 +1261,25 @@
 
 <script src="templates/scriptTemplate/tolerance.js"></script>
 <script>
-    const ctx = document.getElementById('myChartGeneral').getContext('2d');
-    const myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: <?php echo json_encode($tracabilitySheet->timeLog); ?>,
-            datasets: [{
-                label: 'Ventes par mois',
-                data: <?php echo json_encode($data['data']); ?>,
-                backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                borderColor: 'rgba(75, 192, 192, 1)',
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
-
     // Extraire les données pour chaque colonne
-    const temps = dataFromDB.map(item => item.temps); // Colonne 'temps'
-    const dancerArmPressureSetpoint = dataFromDB.map(item => item.DancerArmPressureSetpoint);
-    const dancerArmTensionActual = dataFromDB.map(item => item.DancerArmTensionActual);
-    const postTensionActual = dataFromDB.map(item => item.PostTensionActual);
-    const preTensionSetpoint = dataFromDB.map(item => item.PreTensionSetpoint);
-    const preTensionActual = dataFromDB.map(item => item.PreTensionActual);
-    const hotAirBlowerSetpoint = dataFromDB.map(item => item.HotAirBlowerSetpoint);
-    const nozzleHeaterActual = dataFromDB.map(item => item.NozzleHeaterActual);
-    const nozzleHeaterSetpoint = dataFromDB.map(item => item.NozzleHeaterSetpoint);
-    const tapeHeaterActual = dataFromDB.map(item => item.TapeHeaterActual);
-    const tapeHeaterSetpoint = dataFromDB.map(item => item.TapeHeaterSetpoint);
+    const timeLog = <?php echo json_encode($tracabilitySheet->timeLog); ?>;
+    const dancerArmPressureSetpoint = <?php echo json_encode($tracabilitySheet->dancerArmPressureSetpoint); ?>;
+    const dancerArmTensionActual = <?php echo json_encode($tracabilitySheet->dancerArmTensionActual); ?>;
+    const postTensionActual = <?php echo json_encode($tracabilitySheet->postTensionActual); ?>;
+    const preTensionSetpoint = <?php echo json_encode($tracabilitySheet->preTensionSetpoint); ?>;
+    const preTensionActual = <?php echo json_encode($tracabilitySheet->preTensionActual); ?>;
+    const hotAirBlowerSetpoint = <?php echo json_encode($tracabilitySheet->hotAirBlowerSetpoint); ?>;
+    const nozzleHeaterActual = <?php echo json_encode($tracabilitySheet->nozzleHeaterActual); ?>;
+    const nozzleHeaterSetpoint = <?php echo json_encode($tracabilitySheet->nozzleHeaterSetpoint); ?>;
+    const tapeHeaterActual = <?php echo json_encode($tracabilitySheet->tapeHeaterActual); ?>;
+    const tapeHeaterSetpoint = <?php echo json_encode($tracabilitySheet->tapeHeaterSetpoint); ?>;
 
     // Création du graphique avec Chart.js
-    const ctx = document.getElementById('myChart1').getContext('2d');
+    const ctx = document.getElementById('myChartGeneral').getContext('2d');
     chartGeneral = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: temps, // Utilisation de la colonne 'temps' sur l'axe X
+            labels: timeLog, // Utilisation de la colonne 'temps' sur l'axe X
             datasets: [
                 {
                     label: 'Dancer Arm Pressure Setpoint',
