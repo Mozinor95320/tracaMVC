@@ -83,7 +83,6 @@ class TracabilitySheet
 class TracabilitySheetRepository
 {
     public DatabaseConnection $connection;
-    public DatabaseConnection $connection2;
 
     public function getTracabilitySheet(string $identifier): TracabilitySheet
     {
@@ -164,13 +163,13 @@ class TracabilitySheetRepository
         $tracabilitySheet->qualityInspectorName = $row['qualityInspectorName'];
         $tracabilitySheet->qualityInspectorRemarks = $row['qualityInspectorRemarks'];
 
-        $stmt = $this->connection2->getConnection()->prepare(
+        $stmt = $this->connection->getConnection()->prepare(
             "SELECT timeLog, dancerArmPressureSetpoint, dancerArmTensionActual, postTensionActual, preTensionSetpoint, preTensionActual, hotAirBlowerSetpoint, nozzleHeaterActual, nozzleHeaterSetpoint, tapeHeaterActual, tapeHeaterSetpoint FROM windingMachineReccord WHERE idTracabiltySheet = ? ORDER BY timeLog ASC"
         );
 
         $stmt->execute([$identifier]);
 
-        $tracabilitySheet->dataGraph = $stmt->fetchAll();
+        $tracabilitySheet->dataGraph = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 
         return $tracabilitySheet;
     }
