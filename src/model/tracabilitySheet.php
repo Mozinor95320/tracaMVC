@@ -164,7 +164,7 @@ class TracabilitySheetRepository
         $tracabilitySheet->qualityInspectorRemarks = $row['qualityInspectorRemarks'];
 
         $stmt = $this->connection->getConnection()->prepare(
-            "SELECT timeLog, dancerArmPressureSetpoint, dancerArmTensionActual, postTensionActual, preTensionSetpoint, preTensionActual, hotAirBlowerSetpoint, nozzleHeaterActual, nozzleHeaterSetpoint, tapeHeaterActual, tapeHeaterSetpoint FROM windingMachineReccord WHERE idTracabiltySheet = ? ORDER BY timeLog ASC"
+            "SELECT timeLog, dancerArmPressureSetpoint, dancerArmTensionActual, postTensionActual, preTensionSetpoint, preTensionActual, hotAirBlowerSetpoint, nozzleHeaterActual, nozzleHeaterSetpoint, tapeHeaterActual, tapeHeaterSetpoint FROM windingMachineReccord WHERE idTracabiltySheet = ?"
         );
 
         $stmt->execute([$identifier]);
