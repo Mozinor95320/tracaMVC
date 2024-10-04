@@ -1231,12 +1231,7 @@
 <script src="templates/scriptTemplate/tolerance.js"></script>
 
 <script>
-    // Fonction pour récupérer les données depuis le fichier PHP
-async function fetchData() {
-    const response = await fetch(<?php echo json_encode($tracabilitySheet->dataGraph); ?>); // Appel au fichier PHP
-    const data = await response.json(); // Conversion en JSON
-    return data;
-}
+
 var chartGeneral;
 var chartPreTension;
 var chartPostTension;
@@ -1245,7 +1240,7 @@ var chartPostTemperature;
 
 // Fonction pour construire et afficher le graphique
 async function renderChart() {
-    const dataFromDB = await fetchData();
+    const dataFromDB = <?php echo json_encode($tracabilitySheet->dataGraph); ?>;
 
     // Extraire les données pour chaque colonne
     const timeLog = dataFromDB.map(item => item.timeLog); // Colonne 'temps'
