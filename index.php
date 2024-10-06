@@ -29,7 +29,7 @@ try {
         } elseif ($_GET['action'] === 'search-sn') {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 $searchSn = $_GET['id'];
-                (new Search())->execute($searchSn);
+                (new SearchResult())->execute($searchSn);
             } else {
                 throw new Exception('Aucun identifiant de commentaire envoyé');
             }
