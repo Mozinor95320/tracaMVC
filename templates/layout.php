@@ -20,6 +20,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
 
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg fixed-top bg-dark" data-bs-theme="dark">
         <div class="container-fluid">
@@ -39,7 +40,7 @@
                     </li>
                 </ul>
                 <form class="d-flex" role="search" id="search-form" method="GET" action="">
-                    <input class="form-control me-2" type="search" placeholder="Rechercher un SN" aria-label="Search">
+                    <input class="form-control me-2" type="search" id="search-input" name="search-sn" placeholder="Rechercher un SN" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Rechercher</button>
                 </form>
             </div>
