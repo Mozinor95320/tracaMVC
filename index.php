@@ -2,7 +2,9 @@
 
 require_once('src/controllers/homepage.php');
 require_once('src/controllers/updateTracabilitySheet.php');
+require_once('src/controllers/search.php');
 
+use Application\Controllers\Search\Search;
 use Application\Controllers\Homepage\Homepage;
 use Application\Controllers\UpdateTracabilitySheet\UpdateTracabilitySheet;
 
@@ -24,16 +26,10 @@ try {
             } else {
                 throw new Exception('Aucun identifiant de billet envoyé');
             }
-        } elseif ($_GET['action'] === 'updateComment') {
+        } elseif ($_GET['action'] === 'search-sn') {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
-                $identifier = $_GET['id'];
-                // It sets the input only when the HTTP method is POST (ie. the form is submitted).
-                $input = null;
-                if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                    $input = $_POST;
-                }
-
-                //(new UpdateComment())->execute($identifier, $input);
+                $searchSn = $_GET['id'];
+                (new Search())->execute($searchSn);
             } else {
                 throw new Exception('Aucun identifiant de commentaire envoyé');
             }

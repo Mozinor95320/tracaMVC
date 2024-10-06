@@ -191,4 +191,24 @@ class TracabilitySheetRepository
 
         return $tracabilitySheets;
     }
+
+    public function getTracabilitySheetsSearchResult(string $searcgSn): array
+    {
+        $statement = $this->connection->getConnection()->query(
+            "SELECT serialNumber, workOrder, sheetCreationDate FROM tracabilitySheets ORDER BY sheetCreationDate DESC WHERE serialNumber = ?"
+        );
+
+        $statement->execute([$searcgSn]);
+        $tracabilitySheets = [];
+        while (($row = $statement->fetch())) {
+            $tracabilitySheet = new TracabilitySheet();
+            $tracabilitySheet->workOrder = $row['workOrder'];
+            $tracabilitySheet->sheetCreationDate = $row['sheetCreationDate'];
+            $tracabilitySheet->identifier = $row['serialNumber'];
+
+            $tracabilitySheets[] = $tracabilitySheet;
+        }
+
+        return $tracabilitySheets;
+    }
 }
