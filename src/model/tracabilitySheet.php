@@ -192,13 +192,13 @@ class TracabilitySheetRepository
         return $tracabilitySheets;
     }
 
-    public function getTracabilitySheetsSearchResult(string $searcgSn): array
+    public function getTracabilitySheetsSearchResult(string $searchSn): array
     {
         $statement = $this->connection->getConnection()->query(
             "SELECT serialNumber, workOrder, sheetCreationDate FROM tracabilitySheets ORDER BY sheetCreationDate DESC WHERE serialNumber = ?"
         );
 
-        $statement->execute([$searcgSn]);
+        $statement->execute([$searchSn]);
         $tracabilitySheets = [];
         while (($row = $statement->fetch())) {
             $tracabilitySheet = new TracabilitySheet();

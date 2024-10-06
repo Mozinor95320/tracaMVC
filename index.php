@@ -2,9 +2,9 @@
 
 require_once('src/controllers/homepage.php');
 require_once('src/controllers/updateTracabilitySheet.php');
-require_once('src/controllers/search.php');
+require_once('src/controllers/SearchResult.php');
 
-use Application\Controllers\Search\Search;
+use Application\Controllers\Search\SearchResult;
 use Application\Controllers\Homepage\Homepage;
 use Application\Controllers\UpdateTracabilitySheet\UpdateTracabilitySheet;
 

@@ -10,11 +10,11 @@ use Application\Model\TracabilitySheet\TracabilitySheetRepository;
 
 class SearchResult
 {
-    public function execute(string $SearchSn)
+    public function execute(string $searchSn)
     {
         $tracabilitySheetRepository = new TracabilitySheetRepository();
         $tracabilitySheetRepository->connection = new DatabaseConnection();
-        $tracabilitySheets = $tracabilitySheetRepository->getTracabilitySheetsSearchResult($SearchSn);
+        $tracabilitySheets = $tracabilitySheetRepository->getTracabilitySheetsSearchResult($searchSn);
 
         require('templates/homepage.php');
     }
