@@ -39,7 +39,7 @@
                         <a class="nav-link disabled" aria-disabled="true">Disabled</a>
                     </li>
                 </ul>
-                <form class="d-flex" role="search" id="search-form" method="GET" action="">
+                <form class="d-flex" role="search" id="search-form" method="GET" action="search-sn">
                     <input class="form-control me-2" type="search" id="search-input" name="search-sn" placeholder="Rechercher un SN" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Rechercher</button>
                 </form>
