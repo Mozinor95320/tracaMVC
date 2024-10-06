@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top bg-dark custom-navbar" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg fixed-top bg-dark" data-bs-theme="dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="https://mediumaquamarine-toad-850598.hostingersite.com/index.php">
                 <img src="templates/img/logoParker.png" alt="Bootstrap" height="40">

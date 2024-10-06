@@ -24,7 +24,6 @@ header h1 {
   padding: 6px 12px;
 }
 
-
 .accordion-button {
   background-color: #f8f9fa;
   color: #343a40;
@@ -59,7 +58,7 @@ input[readonly] {
 
 /* Classe pour couleur de tolérance quand aucune valeur n'est entrée */
 .bg-tolerance-default {
-  background-color: #F8F9FA !important; /* Gris */
+  background-color: #f8f9fa !important; /* Gris */
   color: #212529 !important;
 }
 
@@ -67,7 +66,7 @@ input[readonly] {
   position: relative;
   margin: auto;
   height: 90vh; /* Hauteur du graphique */
-  width: 90vw;  /* Largeur du graphique */
+  width: 90vw; /* Largeur du graphique */
 }
 
 .chart-container2 {
@@ -76,6 +75,6 @@ input[readonly] {
   height: 50vh; /* Hauteur du graphique */
 }
 
-.custom-navbar {
-  border-bottom : 10px  solid #ffb91d;
+[data-bs-theme="dark"] .navbar {
+  border-bottom: 10px solid #ffb91d;
 }
