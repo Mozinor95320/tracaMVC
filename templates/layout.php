@@ -25,7 +25,7 @@
     <nav class="navbar navbar-expand-lg fixed-top bg-dark border-bottom border-body" data-bs-theme="dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="https://mediumaquamarine-toad-850598.hostingersite.com/index.php">
-                <img src="templates/img/logoParker.png" alt="Bootstrap" height="30">
+                <img src="templates/img/logoParker.png" alt="Bootstrap" height="40">
             </a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
