@@ -1,15 +1,6 @@
 <?php $title = "Liste des fiches de tracabilite"; ?>
 
-<?php ob_start(); ?>
-<div class="container mt-5">
-    <form id="search-form" method="GET" action="" class="mb-4">
-        <div class="input-group">
-            <input type="text" id="search-input" name="search-sn" class="form-control" placeholder="Rechercher un SN" required>
-            <button class="btn btn-primary" type="submit">Rechercher</button>
-        </div>
-    </form>
-    <div id="result-container">
-<?php
+<?php ob_start(); 
 foreach ($tracabilitySheets as $tracabilitySheet) {
 ?>
 

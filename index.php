@@ -27,7 +27,7 @@ try {
                 throw new Exception('Aucun identifiant de billet envoyé');
             }
         } elseif ($_GET['action'] === 'search-sn') {
-            if (isset($_GET['id']) && $_GET['id'] > 0) {
+            if (isset($_GET['search-input']) && $_GET['id'] > 0) {
                 $searchSn = $_GET['id'];
                 (new SearchResult())->execute($searchSn);
             } else {

@@ -20,7 +20,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
 
 </head>
-
 <body>
     <nav class="navbar navbar-expand-lg fixed-top bg-dark" data-bs-theme="dark">
         <div class="container-fluid">
@@ -39,7 +38,7 @@
                         <a class="nav-link disabled" aria-disabled="true">Disabled</a>
                     </li>
                 </ul>
-                <form class="d-flex" role="search" id="search-form" method="post" action="index.php?action=search-sn&id=" method="post">
+                <form class="d-flex" role="search" id="search-form" method="GET" action="searchSn">
                     <input class="form-control me-2" type="search" id="search-input" name="search-sn" placeholder="Rechercher un SN" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Rechercher</button>
                 </form>
