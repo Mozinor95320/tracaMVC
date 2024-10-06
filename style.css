@@ -75,3 +75,7 @@ input[readonly] {
   margin: auto;
   height: 50vh; /* Hauteur du graphique */
 }
+
+.custom-navbar {
+  border-bottom : 4px  solid #ffb91d;
+}
