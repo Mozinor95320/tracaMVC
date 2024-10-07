@@ -30,13 +30,13 @@
             <a class="navbar-brand" href="https://mediumaquamarine-toad-850598.hostingersite.com/index.php">
                 <img src="templates/img/logo parker_crop.png" alt="Bootstrap" height="30">
             </a>
-            <div class="row">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class="d-flex">
+                <ul class="navbar-nav ">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#">Link</a> 
                     </li>
                     <li class="nav-item">
                         <a class="nav-link disabled" aria-disabled="true">Disabled</a>
