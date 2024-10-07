@@ -30,7 +30,7 @@
             <a class="navbar-brand" href="https://mediumaquamarine-toad-850598.hostingersite.com/index.php">
                 <img src="templates/img/logo parker_crop.png" alt="Bootstrap" height="30">
             </a>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <div class="offcanvas-lg offcanvas-end flex-grow-1" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel" data-bs-scroll="true">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -50,18 +50,6 @@
         </div>
     </header>
 
-
-
-    <!--
-        <header class="banner">
-            <div class="row align-items-center">
-                <div class="col-md-3">
-                <img src="templates/img/logoParker.png" alt="Une belle photo" height="50" />
-                </div>
-            </div>
-            <div class="row align-items-center">
-            </div>
-        </header> -->
     <?= $content ?>
 </body>
 <!-- JS Bootstrap -->
