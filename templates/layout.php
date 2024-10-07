@@ -30,7 +30,7 @@
             <a class="navbar-brand" href="https://mediumaquamarine-toad-850598.hostingersite.com/index.php">
                 <img src="templates/img/logo parker_crop.png" alt="Bootstrap" height="30">
             </a>
-            <div class="offcanvas-lg offcanvas-end flex-grow-1" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel" data-bs-scroll="true">
+            <div class="row">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
